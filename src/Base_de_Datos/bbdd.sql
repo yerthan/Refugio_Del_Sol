@@ -35,8 +35,9 @@ CREATE TABLE Reserva (
                          FOREIGN KEY (RegimenID) REFERENCES Regimen(ID)
 );
 
-
--- Habitaciones con capacidad 1
+-- turista: 100e
+-- suite: 200e
+-- Habitaciones con capacidad 1 : 0€
 INSERT INTO Habitacion (Numero, Tipo, Capacidad, Precio) VALUES
                                                              (1, 'suite', 1, 0),
                                                              (2, 'suite', 1, 0),
@@ -45,7 +46,7 @@ INSERT INTO Habitacion (Numero, Tipo, Capacidad, Precio) VALUES
                                                              (5, 'turista', 1, 100),
                                                              (6, 'turista', 1, 100);
 
--- Habitaciones con capacidad 2
+-- Habitaciones con capacidad 2 : 50€
 INSERT INTO Habitacion (Numero, Tipo, Capacidad, Precio) VALUES
                                                              (7, 'suite', 2, 50),
                                                              (8, 'suite', 2, 50),
@@ -55,7 +56,7 @@ INSERT INTO Habitacion (Numero, Tipo, Capacidad, Precio) VALUES
                                                              (12, 'turista', 2, 150),
                                                              (13, 'turista', 2, 150);
 
--- Habitaciones con capacidad 3
+-- Habitaciones con capacidad 3 : 80€
 INSERT INTO Habitacion (Numero, Tipo, Capacidad, Precio) VALUES
                                                              (14, 'suite', 3, 80),
                                                              (15, 'suite', 3, 80),
