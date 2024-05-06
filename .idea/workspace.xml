@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0cda1711-2e57-43ac-b2a7-e9f4e7396b32" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Base_de_Datos/bbdd.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/Base_de_Datos/bbdd.sql" afterDir="false" />
-    </list>
+    <list default="true" id="0cda1711-2e57-43ac-b2a7-e9f4e7396b32" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,9 +46,32 @@
       <updated>1714989101993</updated>
       <workItem from="1714989103537" duration="658000" />
     </task>
+    <task id="LOCAL-00001" summary="precios habitaciones">
+      <created>1714992016182</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1714992016182</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="precios habitaciones" />
+    <option name="LAST_COMMIT_MESSAGE" value="precios habitaciones" />
   </component>
 </project>
