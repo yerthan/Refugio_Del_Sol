@@ -39,18 +39,18 @@ CREATE TABLE Reserva (
 -- suite: 200e
 -- Habitaciones con capacidad 1 : 0€
 INSERT INTO Habitacion (Numero, Tipo, Capacidad, Precio) VALUES
-                                                             (1, 'suite', 1, 0),
-                                                             (2, 'suite', 1, 0),
-                                                             (3, 'suite', 1, 0),
+                                                             (1, 'suite', 1, 200),
+                                                             (2, 'suite', 1, 200),
+                                                             (3, 'suite', 1, 200),
                                                              (4, 'turista', 1, 100),
                                                              (5, 'turista', 1, 100),
                                                              (6, 'turista', 1, 100);
 
 -- Habitaciones con capacidad 2 : 50€
 INSERT INTO Habitacion (Numero, Tipo, Capacidad, Precio) VALUES
-                                                             (7, 'suite', 2, 50),
-                                                             (8, 'suite', 2, 50),
-                                                             (9, 'suite', 2, 50),
+                                                             (7, 'suite', 2, 250),
+                                                             (8, 'suite', 2, 250),
+                                                             (9, 'suite', 2, 250),
                                                              (10, 'turista', 2, 150),
                                                              (11, 'turista', 2, 150),
                                                              (12, 'turista', 2, 150),
@@ -58,9 +58,9 @@ INSERT INTO Habitacion (Numero, Tipo, Capacidad, Precio) VALUES
 
 -- Habitaciones con capacidad 3 : 80€
 INSERT INTO Habitacion (Numero, Tipo, Capacidad, Precio) VALUES
-                                                             (14, 'suite', 3, 80),
-                                                             (15, 'suite', 3, 80),
-                                                             (16, 'suite', 3, 80),
+                                                             (14, 'suite', 3, 280),
+                                                             (15, 'suite', 3, 280),
+                                                             (16, 'suite', 3, 280),
                                                              (17, 'turista', 3, 180),
                                                              (18, 'turista', 3, 180),
                                                              (19, 'turista', 3, 180),
