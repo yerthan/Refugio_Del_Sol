@@ -18,7 +18,8 @@ CREATE TABLE Extras (
 CREATE TABLE Regimen (
                          ID INT PRIMARY KEY,
                          Tipo VARCHAR(50),
-                         Descripcion VARCHAR(255)
+                         Descripcion VARCHAR(255),
+                         Precio DECIMAL(5,2)
 );
 
 CREATE TABLE Reserva (
