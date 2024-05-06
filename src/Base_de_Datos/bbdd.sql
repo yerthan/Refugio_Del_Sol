@@ -6,7 +6,8 @@ CREATE TABLE Habitacion (
                             ID INT PRIMARY KEY,
                             Numero INT,
                             Tipo VARCHAR(50),
-                            Capacidad INT
+                            Capacidad INT,
+                            Precio DECIMAL(5,2)
 );
 
 CREATE TABLE Extras (
