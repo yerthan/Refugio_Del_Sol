@@ -65,3 +65,11 @@ INSERT INTO Habitacion (Numero, Tipo, Capacidad, Precio) VALUES
                                                              (18, 'turista', 3, 180),
                                                              (19, 'turista', 3, 180),
                                                              (20, 'suite', 3, 280);
+
+
+
+INSERT INTO Extras (Nombre, Precio) VALUES
+                                        ('cuna', 20.00),
+                                        ('gimnasio', 30.00),
+                                        ('parking', 10.00),
+                                        ('cama supletoria', 20.00);
