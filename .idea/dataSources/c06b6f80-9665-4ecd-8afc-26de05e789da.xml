@@ -1111,7 +1111,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <schema id="305" parent="1" name="refugio_del_sol">
-      <LastIntrospectionLocalTimestamp>2024-05-06.10:14:39</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2024-05-06.10:30:23</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <schema id="306" parent="1" name="sys">
@@ -1174,6 +1174,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
     <column id="322" parent="318" name="ID">
+      <AutoIncrement>1</AutoIncrement>
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1197,6 +1198,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="327" parent="319" name="ID">
+      <AutoIncrement>21</AutoIncrement>
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1213,97 +1215,107 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <DasType>int|0s</DasType>
       <Position>4</Position>
     </column>
-    <index id="331" parent="319" name="PRIMARY">
+    <column id="331" parent="319" name="Precio">
+      <DasType>decimal(5,2 digit)|0s</DasType>
+      <Position>5</Position>
+    </column>
+    <index id="332" parent="319" name="PRIMARY">
       <ColNames>ID</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="332" parent="319" name="PRIMARY">
+    <key id="333" parent="319" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="333" parent="320" name="ID">
+    <column id="334" parent="320" name="ID">
+      <AutoIncrement>1</AutoIncrement>
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="334" parent="320" name="Tipo">
+    <column id="335" parent="320" name="Tipo">
       <DasType>varchar(50)|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="335" parent="320" name="Descripcion">
+    <column id="336" parent="320" name="Descripcion">
       <DasType>varchar(255)|0s</DasType>
       <Position>3</Position>
     </column>
-    <index id="336" parent="320" name="PRIMARY">
+    <column id="337" parent="320" name="Precio">
+      <DasType>decimal(5,2 digit)|0s</DasType>
+      <Position>4</Position>
+    </column>
+    <index id="338" parent="320" name="PRIMARY">
       <ColNames>ID</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="337" parent="320" name="PRIMARY">
+    <key id="339" parent="320" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="338" parent="321" name="ID">
+    <column id="340" parent="321" name="ID">
+      <AutoIncrement>1</AutoIncrement>
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="339" parent="321" name="FechaInicio">
+    <column id="341" parent="321" name="FechaInicio">
       <DasType>date|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="340" parent="321" name="FechaFin">
+    <column id="342" parent="321" name="FechaFin">
       <DasType>date|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="341" parent="321" name="HabitacionID">
+    <column id="343" parent="321" name="HabitacionID">
       <DasType>int|0s</DasType>
       <Position>4</Position>
     </column>
-    <column id="342" parent="321" name="ExtrasID">
+    <column id="344" parent="321" name="ExtrasID">
       <DasType>int|0s</DasType>
       <Position>5</Position>
     </column>
-    <column id="343" parent="321" name="RegimenID">
+    <column id="345" parent="321" name="RegimenID">
       <DasType>int|0s</DasType>
       <Position>6</Position>
     </column>
-    <foreign-key id="344" parent="321" name="Reserva_ibfk_1">
+    <foreign-key id="346" parent="321" name="Reserva_ibfk_1">
       <ColNames>HabitacionID</ColNames>
       <RefColNames>ID</RefColNames>
       <RefTableName>Habitacion</RefTableName>
     </foreign-key>
-    <foreign-key id="345" parent="321" name="Reserva_ibfk_2">
+    <foreign-key id="347" parent="321" name="Reserva_ibfk_2">
       <ColNames>ExtrasID</ColNames>
       <RefColNames>ID</RefColNames>
       <RefTableName>Extras</RefTableName>
     </foreign-key>
-    <foreign-key id="346" parent="321" name="Reserva_ibfk_3">
+    <foreign-key id="348" parent="321" name="Reserva_ibfk_3">
       <ColNames>RegimenID</ColNames>
       <RefColNames>ID</RefColNames>
       <RefTableName>Regimen</RefTableName>
     </foreign-key>
-    <index id="347" parent="321" name="PRIMARY">
+    <index id="349" parent="321" name="PRIMARY">
       <ColNames>ID</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="348" parent="321" name="HabitacionID">
+    <index id="350" parent="321" name="HabitacionID">
       <ColNames>HabitacionID</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="349" parent="321" name="ExtrasID">
+    <index id="351" parent="321" name="ExtrasID">
       <ColNames>ExtrasID</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="350" parent="321" name="RegimenID">
+    <index id="352" parent="321" name="RegimenID">
       <ColNames>RegimenID</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="351" parent="321" name="PRIMARY">
+    <key id="353" parent="321" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
