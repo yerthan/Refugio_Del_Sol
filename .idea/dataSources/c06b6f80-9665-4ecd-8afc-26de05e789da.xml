@@ -1,98 +1,164 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="@localhost">
-  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.45">
+  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.52">
     <root id="1">
-      <DefaultCasing>lower/lower</DefaultCasing>
+      <DefaultCasing>exact</DefaultCasing>
       <DefaultEngine>InnoDB</DefaultEngine>
       <DefaultTmpEngine>InnoDB</DefaultTmpEngine>
-      <Grants>|root||root|localhost|ALTER|G
+      <Grants>|root||debian-sys-maint|localhost|ALTER|G
+|root||root|localhost|ALTER|G
+|root||debian-sys-maint|localhost|ALTER ROUTINE|G
 |root||root|localhost|ALTER ROUTINE|G
+|root||debian-sys-maint|localhost|APPLICATION_PASSWORD_ADMIN|G
 |root||root|localhost|APPLICATION_PASSWORD_ADMIN|G
 |root||mysql.infoschema|localhost|AUDIT_ABORT_EXEMPT|G
 |root||mysql.session|localhost|AUDIT_ABORT_EXEMPT|G
 |root||mysql.sys|localhost|AUDIT_ABORT_EXEMPT|G
 |root||root|localhost|AUDIT_ABORT_EXEMPT|G
+|root||debian-sys-maint|localhost|AUDIT_ADMIN|G
 |root||root|localhost|AUDIT_ADMIN|G
+|root||debian-sys-maint|localhost|AUTHENTICATION_POLICY_ADMIN|G
 |root||mysql.session|localhost|AUTHENTICATION_POLICY_ADMIN|G
 |root||root|localhost|AUTHENTICATION_POLICY_ADMIN|G
+|root||debian-sys-maint|localhost|BACKUP_ADMIN|G
 |root||mysql.session|localhost|BACKUP_ADMIN|G
 |root||root|localhost|BACKUP_ADMIN|G
+|root||debian-sys-maint|localhost|BINLOG_ADMIN|G
 |root||root|localhost|BINLOG_ADMIN|G
+|root||debian-sys-maint|localhost|BINLOG_ENCRYPTION_ADMIN|G
 |root||root|localhost|BINLOG_ENCRYPTION_ADMIN|G
+|root||debian-sys-maint|localhost|CLONE_ADMIN|G
 |root||mysql.session|localhost|CLONE_ADMIN|G
 |root||root|localhost|CLONE_ADMIN|G
+|root||debian-sys-maint|localhost|CONNECTION_ADMIN|G
 |root||mysql.session|localhost|CONNECTION_ADMIN|G
 |root||root|localhost|CONNECTION_ADMIN|G
+|root||debian-sys-maint|localhost|CREATE|G
 |root||root|localhost|CREATE|G
+|root||debian-sys-maint|localhost|CREATE ROLE|G
 |root||root|localhost|CREATE ROLE|G
+|root||debian-sys-maint|localhost|CREATE ROUTINE|G
 |root||root|localhost|CREATE ROUTINE|G
+|root||debian-sys-maint|localhost|CREATE TABLESPACE|G
 |root||root|localhost|CREATE TABLESPACE|G
+|root||debian-sys-maint|localhost|CREATE TEMPORARY TABLES|G
 |root||root|localhost|CREATE TEMPORARY TABLES|G
+|root||debian-sys-maint|localhost|CREATE USER|G
 |root||root|localhost|CREATE USER|G
+|root||debian-sys-maint|localhost|CREATE VIEW|G
 |root||root|localhost|CREATE VIEW|G
+|root||debian-sys-maint|localhost|DELETE|G
 |root||root|localhost|DELETE|G
+|root||debian-sys-maint|localhost|DROP|G
 |root||root|localhost|DROP|G
+|root||debian-sys-maint|localhost|DROP ROLE|G
 |root||root|localhost|DROP ROLE|G
+|root||debian-sys-maint|localhost|ENCRYPTION_KEY_ADMIN|G
 |root||root|localhost|ENCRYPTION_KEY_ADMIN|G
+|root||debian-sys-maint|localhost|EVENT|G
 |root||root|localhost|EVENT|G
+|root||debian-sys-maint|localhost|EXECUTE|G
 |root||root|localhost|EXECUTE|G
+|root||debian-sys-maint|localhost|FILE|G
 |root||root|localhost|FILE|G
 |root||mysql.infoschema|localhost|FIREWALL_EXEMPT|G
 |root||mysql.session|localhost|FIREWALL_EXEMPT|G
 |root||mysql.sys|localhost|FIREWALL_EXEMPT|G
 |root||root|localhost|FIREWALL_EXEMPT|G
+|root||debian-sys-maint|localhost|FLUSH_OPTIMIZER_COSTS|G
 |root||root|localhost|FLUSH_OPTIMIZER_COSTS|G
+|root||debian-sys-maint|localhost|FLUSH_STATUS|G
 |root||root|localhost|FLUSH_STATUS|G
+|root||debian-sys-maint|localhost|FLUSH_TABLES|G
 |root||root|localhost|FLUSH_TABLES|G
+|root||debian-sys-maint|localhost|FLUSH_USER_RESOURCES|G
 |root||root|localhost|FLUSH_USER_RESOURCES|G
+|root||debian-sys-maint|localhost|GROUP_REPLICATION_ADMIN|G
 |root||root|localhost|GROUP_REPLICATION_ADMIN|G
+|root||debian-sys-maint|localhost|GROUP_REPLICATION_STREAM|G
 |root||root|localhost|GROUP_REPLICATION_STREAM|G
+|root||debian-sys-maint|localhost|INDEX|G
 |root||root|localhost|INDEX|G
+|root||debian-sys-maint|localhost|INNODB_REDO_LOG_ARCHIVE|G
 |root||root|localhost|INNODB_REDO_LOG_ARCHIVE|G
+|root||debian-sys-maint|localhost|INNODB_REDO_LOG_ENABLE|G
 |root||root|localhost|INNODB_REDO_LOG_ENABLE|G
+|root||debian-sys-maint|localhost|INSERT|G
 |root||root|localhost|INSERT|G
+|root||debian-sys-maint|localhost|LOCK TABLES|G
 |root||root|localhost|LOCK TABLES|G
+|root||debian-sys-maint|localhost|PASSWORDLESS_USER_ADMIN|G
 |root||root|localhost|PASSWORDLESS_USER_ADMIN|G
+|root||debian-sys-maint|localhost|PERSIST_RO_VARIABLES_ADMIN|G
 |root||mysql.session|localhost|PERSIST_RO_VARIABLES_ADMIN|G
 |root||root|localhost|PERSIST_RO_VARIABLES_ADMIN|G
+|root||debian-sys-maint|localhost|PROCESS|G
 |root||root|localhost|PROCESS|G
+|root||debian-sys-maint|localhost|REFERENCES|G
 |root||root|localhost|REFERENCES|G
+|root||debian-sys-maint|localhost|RELOAD|G
 |root||root|localhost|RELOAD|G
+|root||debian-sys-maint|localhost|REPLICATION CLIENT|G
 |root||root|localhost|REPLICATION CLIENT|G
+|root||debian-sys-maint|localhost|REPLICATION SLAVE|G
 |root||root|localhost|REPLICATION SLAVE|G
+|root||debian-sys-maint|localhost|REPLICATION_APPLIER|G
 |root||root|localhost|REPLICATION_APPLIER|G
+|root||debian-sys-maint|localhost|REPLICATION_SLAVE_ADMIN|G
 |root||root|localhost|REPLICATION_SLAVE_ADMIN|G
+|root||debian-sys-maint|localhost|RESOURCE_GROUP_ADMIN|G
 |root||root|localhost|RESOURCE_GROUP_ADMIN|G
+|root||debian-sys-maint|localhost|RESOURCE_GROUP_USER|G
 |root||root|localhost|RESOURCE_GROUP_USER|G
+|root||debian-sys-maint|localhost|ROLE_ADMIN|G
 |root||root|localhost|ROLE_ADMIN|G
+|root||debian-sys-maint|localhost|SELECT|G
 |root||mysql.infoschema|localhost|SELECT|G
 |root||root|localhost|SELECT|G
+|root||debian-sys-maint|localhost|SENSITIVE_VARIABLES_OBSERVER|G
 |root||root|localhost|SENSITIVE_VARIABLES_OBSERVER|G
+|root||debian-sys-maint|localhost|SERVICE_CONNECTION_ADMIN|G
 |root||root|localhost|SERVICE_CONNECTION_ADMIN|G
+|root||debian-sys-maint|localhost|SESSION_VARIABLES_ADMIN|G
 |root||mysql.session|localhost|SESSION_VARIABLES_ADMIN|G
 |root||root|localhost|SESSION_VARIABLES_ADMIN|G
+|root||debian-sys-maint|localhost|SET_USER_ID|G
 |root||root|localhost|SET_USER_ID|G
+|root||debian-sys-maint|localhost|SHOW DATABASES|G
 |root||root|localhost|SHOW DATABASES|G
+|root||debian-sys-maint|localhost|SHOW VIEW|G
 |root||root|localhost|SHOW VIEW|G
+|root||debian-sys-maint|localhost|SHOW_ROUTINE|G
 |root||root|localhost|SHOW_ROUTINE|G
+|root||debian-sys-maint|localhost|SHUTDOWN|G
 |root||mysql.session|localhost|SHUTDOWN|G
 |root||root|localhost|SHUTDOWN|G
+|root||debian-sys-maint|localhost|SUPER|G
 |root||mysql.session|localhost|SUPER|G
 |root||root|localhost|SUPER|G
+|root||debian-sys-maint|localhost|SYSTEM_USER|G
 |root||mysql.infoschema|localhost|SYSTEM_USER|G
 |root||mysql.session|localhost|SYSTEM_USER|G
 |root||mysql.sys|localhost|SYSTEM_USER|G
 |root||root|localhost|SYSTEM_USER|G
+|root||debian-sys-maint|localhost|SYSTEM_VARIABLES_ADMIN|G
 |root||mysql.session|localhost|SYSTEM_VARIABLES_ADMIN|G
 |root||root|localhost|SYSTEM_VARIABLES_ADMIN|G
+|root||debian-sys-maint|localhost|TABLE_ENCRYPTION_ADMIN|G
 |root||root|localhost|TABLE_ENCRYPTION_ADMIN|G
+|root||debian-sys-maint|localhost|TELEMETRY_LOG_ADMIN|G
+|root||root|localhost|TELEMETRY_LOG_ADMIN|G
+|root||debian-sys-maint|localhost|TRIGGER|G
 |root||root|localhost|TRIGGER|G
+|root||debian-sys-maint|localhost|UPDATE|G
 |root||root|localhost|UPDATE|G
+|root||debian-sys-maint|localhost|XA_RECOVER_ADMIN|G
 |root||root|localhost|XA_RECOVER_ADMIN|G
+|root||debian-sys-maint|localhost|grant option|G
 |root||root|localhost|grant option|G
 performance_schema|schema||mysql.session|localhost|SELECT|G
 sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
-      <ServerVersion>8.0.32</ServerVersion>
+      <ServerVersion>8.0.35</ServerVersion>
     </root>
     <collation id="2" parent="1" name="armscii8_bin">
       <Charset>armscii8</Charset>
@@ -993,272 +1059,251 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     <collation id="287" parent="1" name="utf8mb4_zh_0900_as_cs">
       <Charset>utf8mb4</Charset>
     </collation>
-    <schema id="288" parent="1" name="empresa">
-      <Current>1</Current>
+    <schema id="288" parent="1" name="Empresa">
       <CollationName>utf8mb3_spanish2_ci</CollationName>
     </schema>
-    <schema id="289" parent="1" name="information_schema">
+    <schema id="289" parent="1" name="Instituto">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="290" parent="1" name="baloncesto">
+      <CollationName>utf8mb3_bin</CollationName>
+    </schema>
+    <schema id="291" parent="1" name="baloncesto_servlet">
+      <CollationName>utf8mb3_bin</CollationName>
+    </schema>
+    <schema id="292" parent="1" name="info">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="293" parent="1" name="information_schema">
       <CollationName>utf8mb3_general_ci</CollationName>
     </schema>
-    <schema id="290" parent="1" name="instituto">
+    <schema id="294" parent="1" name="jardineria">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="291" parent="1" name="mysql">
+    <schema id="295" parent="1" name="juego">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="292" parent="1" name="performance_schema">
+    <schema id="296" parent="1" name="laravel">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="293" parent="1" name="sys">
+    <schema id="297" parent="1" name="miBaseDeDatos">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <user id="294" parent="1" name="mysql.infoschema">
+    <schema id="298" parent="1" name="miproyecto">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="299" parent="1" name="mysql">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="300" parent="1" name="onetoone">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="301" parent="1" name="peliculas_spring_data">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="302" parent="1" name="performance_schema">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="303" parent="1" name="plantquest">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="304" parent="1" name="proyecto_plantquest">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="305" parent="1" name="refugio_del_sol">
+      <LastIntrospectionLocalTimestamp>2024-05-06.10:14:39</LastIntrospectionLocalTimestamp>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="306" parent="1" name="sys">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="307" parent="1" name="tienda">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="308" parent="1" name="tutorial">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="309" parent="1" name="tutorial_jpa">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="310" parent="1" name="ventas">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="311" parent="1" name="videoclub_jpa">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="312" parent="1" name="videoclub_pruebaud3">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <user id="313" parent="1" name="debian-sys-maint">
+      <Host>localhost</Host>
+      <Plugin>caching_sha2_password</Plugin>
+    </user>
+    <user id="314" parent="1" name="mysql.infoschema">
       <CanLogin>0</CanLogin>
       <Host>localhost</Host>
       <Plugin>caching_sha2_password</Plugin>
     </user>
-    <user id="295" parent="1" name="mysql.session">
+    <user id="315" parent="1" name="mysql.session">
       <CanLogin>0</CanLogin>
       <Host>localhost</Host>
       <Plugin>caching_sha2_password</Plugin>
     </user>
-    <user id="296" parent="1" name="mysql.sys">
+    <user id="316" parent="1" name="mysql.sys">
       <CanLogin>0</CanLogin>
       <Host>localhost</Host>
       <Plugin>caching_sha2_password</Plugin>
     </user>
-    <user id="297" parent="1" name="root">
+    <user id="317" parent="1" name="root">
       <Host>localhost</Host>
-      <Plugin>caching_sha2_password</Plugin>
     </user>
-    <table id="298" parent="288" name="empleados">
+    <table id="318" parent="305" name="Extras">
       <Engine>InnoDB</Engine>
-      <CollationName>utf8mb3_spanish2_ci</CollationName>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="299" parent="288" name="extras">
+    <table id="319" parent="305" name="Habitacion">
       <Engine>InnoDB</Engine>
-      <CollationName>utf8mb3_spanish2_ci</CollationName>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="300" parent="288" name="habitacion">
+    <table id="320" parent="305" name="Regimen">
       <Engine>InnoDB</Engine>
-      <CollationName>utf8mb3_spanish2_ci</CollationName>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="301" parent="288" name="oficinas">
+    <table id="321" parent="305" name="Reserva">
       <Engine>InnoDB</Engine>
-      <CollationName>utf8mb3_spanish2_ci</CollationName>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="302" parent="288" name="regimen">
-      <Engine>InnoDB</Engine>
-      <CollationName>utf8mb3_spanish2_ci</CollationName>
-    </table>
-    <table id="303" parent="288" name="reserva">
-      <Engine>InnoDB</Engine>
-      <CollationName>utf8mb3_spanish2_ci</CollationName>
-    </table>
-    <column id="304" parent="298" name="numemp">
+    <column id="322" parent="318" name="ID">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="305" parent="298" name="nombre">
-      <DasType>varchar(30)|0s</DasType>
-      <Position>2</Position>
-    </column>
-    <column id="306" parent="298" name="edad">
-      <DasType>int|0s</DasType>
-      <Position>3</Position>
-    </column>
-    <column id="307" parent="298" name="oficina">
-      <DasType>int|0s</DasType>
-      <Position>4</Position>
-    </column>
-    <column id="308" parent="298" name="puesto">
-      <DasType>varchar(30)|0s</DasType>
-      <Position>5</Position>
-    </column>
-    <column id="309" parent="298" name="contrato">
-      <DasType>date|0s</DasType>
-      <Position>6</Position>
-    </column>
-    <foreign-key id="310" parent="298" name="fkOficina">
-      <ColNames>oficina</ColNames>
-      <RefColNames>oficina</RefColNames>
-      <RefTableName>oficinas</RefTableName>
-    </foreign-key>
-    <index id="311" parent="298" name="PRIMARY">
-      <ColNames>numemp</ColNames>
-      <Type>btree</Type>
-      <Unique>1</Unique>
-    </index>
-    <index id="312" parent="298" name="fkOficina">
-      <ColNames>oficina</ColNames>
-      <Type>btree</Type>
-    </index>
-    <key id="313" parent="298" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
-    </key>
-    <column id="314" parent="299" name="ID">
-      <DasType>int|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-    </column>
-    <column id="315" parent="299" name="Nombre">
+    <column id="323" parent="318" name="Nombre">
       <DasType>varchar(50)|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="316" parent="299" name="Precio">
+    <column id="324" parent="318" name="Precio">
       <DasType>decimal(5,2 digit)|0s</DasType>
       <Position>3</Position>
     </column>
-    <index id="317" parent="299" name="PRIMARY">
+    <index id="325" parent="318" name="PRIMARY">
       <ColNames>ID</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="318" parent="299" name="PRIMARY">
+    <key id="326" parent="318" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="319" parent="300" name="ID">
+    <column id="327" parent="319" name="ID">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="320" parent="300" name="Numero">
+    <column id="328" parent="319" name="Numero">
       <DasType>int|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="321" parent="300" name="Tipo">
+    <column id="329" parent="319" name="Tipo">
       <DasType>varchar(50)|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="322" parent="300" name="Capacidad">
+    <column id="330" parent="319" name="Capacidad">
       <DasType>int|0s</DasType>
       <Position>4</Position>
     </column>
-    <index id="323" parent="300" name="PRIMARY">
+    <index id="331" parent="319" name="PRIMARY">
       <ColNames>ID</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="324" parent="300" name="PRIMARY">
+    <key id="332" parent="319" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="325" parent="301" name="oficina">
+    <column id="333" parent="320" name="ID">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="326" parent="301" name="ciudad">
-      <DasType>varchar(30)|0s</DasType>
-      <Position>2</Position>
-    </column>
-    <column id="327" parent="301" name="superficie">
-      <DasType>int|0s</DasType>
-      <Position>3</Position>
-    </column>
-    <column id="328" parent="301" name="ventas">
-      <DasType>decimal(8,2 digit)|0s</DasType>
-      <DefaultExpression>0.00</DefaultExpression>
-      <NotNull>1</NotNull>
-      <Position>4</Position>
-    </column>
-    <index id="329" parent="301" name="PRIMARY">
-      <ColNames>oficina</ColNames>
-      <Type>btree</Type>
-      <Unique>1</Unique>
-    </index>
-    <key id="330" parent="301" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
-    </key>
-    <column id="331" parent="302" name="ID">
-      <DasType>int|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-    </column>
-    <column id="332" parent="302" name="Tipo">
+    <column id="334" parent="320" name="Tipo">
       <DasType>varchar(50)|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="333" parent="302" name="Descripcion">
+    <column id="335" parent="320" name="Descripcion">
       <DasType>varchar(255)|0s</DasType>
       <Position>3</Position>
     </column>
-    <index id="334" parent="302" name="PRIMARY">
+    <index id="336" parent="320" name="PRIMARY">
       <ColNames>ID</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="335" parent="302" name="PRIMARY">
+    <key id="337" parent="320" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="336" parent="303" name="ID">
+    <column id="338" parent="321" name="ID">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="337" parent="303" name="FechaInicio">
+    <column id="339" parent="321" name="FechaInicio">
       <DasType>date|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="338" parent="303" name="FechaFin">
+    <column id="340" parent="321" name="FechaFin">
       <DasType>date|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="339" parent="303" name="HabitacionID">
+    <column id="341" parent="321" name="HabitacionID">
       <DasType>int|0s</DasType>
       <Position>4</Position>
     </column>
-    <column id="340" parent="303" name="ExtrasID">
+    <column id="342" parent="321" name="ExtrasID">
       <DasType>int|0s</DasType>
       <Position>5</Position>
     </column>
-    <column id="341" parent="303" name="RegimenID">
+    <column id="343" parent="321" name="RegimenID">
       <DasType>int|0s</DasType>
       <Position>6</Position>
     </column>
-    <foreign-key id="342" parent="303" name="reserva_ibfk_1">
+    <foreign-key id="344" parent="321" name="Reserva_ibfk_1">
       <ColNames>HabitacionID</ColNames>
       <RefColNames>ID</RefColNames>
-      <RefTableName>habitacion</RefTableName>
+      <RefTableName>Habitacion</RefTableName>
     </foreign-key>
-    <foreign-key id="343" parent="303" name="reserva_ibfk_2">
+    <foreign-key id="345" parent="321" name="Reserva_ibfk_2">
       <ColNames>ExtrasID</ColNames>
       <RefColNames>ID</RefColNames>
-      <RefTableName>extras</RefTableName>
+      <RefTableName>Extras</RefTableName>
     </foreign-key>
-    <foreign-key id="344" parent="303" name="reserva_ibfk_3">
+    <foreign-key id="346" parent="321" name="Reserva_ibfk_3">
       <ColNames>RegimenID</ColNames>
       <RefColNames>ID</RefColNames>
-      <RefTableName>regimen</RefTableName>
+      <RefTableName>Regimen</RefTableName>
     </foreign-key>
-    <index id="345" parent="303" name="PRIMARY">
+    <index id="347" parent="321" name="PRIMARY">
       <ColNames>ID</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="346" parent="303" name="HabitacionID">
+    <index id="348" parent="321" name="HabitacionID">
       <ColNames>HabitacionID</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="347" parent="303" name="ExtrasID">
+    <index id="349" parent="321" name="ExtrasID">
       <ColNames>ExtrasID</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="348" parent="303" name="RegimenID">
+    <index id="350" parent="321" name="RegimenID">
       <ColNames>RegimenID</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="349" parent="303" name="PRIMARY">
+    <key id="351" parent="321" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
