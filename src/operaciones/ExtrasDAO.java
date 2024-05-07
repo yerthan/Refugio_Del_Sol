@@ -17,7 +17,7 @@ public class ExtrasDAO {
         return con;
     }
 
-    public String create(Reserva reserva) {
+    public String create(Extras e) {
         String resultado = "";
         Connection con = conectar();
         //nombre, precio, ID
@@ -26,13 +26,9 @@ public class ExtrasDAO {
 
         try{
             sentencia = con.prepareStatement(sql);
-            sentencia.setInt(1, reserva.getID());
-            sentencia.setDate(2, Date.valueOf(String.valueOf(reserva.getFechaInicio())));
-            sentencia.setDate(3, Date.valueOf(String.valueOf(reserva.getFechaFin())));
-            sentencia.setInt(4, reserva.getHabitacionId());
-            sentencia.setInt(5, reserva.getExtrasId());
-            sentencia.setInt(6, reserva.getRegimenId());
-
+            sentencia.setInt(1, e.getID());
+            sentencia.setString(2, e.getNombre());
+            sentencia.setDouble(3, e.getPrecio());
         } catch (SQLException ex){
             ex.getErrorCode();
             return "error";
@@ -40,13 +36,29 @@ public class ExtrasDAO {
         } finally {
             try {
                 con.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
+            } catch (SQLException error) {
+                error.printStackTrace();
                 return "error";
             }
         }
 
 
-        return "Creacion de Reserva correcta";
+        return "Creacion de los extras ha sido correcta";
+    }
+
+
+
+    public Extras read(int id) {
+        return null;
+    }
+
+
+    public void update(Reserva reserva) {
+
+    }
+
+
+    public void delete(int id) {
+
     }
 }

@@ -4,15 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0cda1711-2e57-43ac-b2a7-e9f4e7396b32" name="Changes" comment="factura2">
-      <change afterPath="$PROJECT_DIR$/src/operaciones/ExtrasDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a4a9cf5c-378e-491e-a708-59b23ea91994.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a4a9cf5c-378e-491e-a708-59b23ea91994.xml" afterDir="false" />
+    <list default="true" id="0cda1711-2e57-43ac-b2a7-e9f4e7396b32" name="Changes" comment="Revisión clases">
+      <change afterPath="$PROJECT_DIR$/src/operaciones/I_Extras.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Base_de_Datos/bbdd.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/Base_de_Datos/bbdd.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/operaciones/Habitacion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/operaciones/Habitacion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/operaciones/ExtrasDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/operaciones/ExtrasDAO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +21,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -71,7 +67,7 @@
       <updated>1714989101993</updated>
       <workItem from="1714989103537" duration="658000" />
       <workItem from="1715085249059" duration="23000" />
-      <workItem from="1715097110122" duration="2962000" />
+      <workItem from="1715097110122" duration="3452000" />
     </task>
     <task id="LOCAL-00001" summary="precios habitaciones">
       <created>1714992016182</created>
@@ -102,7 +98,14 @@
       <option name="project" value="LOCAL" />
       <updated>1715097208583</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Revisión clases">
+      <created>1715100247026</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1715100247026</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -124,6 +127,7 @@
     <MESSAGE value="carpetas" />
     <MESSAGE value="factura" />
     <MESSAGE value="factura2" />
-    <option name="LAST_COMMIT_MESSAGE" value="factura2" />
+    <MESSAGE value="Revisión clases" />
+    <option name="LAST_COMMIT_MESSAGE" value="Revisión clases" />
   </component>
 </project>
