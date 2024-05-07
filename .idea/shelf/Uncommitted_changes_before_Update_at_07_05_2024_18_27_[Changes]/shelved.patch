@@ -1,0 +1,235 @@
+Index: src/Base_de_Datos/bbdd.sql
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>CREATE database IF NOT EXISTS refugio_del_sol;\r\n\r\nUSE refugio_del_sol;\r\n\r\nCREATE TABLE Habitacion (\r\n                            ID INT PRIMARY KEY AUTO_INCREMENT UNIQUE,\r\n                            Numero INT,\r\n                            Tipo VARCHAR(50),\r\n                            Capacidad INT,\r\n                            Precio DECIMAL(5,2)\r\n);\r\n\r\nCREATE TABLE Extras (\r\n                        ID INT PRIMARY KEY AUTO_INCREMENT,\r\n                        Nombre VARCHAR(50),\r\n                        Precio DECIMAL(5,2)\r\n);\r\n\r\nCREATE TABLE Regimen (\r\n                         ID INT PRIMARY KEY AUTO_INCREMENT,\r\n                         Tipo VARCHAR(50),\r\n                         Descripcion VARCHAR(255),\r\n                         Precio DECIMAL(5,2)\r\n);\r\n\r\nCREATE TABLE Reserva (\r\n                         ID INT PRIMARY KEY AUTO_INCREMENT,\r\n                         FechaInicio DATE,\r\n                         FechaFin DATE,\r\n                         HabitacionID INT,\r\n                         ExtrasID INT,\r\n                         RegimenID INT,\r\n                         FOREIGN KEY (HabitacionID) REFERENCES Habitacion(ID),\r\n                         FOREIGN KEY (ExtrasID) REFERENCES Extras(ID),\r\n                         FOREIGN KEY (RegimenID) REFERENCES Regimen(ID)\r\n);\r\n\r\n-- turista: 100e\r\n-- suite: 200e\r\n-- Habitaciones con capacidad 1 : 0€\r\nINSERT INTO Habitacion (Numero, Tipo, Capacidad, Precio) VALUES\r\n                                                             (1, 'suite', 1, 200),\r\n                                                             (2, 'suite', 1, 200),\r\n                                                             (3, 'suite', 1, 200),\r\n                                                             (4, 'turista', 1, 100),\r\n                                                             (5, 'turista', 1, 100),\r\n                                                             (6, 'turista', 1, 100);\r\n\r\n-- Habitaciones con capacidad 2 : 50€\r\nINSERT INTO Habitacion (Numero, Tipo, Capacidad, Precio) VALUES\r\n                                                             (7, 'suite', 2, 250),\r\n                                                             (8, 'suite', 2, 250),\r\n                                                             (9, 'suite', 2, 250),\r\n                                                             (10, 'turista', 2, 150),\r\n                                                             (11, 'turista', 2, 150),\r\n                                                             (12, 'turista', 2, 150),\r\n                                                             (13, 'turista', 2, 150);\r\n\r\n-- Habitaciones con capacidad 3 : 80€\r\nINSERT INTO Habitacion (Numero, Tipo, Capacidad, Precio) VALUES\r\n                                                             (14, 'suite', 3, 280),\r\n                                                             (15, 'suite', 3, 280),\r\n                                                             (16, 'suite', 3, 280),\r\n                                                             (17, 'turista', 3, 180),\r\n                                                             (18, 'turista', 3, 180),\r\n                                                             (19, 'turista', 3, 180),\r\n                                                             (20, 'suite', 3, 280);\r\n\r\n\r\n\r\nINSERT INTO Extras (Nombre, Precio) VALUES\r\n                                        ('cuna', 20.00),\r\n                                        ('gimnasio', 30.00),\r\n                                        ('parking', 10.00),\r\n                                        ('cama supletoria', 20.00);\r\n\r\nINSERT INTO Regimen (Tipo, Descripcion, Precio) VALUES ('todo incluido', 'desayuno, almuerzo, cena y bebidas', 50.00);\r\nINSERT INTO Regimen (Tipo, Descripcion, Precio) VALUES ('media pensión', 'desayuno y almuerzo', 25.00);\r\nINSERT INTO Regimen (Tipo, Descripcion, Precio) VALUES ('desayuno', 'desayuno', 10.00);\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Base_de_Datos/bbdd.sql b/src/Base_de_Datos/bbdd.sql
+--- a/src/Base_de_Datos/bbdd.sql	(revision 92f0623e87db8f092165524ecd59af7a04fad99f)
++++ b/src/Base_de_Datos/bbdd.sql	(date 1715099152835)
+@@ -1,3 +1,5 @@
++drop database refugio_del_sol;
++
+ CREATE database IF NOT EXISTS refugio_del_sol;
+ 
+ USE refugio_del_sol;
+@@ -77,3 +79,5 @@
+ INSERT INTO Regimen (Tipo, Descripcion, Precio) VALUES ('todo incluido', 'desayuno, almuerzo, cena y bebidas', 50.00);
+ INSERT INTO Regimen (Tipo, Descripcion, Precio) VALUES ('media pensión', 'desayuno y almuerzo', 25.00);
+ INSERT INTO Regimen (Tipo, Descripcion, Precio) VALUES ('desayuno', 'desayuno', 10.00);
++
++
+Index: .idea/dataSources.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"DataSourceManagerImpl\" format=\"xml\" multifile-model=\"true\">\r\n    <data-source source=\"LOCAL\" name=\"@localhost\" uuid=\"a4a9cf5c-378e-491e-a708-59b23ea91994\">\r\n      <driver-ref>mysql.8</driver-ref>\r\n      <synchronize>true</synchronize>\r\n      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>\r\n      <jdbc-url>jdbc:mysql://localhost:3306</jdbc-url>\r\n      <jdbc-additional-properties>\r\n        <property name=\"com.intellij.clouds.kubernetes.db.host.port\" />\r\n        <property name=\"com.intellij.clouds.kubernetes.db.enabled\" value=\"false\" />\r\n        <property name=\"com.intellij.clouds.kubernetes.db.resource.type\" value=\"Deployment\" />\r\n        <property name=\"com.intellij.clouds.kubernetes.db.container.port\" />\r\n      </jdbc-additional-properties>\r\n      <working-dir>$ProjectFileDir$</working-dir>\r\n    </data-source>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/dataSources.xml b/.idea/dataSources.xml
+--- a/.idea/dataSources.xml	(revision 92f0623e87db8f092165524ecd59af7a04fad99f)
++++ b/.idea/dataSources.xml	(date 1715098997168)
+@@ -1,17 +1,11 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+-    <data-source source="LOCAL" name="@localhost" uuid="a4a9cf5c-378e-491e-a708-59b23ea91994">
++    <data-source source="LOCAL" name="@localhost" uuid="bde25ef2-3da1-4971-86cb-26e9e3eaaf3e">
+       <driver-ref>mysql.8</driver-ref>
+       <synchronize>true</synchronize>
+       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+       <jdbc-url>jdbc:mysql://localhost:3306</jdbc-url>
+-      <jdbc-additional-properties>
+-        <property name="com.intellij.clouds.kubernetes.db.host.port" />
+-        <property name="com.intellij.clouds.kubernetes.db.enabled" value="false" />
+-        <property name="com.intellij.clouds.kubernetes.db.resource.type" value="Deployment" />
+-        <property name="com.intellij.clouds.kubernetes.db.container.port" />
+-      </jdbc-additional-properties>
+       <working-dir>$ProjectFileDir$</working-dir>
+     </data-source>
+   </component>
+Index: src/operaciones/ExtrasDAO.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/operaciones/ExtrasDAO.java b/src/operaciones/ExtrasDAO.java
+new file mode 100644
+--- /dev/null	(date 1715098828757)
++++ b/src/operaciones/ExtrasDAO.java	(date 1715098828757)
+@@ -0,0 +1,21 @@
++package operaciones;
++
++import java.sql.Connection;
++import java.sql.DriverManager;
++import java.sql.SQLException;
++
++public class ExtrasDAO {
++
++    private static Connection conectar() {
++        Connection con = null;
++
++        String url = "jdbc:mysql://localhost/refugio_del_sol";
++        try {
++            con = DriverManager.getConnection(url, "root", "1234");
++        } catch (SQLException ex) {
++            System.out.println("Error al conectar al SGBD.");
++        }
++
++        return con;
++    }
++}
+Index: .idea/dataSources.local.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n<<<<<<< HEAD\r\n  <component name=\"dataSourceStorageLocal\" created-in=\"IU-223.8617.56\">\r\n    <data-source name=\"@localhost\" uuid=\"a4a9cf5c-378e-491e-a708-59b23ea91994\">\r\n      <database-info product=\"MySQL\" version=\"8.0.32\" jdbc-version=\"4.2\" driver-name=\"MySQL Connector/J\" driver-version=\"mysql-connector-j-8.2.0 (Revision: 06a1f724497fd81c6a659131fda822c9e5085b6c)\" dbms=\"MYSQL\" exact-version=\"8.0.32\" exact-driver-version=\"8.2\">\r\n=======\r\n  <component name=\"dataSourceStorageLocal\" created-in=\"IU-241.14494.240\">\r\n    <data-source name=\"@localhost\" uuid=\"a4a9cf5c-378e-491e-a708-59b23ea91994\">\r\n      <database-info product=\"MySQL\" version=\"8.0.36\" jdbc-version=\"4.2\" driver-name=\"MySQL Connector/J\" driver-version=\"mysql-connector-j-8.2.0 (Revision: 06a1f724497fd81c6a659131fda822c9e5085b6c)\" dbms=\"MYSQL\" exact-version=\"8.0.36\" exact-driver-version=\"8.2\">\r\n>>>>>>> inicio/master\r\n        <extra-name-characters>#@</extra-name-characters>\r\n        <identifier-quote-string>`</identifier-quote-string>\r\n      </database-info>\r\n      <case-sensitivity plain-identifiers=\"lower\" quoted-identifiers=\"lower\" />\r\n<<<<<<< HEAD\r\n      <secret-storage>master_key</secret-storage>\r\n=======\r\n>>>>>>> inicio/master\r\n      <user-name>root</user-name>\r\n      <schema-mapping>\r\n        <introspection-scope>\r\n          <node kind=\"schema\">\r\n<<<<<<< HEAD\r\n            <name qname=\"refugio_del_sol\" />\r\n            <name qname=\"@\" />\r\n=======\r\n            <name qname=\"@\" />\r\n            <name qname=\"refugio_del_sol\" />\r\n>>>>>>> inicio/master\r\n          </node>\r\n        </introspection-scope>\r\n      </schema-mapping>\r\n    </data-source>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/dataSources.local.xml b/.idea/dataSources.local.xml
+--- a/.idea/dataSources.local.xml	(revision 92f0623e87db8f092165524ecd59af7a04fad99f)
++++ b/.idea/dataSources.local.xml	(date 1715099102155)
+@@ -1,33 +1,19 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+-<<<<<<< HEAD
+   <component name="dataSourceStorageLocal" created-in="IU-223.8617.56">
+-    <data-source name="@localhost" uuid="a4a9cf5c-378e-491e-a708-59b23ea91994">
++    <data-source name="@localhost" uuid="bde25ef2-3da1-4971-86cb-26e9e3eaaf3e">
+       <database-info product="MySQL" version="8.0.32" jdbc-version="4.2" driver-name="MySQL Connector/J" driver-version="mysql-connector-j-8.2.0 (Revision: 06a1f724497fd81c6a659131fda822c9e5085b6c)" dbms="MYSQL" exact-version="8.0.32" exact-driver-version="8.2">
+-=======
+-  <component name="dataSourceStorageLocal" created-in="IU-241.14494.240">
+-    <data-source name="@localhost" uuid="a4a9cf5c-378e-491e-a708-59b23ea91994">
+-      <database-info product="MySQL" version="8.0.36" jdbc-version="4.2" driver-name="MySQL Connector/J" driver-version="mysql-connector-j-8.2.0 (Revision: 06a1f724497fd81c6a659131fda822c9e5085b6c)" dbms="MYSQL" exact-version="8.0.36" exact-driver-version="8.2">
+->>>>>>> inicio/master
+         <extra-name-characters>#@</extra-name-characters>
+         <identifier-quote-string>`</identifier-quote-string>
+       </database-info>
+       <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
+-<<<<<<< HEAD
+       <secret-storage>master_key</secret-storage>
+-=======
+->>>>>>> inicio/master
+       <user-name>root</user-name>
+       <schema-mapping>
+         <introspection-scope>
+           <node kind="schema">
+-<<<<<<< HEAD
+             <name qname="refugio_del_sol" />
+             <name qname="@" />
+-=======
+-            <name qname="@" />
+-            <name qname="refugio_del_sol" />
+->>>>>>> inicio/master
+           </node>
+         </introspection-scope>
+       </schema-mapping>
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"0cda1711-2e57-43ac-b2a7-e9f4e7396b32\" name=\"Changes\" comment=\"factura\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"ComposerSettings\">\r\n    <execution />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2g5YqqtzpPblzSGRAdUB7DGbGWe\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;master&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/Users/34691/Downloads/AplicacionCompletaFinal&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\r\n  }\r\n}</component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"0cda1711-2e57-43ac-b2a7-e9f4e7396b32\" name=\"Changes\" comment=\"\" />\r\n      <created>1714989101993</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1714989101993</updated>\r\n      <workItem from=\"1714989103537\" duration=\"658000\" />\r\n      <workItem from=\"1715085249059\" duration=\"23000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"precios habitaciones\">\r\n      <created>1714992016182</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1714992016182</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"carpetas\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1715078512297</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1715078512297</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"factura\">\r\n      <created>1715081903203</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1715081903203</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"4\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"precios habitaciones\" />\r\n    <MESSAGE value=\"carpetas\" />\r\n    <MESSAGE value=\"factura\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"factura\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 92f0623e87db8f092165524ecd59af7a04fad99f)
++++ b/.idea/workspace.xml	(date 1715099152963)
+@@ -4,8 +4,12 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="0cda1711-2e57-43ac-b2a7-e9f4e7396b32" name="Changes" comment="factura">
++    <list default="true" id="0cda1711-2e57-43ac-b2a7-e9f4e7396b32" name="Changes" comment="factura2">
++      <change afterPath="$PROJECT_DIR$/src/operaciones/ExtrasDAO.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/Base_de_Datos/bbdd.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/Base_de_Datos/bbdd.sql" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -24,6 +28,9 @@
+   </component>
+   <component name="Git.Settings">
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
++  </component>
++  <component name="MarkdownSettingsMigration">
++    <option name="stateVersion" value="1" />
+   </component>
+   <component name="ProjectId" id="2g5YqqtzpPblzSGRAdUB7DGbGWe" />
+   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+@@ -31,20 +38,26 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent">{
+-  &quot;keyToString&quot;: {
+-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+-    &quot;last_opened_file_path&quot;: &quot;C:/Users/34691/Downloads/AplicacionCompletaFinal&quot;,
+-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "RunOnceActivity.OpenProjectViewOnStart": "true",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "WebServerToolWindowFactoryState": "false",
++    "git-widget-placeholder": "master",
++    "last_opened_file_path": "C:/Users/34691/Downloads/AplicacionCompletaFinal",
++    "node.js.detected.package.eslint": "true",
++    "node.js.detected.package.tslint": "true",
++    "node.js.selected.package.eslint": "(autodetect)",
++    "node.js.selected.package.tslint": "(autodetect)",
++    "vue.rearranger.settings.migration": "true"
++  },
++  "keyToStringList": {
++    "DatabaseDriversLRU": [
++      "sqlite",
++      "mysql"
++    ]
+   }
+-}</component>
++}]]></component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
+     <task active="true" id="Default" summary="Default task">
+@@ -55,6 +68,7 @@
+       <updated>1714989101993</updated>
+       <workItem from="1714989103537" duration="658000" />
+       <workItem from="1715085249059" duration="23000" />
++      <workItem from="1715097110122" duration="1897000" />
+     </task>
+     <task id="LOCAL-00001" summary="precios habitaciones">
+       <created>1714992016182</created>
+@@ -78,7 +92,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1715081903203</updated>
+     </task>
+-    <option name="localTasksCounter" value="4" />
++    <task id="LOCAL-00004" summary="factura2">
++      <created>1715097208583</created>
++      <option name="number" value="00004" />
++      <option name="presentableId" value="LOCAL-00004" />
++      <option name="project" value="LOCAL" />
++      <updated>1715097208583</updated>
++    </task>
++    <option name="localTasksCounter" value="5" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -99,6 +120,7 @@
+     <MESSAGE value="precios habitaciones" />
+     <MESSAGE value="carpetas" />
+     <MESSAGE value="factura" />
+-    <option name="LAST_COMMIT_MESSAGE" value="factura" />
++    <MESSAGE value="factura2" />
++    <option name="LAST_COMMIT_MESSAGE" value="factura2" />
+   </component>
+ </project>
+\ No newline at end of file

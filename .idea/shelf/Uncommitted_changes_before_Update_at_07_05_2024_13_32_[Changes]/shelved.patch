@@ -1,0 +1,95 @@
+Index: .idea/dataSources.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"DataSourceManagerImpl\" format=\"xml\" multifile-model=\"true\">\r\n    <data-source source=\"LOCAL\" name=\"@localhost\" uuid=\"a4a9cf5c-378e-491e-a708-59b23ea91994\">\r\n      <driver-ref>mysql.8</driver-ref>\r\n      <synchronize>true</synchronize>\r\n      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>\r\n      <jdbc-url>jdbc:mysql://localhost:3306</jdbc-url>\r\n      <working-dir>$ProjectFileDir$</working-dir>\r\n    </data-source>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/dataSources.xml b/.idea/dataSources.xml
+--- a/.idea/dataSources.xml	(revision 0f8ff201f06f22ca1fdd6c905e979179f39986e3)
++++ b/.idea/dataSources.xml	(date 1715081089217)
+@@ -6,6 +6,12 @@
+       <synchronize>true</synchronize>
+       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+       <jdbc-url>jdbc:mysql://localhost:3306</jdbc-url>
++      <jdbc-additional-properties>
++        <property name="com.intellij.clouds.kubernetes.db.host.port" />
++        <property name="com.intellij.clouds.kubernetes.db.enabled" value="false" />
++        <property name="com.intellij.clouds.kubernetes.db.resource.type" value="Deployment" />
++        <property name="com.intellij.clouds.kubernetes.db.container.port" />
++      </jdbc-additional-properties>
+       <working-dir>$ProjectFileDir$</working-dir>
+     </data-source>
+   </component>
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_21\" default=\"true\" project-jdk-name=\"19\" project-jdk-type=\"JavaSDK\">\r\n    <output url=\"file://$PROJECT_DIR$/out\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision 0f8ff201f06f22ca1fdd6c905e979179f39986e3)
++++ b/.idea/misc.xml	(date 1715081089219)
+@@ -1,6 +1,6 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+-  <component name="ProjectRootManager" version="2" languageLevel="JDK_21" default="true" project-jdk-name="19" project-jdk-type="JavaSDK">
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_19" default="true" project-jdk-name="19" project-jdk-type="JavaSDK">
+     <output url="file://$PROJECT_DIR$/out" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: src/controlador/claseControlador.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package controlador;\r\n\r\nimport java.io.BufferedWriter;\r\nimport java.io.FileWriter;\r\nimport java.io.IOException;\r\n//\r\n//public class claseControlador {\r\n//    public String escribirInfo(String informacion){\r\n//        String resultado = \"Reserva realizada\";\r\n//        try {\r\n//            BufferedWriter bw=new BufferedWriter(new FileWriter(\"infoReserva.txt\"));\r\n//            if(informacion != null){\r\n//                informacion = informacion.substring(0, informacion.length() - 1);\r\n//\r\n//            }\r\n//\r\n//        }catch (IOException e){\r\n//            System.out.println(\"error\");\r\n//            System.out.println(e);\r\n//        }\r\n//\r\n//\r\n//        return resultado;\r\n//    }\r\n//\r\n//\r\n//    public String enviarInformacion(String nombreFichero) {\r\n//        String resultado=\"Pedido almacenado correctamente\";\r\n//        PedidoDao pdDao=new PedidoDao();\r\n//        resultado = pdDao.procesarPedido(nombreFichero);\r\n//        return resultado;\r\n//\r\n//    }\r\n//}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/controlador/claseControlador.java b/src/controlador/claseControlador.java
+--- a/src/controlador/claseControlador.java	(revision 0f8ff201f06f22ca1fdd6c905e979179f39986e3)
++++ b/src/controlador/claseControlador.java	(date 1715081089220)
+@@ -4,7 +4,7 @@
+ import java.io.FileWriter;
+ import java.io.IOException;
+ //
+-//public class claseControlador {
++public class claseControlador {
+ //    public String escribirInfo(String informacion){
+ //        String resultado = "Reserva realizada";
+ //        try {
+@@ -31,4 +31,4 @@
+ //        return resultado;
+ //
+ //    }
+-//}
++}
+Index: src/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import operaciones.Factura;\r\nimport operaciones.Reserva;\r\n\r\npublic class Main {\r\n    public static void main(String[] args) {\r\n\r\n        Factura f = new Factura();\r\n\r\n        f.imprimir();\r\n\r\n\r\n        System.out.println(\"Hello world!\");\r\n    }\r\n\r\n\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Main.java b/src/Main.java
+--- a/src/Main.java	(revision 0f8ff201f06f22ca1fdd6c905e979179f39986e3)
++++ b/src/Main.java	(date 1715081278720)
+@@ -1,16 +1,5 @@
+-import operaciones.Factura;
+-import operaciones.Reserva;
+-
+ public class Main {
+     public static void main(String[] args) {
+-
+-        Factura f = new Factura();
+-
+-        f.imprimir();
+-
+-
+         System.out.println("Hello world!");
+     }
+-
+-
+ }
+\ No newline at end of file
