@@ -37,6 +37,7 @@ public class Main extends JFrame {
         gbc_lblNewLabel.gridy = 0;
         contentPane.add(lblNewLabel, gbc_lblNewLabel);
 
+
         JLabel lblNewLabel_1 = new JLabel("Elige el tipo de habitación");
         GridBagConstraints gbc_lblNewLabel_1 = new GridBagConstraints();
         gbc_lblNewLabel_1.insets = new Insets(0, 0, 5, 0);
