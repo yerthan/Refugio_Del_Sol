@@ -3,7 +3,7 @@ CREATE database IF NOT EXISTS refugio_del_sol;
 USE refugio_del_sol;
 
 CREATE TABLE Habitacion (
-                            ID INT PRIMARY KEY AUTO_INCREMENT,
+                            ID INT PRIMARY KEY AUTO_INCREMENT UNIQUE,
                             Numero INT,
                             Tipo VARCHAR(50),
                             Capacidad INT,
