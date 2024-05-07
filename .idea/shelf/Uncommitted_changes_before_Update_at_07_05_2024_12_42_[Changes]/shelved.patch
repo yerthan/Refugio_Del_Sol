@@ -1,0 +1,64 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"0cda1711-2e57-43ac-b2a7-e9f4e7396b32\" name=\"Changes\" comment=\"precios habitaciones\">\r\n      <change afterPath=\"$PROJECT_DIR$/src/controlador/claseControlador.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/operaciones/LecturaOEscrituraFicheros.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/vistas/ClaseVista.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/dataSources/c06b6f80-9665-4ecd-8afc-26de05e789da.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/dataSources/c06b6f80-9665-4ecd-8afc-26de05e789da/storage_v2/_src_/schema/information_schema.FNRwLQ.meta\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/dataSources/c06b6f80-9665-4ecd-8afc-26de05e789da/storage_v2/_src_/schema/mysql.osA4Bg.meta\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/dataSources/c06b6f80-9665-4ecd-8afc-26de05e789da/storage_v2/_src_/schema/performance_schema.kIw0nw.meta\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/dataSources/c06b6f80-9665-4ecd-8afc-26de05e789da/storage_v2/_src_/schema/sys.zb4BAA.meta\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"ComposerSettings\">\r\n    <execution />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2g5YqqtzpPblzSGRAdUB7DGbGWe\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;master&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/Users/34691/Downloads/AplicacionCompletaFinal&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\r\n  }\r\n}</component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"0cda1711-2e57-43ac-b2a7-e9f4e7396b32\" name=\"Changes\" comment=\"\" />\r\n      <created>1714989101993</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1714989101993</updated>\r\n      <workItem from=\"1714989103537\" duration=\"658000\" />\r\n      <workItem from=\"1715075563209\" duration=\"2187000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"precios habitaciones\">\r\n      <created>1714992016182</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1714992016182</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"precios habitaciones\">\r\n      <created>1714992224296</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1714992224296</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"3\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"precios habitaciones\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"precios habitaciones\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 5961723af15ddb9b93f4f14d4d7645560ce3f300)
++++ b/.idea/workspace.xml	(date 1715078529608)
+@@ -4,17 +4,7 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="0cda1711-2e57-43ac-b2a7-e9f4e7396b32" name="Changes" comment="precios habitaciones">
+-      <change afterPath="$PROJECT_DIR$/src/controlador/claseControlador.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/operaciones/LecturaOEscrituraFicheros.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/vistas/ClaseVista.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c06b6f80-9665-4ecd-8afc-26de05e789da.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c06b6f80-9665-4ecd-8afc-26de05e789da/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c06b6f80-9665-4ecd-8afc-26de05e789da/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c06b6f80-9665-4ecd-8afc-26de05e789da/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c06b6f80-9665-4ecd-8afc-26de05e789da/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-    </list>
++    <list default="true" id="0cda1711-2e57-43ac-b2a7-e9f4e7396b32" name="Changes" comment="Estructura" />
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -65,7 +55,7 @@
+       <option name="presentableId" value="Default" />
+       <updated>1714989101993</updated>
+       <workItem from="1714989103537" duration="658000" />
+-      <workItem from="1715075563209" duration="2187000" />
++      <workItem from="1715075563209" duration="2611000" />
+     </task>
+     <task id="LOCAL-00001" summary="precios habitaciones">
+       <created>1714992016182</created>
+@@ -81,7 +71,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1714992224296</updated>
+     </task>
+-    <option name="localTasksCounter" value="3" />
++    <task id="LOCAL-00003" summary="Estructura">
++      <created>1715078120924</created>
++      <option name="number" value="00003" />
++      <option name="presentableId" value="LOCAL-00003" />
++      <option name="project" value="LOCAL" />
++      <updated>1715078120924</updated>
++    </task>
++    <option name="localTasksCounter" value="4" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -100,6 +97,7 @@
+   </component>
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="precios habitaciones" />
+-    <option name="LAST_COMMIT_MESSAGE" value="precios habitaciones" />
++    <MESSAGE value="Estructura" />
++    <option name="LAST_COMMIT_MESSAGE" value="Estructura" />
+   </component>
+ </project>
+\ No newline at end of file

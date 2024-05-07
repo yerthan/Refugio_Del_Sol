@@ -1,0 +1,136 @@
+Index: src/Base_de_Datos/bbdd.sql
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>CREATE database IF NOT EXISTS refugio_del_sol;\r\n\r\nUSE refugio_del_sol;\r\n\r\nCREATE TABLE Habitacion (\r\n                            ID INT PRIMARY KEY,\r\n                            Numero INT,\r\n                            Tipo VARCHAR(50),\r\n                            Capacidad INT,\r\n                            Precio DECIMAL(5,2)\r\n);\r\n\r\nCREATE TABLE Extras (\r\n                        ID INT PRIMARY KEY,\r\n                        Nombre VARCHAR(50),\r\n                        Precio DECIMAL(5,2)\r\n);\r\n\r\nCREATE TABLE Regimen (\r\n                         ID INT PRIMARY KEY,\r\n                         Tipo VARCHAR(50),\r\n                         Descripcion VARCHAR(255),\r\n                         Precio DECIMAL(5,2)\r\n);\r\n\r\nCREATE TABLE Reserva (\r\n                         ID INT PRIMARY KEY,\r\n                         FechaInicio DATE,\r\n                         FechaFin DATE,\r\n                         HabitacionID INT,\r\n                         ExtrasID INT,\r\n                         RegimenID INT,\r\n                         FOREIGN KEY (HabitacionID) REFERENCES Habitacion(ID),\r\n                         FOREIGN KEY (ExtrasID) REFERENCES Extras(ID),\r\n                         FOREIGN KEY (RegimenID) REFERENCES Regimen(ID)\r\n);\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Base_de_Datos/bbdd.sql b/src/Base_de_Datos/bbdd.sql
+--- a/src/Base_de_Datos/bbdd.sql	(revision 0bbf7cf8f60f079b17c1b063c58774cbfabecd55)
++++ b/src/Base_de_Datos/bbdd.sql	(date 1714991066902)
+@@ -3,7 +3,7 @@
+ USE refugio_del_sol;
+ 
+ CREATE TABLE Habitacion (
+-                            ID INT PRIMARY KEY,
++                            ID INT PRIMARY KEY AUTO_INCREMENT,
+                             Numero INT,
+                             Tipo VARCHAR(50),
+                             Capacidad INT,
+@@ -11,20 +11,20 @@
+ );
+ 
+ CREATE TABLE Extras (
+-                        ID INT PRIMARY KEY,
++                        ID INT PRIMARY KEY AUTO_INCREMENT,
+                         Nombre VARCHAR(50),
+                         Precio DECIMAL(5,2)
+ );
+ 
+ CREATE TABLE Regimen (
+-                         ID INT PRIMARY KEY,
++                         ID INT PRIMARY KEY AUTO_INCREMENT,
+                          Tipo VARCHAR(50),
+                          Descripcion VARCHAR(255),
+                          Precio DECIMAL(5,2)
+ );
+ 
+ CREATE TABLE Reserva (
+-                         ID INT PRIMARY KEY,
++                         ID INT PRIMARY KEY AUTO_INCREMENT,
+                          FechaInicio DATE,
+                          FechaFin DATE,
+                          HabitacionID INT,
+Index: .idea/dataSources.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"DataSourceManagerImpl\" format=\"xml\" multifile-model=\"true\">\r\n    <data-source source=\"LOCAL\" name=\"@localhost\" uuid=\"c06b6f80-9665-4ecd-8afc-26de05e789da\">\r\n      <driver-ref>mysql.8</driver-ref>\r\n      <synchronize>true</synchronize>\r\n      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>\r\n      <jdbc-url>jdbc:mysql://localhost:3306</jdbc-url>\r\n      <working-dir>$ProjectFileDir$</working-dir>\r\n    </data-source>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/dataSources.xml b/.idea/dataSources.xml
+--- a/.idea/dataSources.xml	(revision 0bbf7cf8f60f079b17c1b063c58774cbfabecd55)
++++ b/.idea/dataSources.xml	(date 1714990854320)
+@@ -1,7 +1,7 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+-    <data-source source="LOCAL" name="@localhost" uuid="c06b6f80-9665-4ecd-8afc-26de05e789da">
++    <data-source source="LOCAL" name="@localhost" uuid="a4a9cf5c-378e-491e-a708-59b23ea91994">
+       <driver-ref>mysql.8</driver-ref>
+       <synchronize>true</synchronize>
+       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+Index: .idea/sqldialects.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"SqlDialectMappings\">\r\n    <file url=\"file://$PROJECT_DIR$/src/Base_de_Datos/bbdd.sql\" dialect=\"MySQL\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/sqldialects.xml b/.idea/sqldialects.xml
+--- a/.idea/sqldialects.xml	(revision 0bbf7cf8f60f079b17c1b063c58774cbfabecd55)
++++ b/.idea/sqldialects.xml	(date 1714990854329)
+@@ -1,6 +1,6 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="SqlDialectMappings">
+-    <file url="file://$PROJECT_DIR$/src/Base_de_Datos/bbdd.sql" dialect="MySQL" />
++    <file url="file://$PROJECT_DIR$/src/Base_de_Datos/bbdd.sql" dialect="GenericSQL" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"0cda1711-2e57-43ac-b2a7-e9f4e7396b32\" name=\"Changes\" comment=\"\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/Base_de_Datos/bbdd.sql\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/Base_de_Datos/bbdd.sql\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2g5YqqtzpPblzSGRAdUB7DGbGWe\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/Users/34691/Downloads/AplicacionCompletaFinal&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\r\n  }\r\n}</component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"0cda1711-2e57-43ac-b2a7-e9f4e7396b32\" name=\"Changes\" comment=\"\" />\r\n      <created>1714989101993</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1714989101993</updated>\r\n      <workItem from=\"1714989103537\" duration=\"658000\" />\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 0bbf7cf8f60f079b17c1b063c58774cbfabecd55)
++++ b/.idea/workspace.xml	(date 1714991060098)
+@@ -4,7 +4,9 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="0cda1711-2e57-43ac-b2a7-e9f4e7396b32" name="Changes" comment="">
++    <list default="true" id="0cda1711-2e57-43ac-b2a7-e9f4e7396b32" name="Changes" comment="CAMBIO BBDD">
++      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/Base_de_Datos/bbdd.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/Base_de_Datos/bbdd.sql" afterDir="false" />
+     </list>
+@@ -45,9 +47,32 @@
+       <updated>1714989101993</updated>
+       <workItem from="1714989103537" duration="658000" />
+     </task>
++    <task id="LOCAL-00001" summary="CAMBIO BBDD">
++      <created>1714990904442</created>
++      <option name="number" value="00001" />
++      <option name="presentableId" value="LOCAL-00001" />
++      <option name="project" value="LOCAL" />
++      <updated>1714990904442</updated>
++    </task>
++    <option name="localTasksCounter" value="2" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+     <option name="version" value="3" />
+   </component>
++  <component name="Vcs.Log.Tabs.Properties">
++    <option name="TAB_STATES">
++      <map>
++        <entry key="MAIN">
++          <value>
++            <State />
++          </value>
++        </entry>
++      </map>
++    </option>
++  </component>
++  <component name="VcsManagerConfiguration">
++    <MESSAGE value="CAMBIO BBDD" />
++    <option name="LAST_COMMIT_MESSAGE" value="CAMBIO BBDD" />
++  </component>
+ </project>
+\ No newline at end of file
