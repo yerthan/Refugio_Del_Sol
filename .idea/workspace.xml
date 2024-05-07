@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0cda1711-2e57-43ac-b2a7-e9f4e7396b32" name="Changes" comment="precios habitaciones">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/a4a9cf5c-378e-491e-a708-59b23ea91994/storage_v2/_src_/schema/refugio_del_sol.aJVh-Q.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="0cda1711-2e57-43ac-b2a7-e9f4e7396b32" name="Changes" comment="carpetas">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controlador/claseControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controlador/claseControlador.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,9 +25,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2g5YqqtzpPblzSGRAdUB7DGbGWe" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -63,7 +55,6 @@
       <option name="presentableId" value="Default" />
       <updated>1714989101993</updated>
       <workItem from="1714989103537" duration="658000" />
-      <workItem from="1715075563209" duration="2187000" />
     </task>
     <task id="LOCAL-00001" summary="precios habitaciones">
       <created>1714992016182</created>
@@ -72,12 +63,13 @@
       <option name="project" value="LOCAL" />
       <updated>1714992016182</updated>
     </task>
-    <task id="LOCAL-00002" summary="precios habitaciones">
-      <created>1714992224296</created>
+    <task id="LOCAL-00002" summary="carpetas">
+      <option name="closed" value="true" />
+      <created>1715078512297</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1714992224296</updated>
+      <updated>1715078512297</updated>
     </task>
     <option name="localTasksCounter" value="3" />
     <servers />
@@ -98,6 +90,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="precios habitaciones" />
-    <option name="LAST_COMMIT_MESSAGE" value="precios habitaciones" />
+    <MESSAGE value="carpetas" />
+    <option name="LAST_COMMIT_MESSAGE" value="carpetas" />
   </component>
 </project>
