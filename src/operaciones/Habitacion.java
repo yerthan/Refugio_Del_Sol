@@ -2,27 +2,29 @@ package operaciones;
 
 public class Habitacion {
 
-    int numero;
-    String tipo;
-    int capacidaD;
-    int id;
+    private int ID;
+    private int numero;
+    private String tipo;
+    private int capacidad;
+    private double precio;
 
-    public Habitacion(int numero, int capacidaD, int id, String tipo){
+    public Habitacion(int ID, int numero, String tipo, int capacidad, double precio) {
+        this.ID = ID;
         this.numero = numero;
-        this.capacidaD = capacidaD;
-        this.id = id;
+        this.tipo = tipo;
+        this.capacidad = capacidad;
+        this.precio = precio;
     }
 
     public Habitacion() {
     }
 
-
-    public String getTipo() {
-        return tipo;
+    public int getID() {
+        return ID;
     }
 
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
+    public void setID(int ID) {
+        this.ID = ID;
     }
 
     public int getNumero() {
@@ -33,28 +35,38 @@ public class Habitacion {
         this.numero = numero;
     }
 
-    public int getCapacidaD() {
-        return capacidaD;
+    public String getTipo() {
+        return tipo;
     }
 
-    public void setCapacidaD(int capacidaD) {
-        this.capacidaD = capacidaD;
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
     }
 
-    public int getId() {
-        return id;
+    public int getCapacidad() {
+        return capacidad;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setCapacidad(int capacidad) {
+        this.capacidad = capacidad;
+    }
+
+    public double getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(double precio) {
+        this.precio = precio;
     }
 
     @Override
     public String toString() {
         return "Habitacion{" +
-                "numero=" + numero +
-                ", capacidaD=" + capacidaD +
-                ", id=" + id +
+                "ID=" + ID +
+                ", numero=" + numero +
+                ", tipo='" + tipo + '\'' +
+                ", capacidad=" + capacidad +
+                ", precio=" + precio +
                 '}';
     }
 }
