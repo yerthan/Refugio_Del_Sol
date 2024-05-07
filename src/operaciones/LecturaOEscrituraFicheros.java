@@ -8,4 +8,8 @@ import java.io.IOException;
 public class LecturaOEscrituraFicheros {
 
 
+    public static void main(String[] args) {
+        System.out.println("jsjs");
+    }
+
 }
