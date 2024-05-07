@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0cda1711-2e57-43ac-b2a7-e9f4e7396b32" name="Changes" comment="Revisión clases">
-      <change afterPath="$PROJECT_DIR$/src/operaciones/I_Extras.java" afterDir="false" />
+    <list default="true" id="0cda1711-2e57-43ac-b2a7-e9f4e7396b32" name="Changes" comment="Extras DAO e interfaz">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/operaciones/ExtrasDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/operaciones/ExtrasDAO.java" afterDir="false" />
     </list>
@@ -67,7 +66,7 @@
       <updated>1714989101993</updated>
       <workItem from="1714989103537" duration="658000" />
       <workItem from="1715085249059" duration="23000" />
-      <workItem from="1715097110122" duration="3452000" />
+      <workItem from="1715097110122" duration="3585000" />
     </task>
     <task id="LOCAL-00001" summary="precios habitaciones">
       <created>1714992016182</created>
@@ -105,7 +104,21 @@
       <option name="project" value="LOCAL" />
       <updated>1715100247026</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Extras DAO e interfaz">
+      <created>1715100731998</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1715100731998</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Extras DAO e interfaz">
+      <created>1715100761177</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1715100761177</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -128,6 +141,7 @@
     <MESSAGE value="factura" />
     <MESSAGE value="factura2" />
     <MESSAGE value="Revisión clases" />
-    <option name="LAST_COMMIT_MESSAGE" value="Revisión clases" />
+    <MESSAGE value="Extras DAO e interfaz" />
+    <option name="LAST_COMMIT_MESSAGE" value="Extras DAO e interfaz" />
   </component>
 </project>

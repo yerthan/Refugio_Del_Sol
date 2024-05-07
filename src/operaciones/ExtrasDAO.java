@@ -21,7 +21,7 @@ public class ExtrasDAO {
         String resultado = "";
         Connection con = conectar();
         //nombre, precio, ID
-        String sql = "INSERT INTO Reserva VALUES (?, ?, ?)";
+        String sql = "INSERT INTO Extras VALUES (?, ?, ?)";
         PreparedStatement sentencia;
 
         try{
@@ -53,7 +53,7 @@ public class ExtrasDAO {
     }
 
 
-    public void update(Reserva reserva) {
+    public void update(Extras extra) {
 
     }
 
