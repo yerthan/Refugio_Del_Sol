@@ -1,3 +1,5 @@
+drop database refugio_del_sol;
+
 CREATE database IF NOT EXISTS refugio_del_sol;
 
 USE refugio_del_sol;
@@ -77,3 +79,5 @@ INSERT INTO Extras (Nombre, Precio) VALUES
 INSERT INTO Regimen (Tipo, Descripcion, Precio) VALUES ('todo incluido', 'desayuno, almuerzo, cena y bebidas', 50.00);
 INSERT INTO Regimen (Tipo, Descripcion, Precio) VALUES ('media pensión', 'desayuno y almuerzo', 25.00);
 INSERT INTO Regimen (Tipo, Descripcion, Precio) VALUES ('desayuno', 'desayuno', 10.00);
+
+

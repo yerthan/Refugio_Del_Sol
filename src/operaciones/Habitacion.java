@@ -3,11 +3,11 @@ package operaciones;
 public class Habitacion {
 
     int numero;
-    tipo tipo;
+    String tipo;
     int capacidaD;
     int id;
 
-    public Habitacion(int numero, int capacidaD, int id, tipo tipo){
+    public Habitacion(int numero, int capacidaD, int id, String tipo){
         this.numero = numero;
         this.capacidaD = capacidaD;
         this.id = id;
@@ -17,11 +17,11 @@ public class Habitacion {
     }
 
 
-    public operaciones.tipo getTipo() {
+    public String getTipo() {
         return tipo;
     }
 
-    public void setTipo(operaciones.tipo tipo) {
+    public void setTipo(String tipo) {
         this.tipo = tipo;
     }
 
