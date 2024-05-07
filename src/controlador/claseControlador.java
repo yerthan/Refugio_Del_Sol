@@ -4,7 +4,7 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 //
-//public class claseControlador {
+public class claseControlador {
 //    public String escribirInfo(String informacion){
 //        String resultado = "Reserva realizada";
 //        try {
@@ -31,4 +31,4 @@ import java.io.IOException;
 //        return resultado;
 //
 //    }
-//}
+}

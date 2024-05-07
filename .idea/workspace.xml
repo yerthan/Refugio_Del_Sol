@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0cda1711-2e57-43ac-b2a7-e9f4e7396b32" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/operaciones/Factura.java" afterDir="false" />
+    <list default="true" id="0cda1711-2e57-43ac-b2a7-e9f4e7396b32" name="Changes" comment="carpetas">
+      <change afterPath="$PROJECT_DIR$/src/operaciones/Extras.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/operaciones/Regimen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/operaciones/Reserva.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/operaciones/Reserva.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Base_de_Datos/bbdd.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/Base_de_Datos/bbdd.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +66,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714992016182</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="carpetas">
+      <option name="closed" value="true" />
+      <created>1715078512297</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1715078512297</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -84,7 +93,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="precios habitaciones" />
-    <MESSAGE value="Clases Habitacion, reserva y tipo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Clases Habitacion, reserva y tipo" />
+    <MESSAGE value="carpetas" />
+    <option name="LAST_COMMIT_MESSAGE" value="carpetas" />
   </component>
 </project>
