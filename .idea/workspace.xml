@@ -4,17 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0cda1711-2e57-43ac-b2a7-e9f4e7396b32" name="Changes" comment="Extras DAO e interfaz">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a4a9cf5c-378e-491e-a708-59b23ea91994.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a4a9cf5c-378e-491e-a708-59b23ea91994/storage_v2/_src_/schema/empresa.iUA1nw.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a4a9cf5c-378e-491e-a708-59b23ea91994/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a4a9cf5c-378e-491e-a708-59b23ea91994/storage_v2/_src_/schema/information_schema.FNRwLQ.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a4a9cf5c-378e-491e-a708-59b23ea91994/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a4a9cf5c-378e-491e-a708-59b23ea91994/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a4a9cf5c-378e-491e-a708-59b23ea91994/storage_v2/_src_/schema/refugio_del_sol.aJVh-Q.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a4a9cf5c-378e-491e-a708-59b23ea91994/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
+    <list default="true" id="0cda1711-2e57-43ac-b2a7-e9f4e7396b32" name="Changes" comment="Primer commit 08/05/2024">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/operaciones/HabitacionDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/operaciones/HabitacionDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/operaciones/LecturaOEscrituraFicheros.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/operaciones/LecturaOEscrituraFicheros.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +68,7 @@
       <workItem from="1714989103537" duration="658000" />
       <workItem from="1715085249059" duration="23000" />
       <workItem from="1715097110122" duration="5557000" />
-      <workItem from="1715156359423" duration="1390000" />
+      <workItem from="1715156359423" duration="3009000" />
     </task>
     <task id="LOCAL-00001" summary="precios habitaciones">
       <created>1714992016182</created>
@@ -141,7 +134,14 @@
       <option name="project" value="LOCAL" />
       <updated>1715103018876</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Primer commit 08/05/2024">
+      <created>1715157812382</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1715157812382</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -165,6 +165,7 @@
     <MESSAGE value="factura2" />
     <MESSAGE value="Revisión clases" />
     <MESSAGE value="Extras DAO e interfaz" />
-    <option name="LAST_COMMIT_MESSAGE" value="Extras DAO e interfaz" />
+    <MESSAGE value="Primer commit 08/05/2024" />
+    <option name="LAST_COMMIT_MESSAGE" value="Primer commit 08/05/2024" />
   </component>
 </project>

@@ -3,9 +3,9 @@ package operaciones;
 import java.sql.*;
 
 public class HabitacionDAO implements I_HabitacionDAO{
-
+    private static Connection con = null;
     private static Connection conectar() {
-        Connection con = null;
+
 
         String url = "jdbc:mysql://localhost/refugio_del_sol";
         try {
@@ -57,7 +57,16 @@ public class HabitacionDAO implements I_HabitacionDAO{
     @Override
     public Habitacion read(int id) {
         String consulta = "DELETE FROM Habitacion WHERE Numero = ?";
-        conectar();
+        try (PreparedStatement ps = con.prepareStatement(consulta)) {
+            ps.setInt(1, numemp);
+
+            int filasBorradas = ps.executeUpdate();
+
+            return filasBorradas > 0;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
 
         return null;
 
