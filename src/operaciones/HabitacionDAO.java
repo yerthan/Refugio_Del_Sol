@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class HabitacionDAO implements I_HabitacionDAO{
-
+ /*modelo*/
     private static Connection conectar() {
         Connection con = null;
 
