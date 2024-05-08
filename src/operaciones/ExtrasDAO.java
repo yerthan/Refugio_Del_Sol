@@ -48,7 +48,40 @@ public class ExtrasDAO {
 
 
 
-    public Extras read(int id) {
+    public Extras read(int id)  {
+        String consulta = "SELECT * FROM refugio_del_sol.Habitacion WHERE ID = ?";
+        Connection con = conectar();
+
+        try(PreparedStatement ps = con.prepareStatement((consulta))){
+            ps.setInt(1, id);
+            ResultSet rs = ps.executeQuery();
+
+            if(rs.next()){
+                Extras extras = new Extras();
+                extras.setNombre(rs.getString("Nombre"));
+                extras.setPrecio(rs.getDouble("Precio"));
+                extras.setID(rs.getInt("ID"));
+                return extras;
+            }else {
+                System.out.println("no existe el extra");
+                return null;
+            }
+
+
+        }catch (Exception e){
+            System.out.println(e);
+        }finally{
+            try {
+                if(con != null){
+                    con.close();
+                }
+            }catch (SQLException ex){
+                ex.printStackTrace();
+            }
+
+        }
+
+
         return null;
     }
 
