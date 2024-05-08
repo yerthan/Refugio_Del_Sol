@@ -4,23 +4,30 @@ import java.util.Date;
 
 public class Reserva {
 
-        Date fechaInicio;
-        Date fechaFin;
-        int habitacionId;
-        int extrasId;
-        int regimenId;
-        int ID;
+    private int ID;
+    private Date fechaInicio;
+    private Date fechaFin;
+    private int habitacionID;
+    private int extrasID;
+    private int regimenID;
 
-    public Reserva() {
-
-    }
-
-    public Reserva(Date fechaInicio, Date fechaFin, int habitacionId, int extrasId, int regimenId, int ID) {
+    public Reserva(int ID, Date fechaInicio, Date fechaFin, int habitacionID, int extrasID, int regimenID) {
+        this.ID = ID;
         this.fechaInicio = fechaInicio;
         this.fechaFin = fechaFin;
-        this.habitacionId = habitacionId;
-        this.extrasId = extrasId;
-        this.regimenId = regimenId;
+        this.habitacionID = habitacionID;
+        this.extrasID = extrasID;
+        this.regimenID = regimenID;
+    }
+
+    public Reserva() {
+    }
+
+    public int getID() {
+        return ID;
+    }
+
+    public void setID(int ID) {
         this.ID = ID;
     }
 
@@ -40,51 +47,39 @@ public class Reserva {
         this.fechaFin = fechaFin;
     }
 
-    public int getHabitacionId() {
-        return habitacionId;
+    public int getHabitacionID() {
+        return habitacionID;
     }
 
-    public void setHabitacionId(int habitacionId) {
-        this.habitacionId = habitacionId;
+    public void setHabitacionID(int habitacionID) {
+        this.habitacionID = habitacionID;
     }
 
-    public int getExtrasId() {
-        return extrasId;
+    public int getExtrasID() {
+        return extrasID;
     }
 
-    public void setExtrasId(int extrasId) {
-        this.extrasId = extrasId;
+    public void setExtrasID(int extrasID) {
+        this.extrasID = extrasID;
     }
 
-    public int getRegimenId() {
-        return regimenId;
+    public int getRegimenID() {
+        return regimenID;
     }
 
-    public void setRegimenId(int regimenId) {
-        this.regimenId = regimenId;
-    }
-
-    public int getID() {
-        return ID;
-    }
-
-    public void setID(int ID) {
-        this.ID = ID;
+    public void setRegimenID(int regimenID) {
+        this.regimenID = regimenID;
     }
 
     @Override
     public String toString() {
         return "Reserva{" +
-                "fechaInicio=" + fechaInicio +
+                "ID=" + ID +
+                ", fechaInicio=" + fechaInicio +
                 ", fechaFin=" + fechaFin +
-                ", habitacionId=" + habitacionId +
-                ", extrasId=" + extrasId +
-                ", regimenId=" + regimenId +
-                ", ID=" + ID +
+                ", habitacionID=" + habitacionID +
+                ", extrasID=" + extrasID +
+                ", regimenID=" + regimenID +
                 '}';
     }
-
-
-
-
 }
