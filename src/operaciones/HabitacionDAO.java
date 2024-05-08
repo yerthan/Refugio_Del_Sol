@@ -56,7 +56,12 @@ public class HabitacionDAO implements I_HabitacionDAO{
 
     @Override
     public Habitacion read(int id) {
+        String consulta = "DELETE FROM Habitacion WHERE Numero = ?";
+        conectar();
+
         return null;
+
+
     }
 
     @Override
