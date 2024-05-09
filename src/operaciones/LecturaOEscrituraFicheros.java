@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 public class LecturaOEscrituraFicheros {
 
+    /*
     public String escribirInfo(String info){
         String resultado = "Reserva Realizada";
         try {
@@ -15,7 +16,7 @@ public class LecturaOEscrituraFicheros {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-    }
+    }*/
 
 
     public ArrayList<String> leerUsuarioContrasena(){

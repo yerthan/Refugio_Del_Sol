@@ -51,7 +51,7 @@ public class ExtrasDAO {
 
 
     public Extras read(int id)  {
-        String consulta = "SELECT * FROM refugio_del_sol.extras WHERE ID = ?";
+        String consulta = "SELECT * FROM refugio_del_sol.Extras WHERE ID = ?";
         Connection con = conectar();
 
         try(PreparedStatement ps = con.prepareStatement((consulta))){

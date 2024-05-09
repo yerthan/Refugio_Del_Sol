@@ -55,13 +55,49 @@ public class RegimenDAO  implements I_RegimenDAO{
     public Regimen read(int id) {
 
         String consulta = "SELECT * FROM refugio_del_sol.Regimen";
+        Connection con = conectar();
 
+        try(PreparedStatement ps = con.prepareStatement(consulta)){
+
+            ps.setInt(1, id);
+            ResultSet rs = ps.executeQuery();
+
+            if(rs.next()){
+                Regimen r = new Regimen();
+                r.setID(rs.getInt("ID"));
+                r.setTipo(rs.getString("Tipo"));
+                r.setDescripcion(rs.getString("Descripcion"));
+                r.setPrecio(rs.getDouble("Precio"));
+
+                return r;
+            }else{
+                System.out.println("No existe el regimen");
+                return null;
+            }
+
+        }catch (Exception e){
+            System.out.println(e);
+        }finally {
+            try {
+                if(con != null){
+                    con.close();
+                }
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+        }
+        System.out.println("error");
         return null;
+
     }
 
     @Override
-    public void update(Regimen regimen) {
+    public void update(Regimen regimen, double precio) {
 
+        List<Regimen> regimens = listarRegimen();
+        Connection con = conectar();
+
+        String consulta = "UPDATE refugio_del_sol.Regimen"
     }
 
     @Override
