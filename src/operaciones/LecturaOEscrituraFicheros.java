@@ -5,21 +5,21 @@ import java.util.ArrayList;
 
 public class LecturaOEscrituraFicheros {
 
-    /*
-    public String escribirInfo(String info){
-        String resultado = "Reserva Realizada";
-        try {
-            BufferedWriter bw = new BufferedWriter(new FileWriter("reserva.txt"));
-            if(info != null){
-                info=info.substring(0, info.length()-1);
-            }
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }*/
+//    public String escribirInfo(String info){
+//        String resultado = "Reserva Realizada";
+//        try {
+//            BufferedWriter bw = new BufferedWriter(new FileWriter("reserva.txt"));
+//            if(info != null){
+//                info=info.substring(0, info.length()-1);
+//                return info;
+//            }
+//        } catch (IOException e) {
+//            throw new RuntimeException(e);
+//        }
+//    }
 
 
-    public ArrayList<String> leerUsuarioContrasena(){
+    public static ArrayList<String> leerUsuarioContrasena(){
 
         FileWriter fw = null;
         BufferedWriter bW = null;
@@ -53,8 +53,5 @@ public class LecturaOEscrituraFicheros {
     }
 
 
-    public static void main(String[] args) {
-        System.out.println("jsjs");
-    }
 
 }

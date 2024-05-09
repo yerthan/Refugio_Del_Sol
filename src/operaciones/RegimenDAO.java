@@ -11,7 +11,9 @@ public class RegimenDAO  implements I_RegimenDAO{
 
         String url = "jdbc:mysql://localhost/refugio_del_sol";
         try {
-            con = DriverManager.getConnection(url, "root", "root");
+            ArrayList<String> datos = LecturaOEscrituraFicheros.leerUsuarioContrasena();
+
+            con = DriverManager.getConnection(url, datos.getFirst(), datos.getLast());
         } catch (SQLException ex) {
             System.out.println("Error al conectar a la BBDD.");
         }
