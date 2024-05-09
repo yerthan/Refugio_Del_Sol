@@ -60,9 +60,10 @@ public class ExtrasDAO {
 
             if(rs.next()){
                 Extras extras = new Extras();
+                extras.setID(rs.getInt("ID"));
                 extras.setNombre(rs.getString("Nombre"));
                 extras.setPrecio(rs.getDouble("Precio"));
-                extras.setID(rs.getInt("ID"));
+
                 return extras;
             }else {
                 System.out.println("no existe el extra");
@@ -88,12 +89,40 @@ public class ExtrasDAO {
 
     public void update(Extras extra, double precio) {
 
-        List<Extras> extras =
+        List<Extras> extras = new ArrayList<>();
+        Connection con = conectar();
 
+        String consulta = "UPDATE refugio_del_sol.Extras SET Extras.Precio = ? WHERE Extras.ID = ?";
+
+        if(extras.contains(extra)){
+            try(PreparedStatement ps = con.prepareStatement(consulta)) {
+                ps.setDouble(3, precio);
+
+                int filasActualizadas = ps.executeUpdate();
+                System.out.println("Extras actualizados");
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+        }else{
+            System.out.println("no existe el extra");
+        }
     }
 
 
-    public void delete(int id) {
+    public void delete(int id){
+
+        String consulta = "DELETE FROM refugio_de_sol.Extras WHERE ID = ?";
+        Connection con = conectar();
+
+        try(PreparedStatement ps = con.prepareStatement(consulta)) {
+            ps.setInt(1, id);
+            int filasBorradas = ps.executeUpdate();
+            System.out.println("filasBorradas = " + filasBorradas);
+        }catch (Exception e){
+            System.out.println(e);
+            System.out.println("Error al borrar el Extra");
+        }
+
 
     }
 
@@ -110,16 +139,14 @@ public class ExtrasDAO {
 
                 Extras extra = new Extras();
                 extra.setID(rs.getInt("ID"));
-                habitacion.setNumero(rs.getInt("Numero"));
-                habitacion.setTipo(rs.getString("Tipo"));
-                habitacion.setCapacidad(rs.getInt("Capacidad"));
-                habitacion.setPrecio(rs.getDouble("Precio"));
+                extra.setNombre(rs.getString("Nombre"));
+                extra.setPrecio(rs.getDouble("Precio"));
 
+                extras.add(extra);
 
-                habitaciones.add(habitacion);
 
             }
-            return habitaciones;
+            return extras;
 
         } catch (SQLException e) {
             throw new RuntimeException(e);
