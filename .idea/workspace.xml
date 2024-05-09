@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0cda1711-2e57-43ac-b2a7-e9f4e7396b32" name="Changes" comment="porfa">
+    <list default="true" id="0cda1711-2e57-43ac-b2a7-e9f4e7396b32" name="Changes" comment="porfa funciona">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/operaciones/I_RegimenDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/operaciones/I_RegimenDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/operaciones/RegimenDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/operaciones/RegimenDAO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -77,7 +76,7 @@
       <workItem from="1715097110122" duration="5557000" />
       <workItem from="1715156359423" duration="3072000" />
       <workItem from="1715161900695" duration="2441000" />
-      <workItem from="1715239444459" duration="3805000" />
+      <workItem from="1715239444459" duration="4765000" />
     </task>
     <task id="LOCAL-00001" summary="precios habitaciones">
       <created>1714992016182</created>
@@ -199,7 +198,14 @@
       <option name="project" value="LOCAL" />
       <updated>1715242815988</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="porfa funciona">
+      <created>1715243279411</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1715243279411</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -228,6 +234,7 @@
     <MESSAGE value="ExtrasDAO" />
     <MESSAGE value="leerfichero" />
     <MESSAGE value="porfa" />
-    <option name="LAST_COMMIT_MESSAGE" value="porfa" />
+    <MESSAGE value="porfa funciona" />
+    <option name="LAST_COMMIT_MESSAGE" value="porfa funciona" />
   </component>
 </project>
