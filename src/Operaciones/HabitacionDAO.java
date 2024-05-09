@@ -1,4 +1,4 @@
-package operaciones;
+package Operaciones;
 
 import java.sql.*;
 import java.util.ArrayList;

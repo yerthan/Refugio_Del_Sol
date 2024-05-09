@@ -1,8 +1,5 @@
-package controlador;
+package Controlador;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
 //
 public class claseControlador {
 //    public String escribirInfo(String informacion){

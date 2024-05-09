@@ -1,4 +1,4 @@
-package operaciones;
+package Operaciones;
 
 public interface I_ReservaDAO {
     public String create (Reserva reserva);

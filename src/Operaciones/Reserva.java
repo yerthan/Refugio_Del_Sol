@@ -1,4 +1,4 @@
-package operaciones;
+package Operaciones;
 
 import java.util.Date;
 
