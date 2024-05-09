@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0cda1711-2e57-43ac-b2a7-e9f4e7396b32" name="Changes" comment="No tengo ni idea de seguir">
+    <list default="true" id="0cda1711-2e57-43ac-b2a7-e9f4e7396b32" name="Changes" comment="ExtrasDAO">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/operaciones/ExtrasDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/operaciones/ExtrasDAO.java" afterDir="false" />
     </list>
@@ -68,7 +68,8 @@
       <workItem from="1715085249059" duration="23000" />
       <workItem from="1715097110122" duration="5557000" />
       <workItem from="1715156359423" duration="3072000" />
-      <workItem from="1715161900695" duration="2409000" />
+      <workItem from="1715161900695" duration="2441000" />
+      <workItem from="1715239444459" duration="924000" />
     </task>
     <task id="LOCAL-00001" summary="precios habitaciones">
       <created>1714992016182</created>
@@ -155,7 +156,14 @@
       <option name="project" value="LOCAL" />
       <updated>1715164201014</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="ExtrasDAO">
+      <created>1715165074749</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1715165074749</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,6 +189,7 @@
     <MESSAGE value="Extras DAO e interfaz" />
     <MESSAGE value="Primer commit 08/05/2024" />
     <MESSAGE value="No tengo ni idea de seguir" />
-    <option name="LAST_COMMIT_MESSAGE" value="No tengo ni idea de seguir" />
+    <MESSAGE value="ExtrasDAO" />
+    <option name="LAST_COMMIT_MESSAGE" value="ExtrasDAO" />
   </component>
 </project>
