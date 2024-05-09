@@ -13,7 +13,7 @@ public class ExtrasDAO {
         try {
             ArrayList<String> datos = LecturaOEscrituraFicheros.leerUsuarioContrasena();
 
-            con = DriverManager.getConnection(url, datos.getFirst(), datos.getLast());
+            con = DriverManager.getConnection(url, datos.get(0), datos.get(1));
 
         } catch (SQLException ex) {
             System.out.println("Error al conectar a la BBDD.");
