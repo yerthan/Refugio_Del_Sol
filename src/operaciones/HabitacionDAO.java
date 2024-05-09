@@ -127,7 +127,7 @@ public class HabitacionDAO implements I_HabitacionDAO{
         List<Habitacion> habitaciones = listarHabitaciones();
         Connection con = conectar();
 
-        String consulta = "UPDATE refugio_del_sol.Habitacion SET oficina = ? WHERE oficina = ?";
+        String consulta = "UPDATE refugio_del_sol.Habitacion SET Habitacion.Precio = ? WHERE Habitacion.ID = ?";
 
         if (habitaciones.contains(habitacion)){
             try (PreparedStatement ps = con.prepareStatement(consulta)) {
