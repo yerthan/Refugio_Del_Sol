@@ -92,21 +92,45 @@ public class RegimenDAO  implements I_RegimenDAO{
     }
 
     @Override
-    public void update(Regimen regimen) {
-
-    }
-
-    @Override
     public void update(Regimen regimen, double precio) {
 
         List<Regimen> regimens = listarRegimen();
         Connection con = conectar();
 
-        String consulta = "UPDATE refugio_del_sol.Regimen"
+        String consulta = "UPDATE refugio_del_sol.Regimen SET Regimen.Precio";
+
+        if(regimens.contains(regimen)){
+            try(PreparedStatement ps = con.prepareStatement(consulta)) {
+                ps.setDouble(4, precio);
+                int filasActualizadas = ps.executeUpdate();
+                System.out.println("Regimen actualizado");
+            }catch (Exception e){
+                System.out.println(e);
+            }
+        }else{
+            System.out.println("No existe el regimen ");
+        }
     }
 
     @Override
     public void delete(int id) {
+
+        String consulta = "DELETE FROM refugio_del_sol.Regimen WHERE ID = ?";
+
+        Connection con = conectar();
+
+        try (PreparedStatement ps = con.prepareStatement(consulta))  {
+
+            ps.setInt(1, id);
+
+            int filasBorradas = ps.executeUpdate();
+            System.out.println("filasBorradas : " + filasBorradas);
+
+        }catch (Exception e){
+            System.out.println(e);
+            System.out.println("Error al borrar Regimen");
+        }
+
 
     }
 
