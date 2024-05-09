@@ -5055,39 +5055,43 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <DasType>int|0s</DasType>
       <Position>6</Position>
     </column>
-    <foreign-key id="1140" parent="380" name="reserva_ibfk_1">
+    <column id="1140" parent="380" name="PrecioTotal">
+      <DasType>decimal(5,2 digit)|0s</DasType>
+      <Position>7</Position>
+    </column>
+    <foreign-key id="1141" parent="380" name="reserva_ibfk_1">
       <ColNames>HabitacionID</ColNames>
       <RefColNames>ID</RefColNames>
       <RefTableName>habitacion</RefTableName>
     </foreign-key>
-    <foreign-key id="1141" parent="380" name="reserva_ibfk_2">
+    <foreign-key id="1142" parent="380" name="reserva_ibfk_2">
       <ColNames>ExtrasID</ColNames>
       <RefColNames>ID</RefColNames>
       <RefTableName>extras</RefTableName>
     </foreign-key>
-    <foreign-key id="1142" parent="380" name="reserva_ibfk_3">
+    <foreign-key id="1143" parent="380" name="reserva_ibfk_3">
       <ColNames>RegimenID</ColNames>
       <RefColNames>ID</RefColNames>
       <RefTableName>regimen</RefTableName>
     </foreign-key>
-    <index id="1143" parent="380" name="PRIMARY">
+    <index id="1144" parent="380" name="PRIMARY">
       <ColNames>ID</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="1144" parent="380" name="HabitacionID">
+    <index id="1145" parent="380" name="HabitacionID">
       <ColNames>HabitacionID</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="1145" parent="380" name="ExtrasID">
+    <index id="1146" parent="380" name="ExtrasID">
       <ColNames>ExtrasID</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="1146" parent="380" name="RegimenID">
+    <index id="1147" parent="380" name="RegimenID">
       <ColNames>RegimenID</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="1147" parent="380" name="PRIMARY">
+    <key id="1148" parent="380" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>

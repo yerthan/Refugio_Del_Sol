@@ -1,6 +1,8 @@
 package operaciones;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class RegimenDAO  implements I_RegimenDAO{
 
@@ -51,6 +53,9 @@ public class RegimenDAO  implements I_RegimenDAO{
 
     @Override
     public Regimen read(int id) {
+
+        String consulta = "SELECT * FROM refugio_del_sol.Regimen";
+
         return null;
     }
 
@@ -62,5 +67,32 @@ public class RegimenDAO  implements I_RegimenDAO{
     @Override
     public void delete(int id) {
 
+    }
+
+
+    public List<Regimen> listarRegimen(){
+        List<Regimen> regimens = new ArrayList<>();
+        String consulta = "SELECT * FROM refugio_del_sol.Regimen";
+        Connection con = conectar();
+
+        try (PreparedStatement ps = con.prepareStatement(consulta)){
+            ResultSet rs = ps.executeQuery();
+
+            while (rs.next()){
+
+                Regimen regimen = new Regimen();
+                regimen.setID(rs.getInt("ID"));
+                regimen.setTipo(rs.getString("Tipo"));
+                regimen.setDescripcion(rs.getString("Descripcion"));
+                regimen.setPrecio(rs.getDouble("Precio"));
+
+                regimens.add(regimen);
+
+            }
+            return regimens;
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

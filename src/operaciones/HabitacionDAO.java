@@ -85,7 +85,7 @@ public class HabitacionDAO implements I_HabitacionDAO{
 
     @Override
     public Habitacion read(int id) {
-        String consulta = "SELECT * FROM refugio_del_sol.Habitacion WHERE ID = ?";
+        String consulta = "SELECT * FROM refugio_del_sol.habitacion WHERE ID = ?";
         Connection con = conectar();
 
         try (PreparedStatement ps = con.prepareStatement(consulta)){
