@@ -92,6 +92,11 @@ public class RegimenDAO  implements I_RegimenDAO{
     }
 
     @Override
+    public void update(Regimen regimen) {
+
+    }
+
+    @Override
     public void update(Regimen regimen, double precio) {
 
         List<Regimen> regimens = listarRegimen();

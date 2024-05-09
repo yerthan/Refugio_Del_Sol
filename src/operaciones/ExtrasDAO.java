@@ -143,8 +143,6 @@ public class ExtrasDAO {
                 extra.setPrecio(rs.getDouble("Precio"));
 
                 extras.add(extra);
-
-
             }
             return extras;
 
