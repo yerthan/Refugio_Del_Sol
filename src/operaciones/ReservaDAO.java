@@ -36,6 +36,7 @@ public class ReservaDAO implements I_ReservaDAO{
                 reserva.setHabitacionID(rs.getInt("HabitacionID"));
                 reserva.setExtrasID(rs.getInt("ExtrasID"));
                 reserva.setRegimenID(rs.getInt("RegimenID"));
+                reserva.setPrecioTotal(rs.getDouble("PrecioTotal"));
 
 
                 reservas.add(reserva);
@@ -62,7 +63,7 @@ public class ReservaDAO implements I_ReservaDAO{
         String resultado = "";
         Connection con = conectar();
                                                     //ID, fechaInicio, fechaFin, habitacionID, extrasID, regimenID
-        String sql = "INSERT INTO refugio_del_sol.Reserva VALUES (?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO refugio_del_sol.Reserva VALUES (?, ?, ?, ?, ?, ?, ?)";
         PreparedStatement sentencia;
 
         try{
@@ -73,6 +74,7 @@ public class ReservaDAO implements I_ReservaDAO{
             sentencia.setInt(4, reserva.getHabitacionID());
             sentencia.setInt(5, reserva.getExtrasID());
             sentencia.setInt(6, reserva.getRegimenID());
+            sentencia.setDouble(7, reserva.getPrecioTotal());
             return "Creacion de Reserva correcta";
 
         } catch (SQLException ex){
@@ -108,6 +110,7 @@ public class ReservaDAO implements I_ReservaDAO{
                 reserva.setHabitacionID(rs.getInt("HabitacionID"));
                 reserva.setExtrasID(rs.getInt("ExtrasID"));
                 reserva.setRegimenID(rs.getInt("RegimenID"));
+                reserva.setPrecioTotal(rs.getDouble("PrecioTotal"));
                 return reserva;
             } else {
                 System.out.println("No existe esa reserva");
@@ -132,11 +135,38 @@ public class ReservaDAO implements I_ReservaDAO{
 
     @Override
     public void update(Reserva reserva, double precio) {
+        List<Reserva> reservas = listarReservas();
+        Connection con = conectar();
 
+        String consulta = "UPDATE refugio_del_sol.Reserva SET Reserva.Precio = ? WHERE ID = ?";
+
+        if (reservas.contains(reserva)){
+            try(PreparedStatement ps = con.prepareStatement(consulta)){
+                int filasActualizadas = ps.executeUpdate();
+                System.out.println("Reserva actualizada");
+            } catch (SQLException e){
+                e.printStackTrace();
+            }
+        } else {
+            System.out.println("No existe la reserva");
+        }
     }
 
     @Override
     public void delete(int id) {
+        String consulta = "DELETE FROM refugio_del_sol.Reserva WHERE ID = ?";
+        Connection con = conectar();
 
+        try (PreparedStatement ps = con.prepareStatement(consulta)) {
+            ps.setInt(1, id);
+
+            int filasBorradas = ps.executeUpdate();
+            System.out.println("filasBorradas: " + filasBorradas);
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            System.out.println("Error al borrar reserva");
+
+        }
     }
 }

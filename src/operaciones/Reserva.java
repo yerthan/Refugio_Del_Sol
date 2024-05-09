@@ -10,14 +10,16 @@ public class Reserva {
     private int habitacionID;
     private int extrasID;
     private int regimenID;
+    private double precioTotal;
 
-    public Reserva(int ID, Date fechaInicio, Date fechaFin, int habitacionID, int extrasID, int regimenID) {
+    public Reserva(int ID, Date fechaInicio, Date fechaFin, int habitacionID, int extrasID, int regimenID, double precioTotal) {
         this.ID = ID;
         this.fechaInicio = fechaInicio;
         this.fechaFin = fechaFin;
         this.habitacionID = habitacionID;
         this.extrasID = extrasID;
         this.regimenID = regimenID;
+        this.precioTotal = precioTotal;
     }
 
     public Reserva() {
@@ -71,6 +73,14 @@ public class Reserva {
         this.regimenID = regimenID;
     }
 
+    public double getPrecioTotal() {
+        return precioTotal;
+    }
+
+    public void setPrecioTotal(double precioTotal) {
+        this.precioTotal = precioTotal;
+    }
+
     @Override
     public String toString() {
         return "Reserva{" +
@@ -80,6 +90,7 @@ public class Reserva {
                 ", habitacionID=" + habitacionID +
                 ", extrasID=" + extrasID +
                 ", regimenID=" + regimenID +
+                ", precioTotal=" + precioTotal +
                 '}';
     }
 }

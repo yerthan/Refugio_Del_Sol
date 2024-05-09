@@ -1,4 +1,3 @@
-drop database refugio_del_sol;
 
 CREATE database IF NOT EXISTS refugio_del_sol;
 
@@ -32,6 +31,7 @@ CREATE TABLE Reserva (
                          HabitacionID INT,
                          ExtrasID INT,
                          RegimenID INT,
+                         PrecioTotal DECIMAL(5,2),
                          FOREIGN KEY (HabitacionID) REFERENCES Habitacion(ID),
                          FOREIGN KEY (ExtrasID) REFERENCES Extras(ID),
                          FOREIGN KEY (RegimenID) REFERENCES Regimen(ID)
