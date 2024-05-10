@@ -60,6 +60,35 @@ public class ReservaDAO implements I_ReservaDAO{
         ExtrasDAO extrasDAO = new ExtrasDAO();
 
         //necesitamos los datos recogidos en fichero para rellenar la bbdd!!!
+        List<Habitacion> habitaciones= habitacionDAO.listarHabitaciones();
+        List<Regimen> regimens = regimenDAO.listarRegimen();
+        List<Extras> extras = extrasDAO.listarExtras();
+
+        ArrayList<String> datosReserva = Controlador.claseControlador.leerReserva();
+
+        if (datosReserva!= null){
+            for (Habitacion h : habitaciones){
+                if (h.getTipo().equals(datosReserva.get(0))
+                    && String.valueOf(h.getCapacidad()).equals(datosReserva.get(1))){
+                    reserva.setHabitacionID(h.getID());
+                }
+            }
+
+            for (Regimen r : regimens){
+                if (r.getTipo().equals(datosReserva.get(2))){
+                    reserva.setRegimenID(r.getID());
+                }
+            }
+
+            for (Extras e : extras){
+                if (e.getNombre().equals(datosReserva.get(3))){
+                    reserva.setExtrasID(e.getID());
+                }
+            }
+
+        } else{
+            System.out.println("error");
+        }
 
 
         String resultado = "";

@@ -37,7 +37,7 @@ public class claseControlador {
     }
     */
 
-    public ArrayList<String> leerReserva(){
+    public static ArrayList<String> leerReserva(){
 
         String linea = "";
         String archivo = "";
@@ -66,6 +66,8 @@ public class claseControlador {
         return null;
 
     }
+
+
 
 
 
