@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0cda1711-2e57-43ac-b2a7-e9f4e7396b32" name="Changes" comment="porfa funciona">
+    <list default="true" id="0cda1711-2e57-43ac-b2a7-e9f4e7396b32" name="Changes" comment="get">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/bde25ef2-3da1-4971-86cb-26e9e3eaaf3e.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/operaciones/RegimenDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/operaciones/RegimenDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controlador/claseControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controlador/claseControlador.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +77,8 @@
       <workItem from="1715097110122" duration="5557000" />
       <workItem from="1715156359423" duration="3072000" />
       <workItem from="1715161900695" duration="2441000" />
-      <workItem from="1715239444459" duration="4765000" />
+      <workItem from="1715239444459" duration="5378000" />
+      <workItem from="1715329407523" duration="1197000" />
     </task>
     <task id="LOCAL-00001" summary="precios habitaciones">
       <created>1714992016182</created>
@@ -205,7 +207,14 @@
       <option name="project" value="LOCAL" />
       <updated>1715243279411</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="get">
+      <created>1715244236863</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1715244236863</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -235,6 +244,7 @@
     <MESSAGE value="leerfichero" />
     <MESSAGE value="porfa" />
     <MESSAGE value="porfa funciona" />
-    <option name="LAST_COMMIT_MESSAGE" value="porfa funciona" />
+    <MESSAGE value="get" />
+    <option name="LAST_COMMIT_MESSAGE" value="get" />
   </component>
 </project>
