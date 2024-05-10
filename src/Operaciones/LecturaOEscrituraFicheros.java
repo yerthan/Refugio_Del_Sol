@@ -5,19 +5,25 @@ import java.util.ArrayList;
 
 public class LecturaOEscrituraFicheros {
 
-    public static void escribirInfo(ArrayList<String> info){
-        String resultado = "Reserva Realizada";
-        try {
-            BufferedWriter bw = new BufferedWriter(new FileWriter("./src/ArchivoDeTextos/reserva.txt"));
-            if(info != null){
-                bw.write(info.toString());
+    public static void escribirInfo(ArrayList<String> informacion) throws IOException {
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter("./src/ArchivoDeTextos/reserva.txt"))) {
 
+            if (informacion != null && !informacion.isEmpty()) {
+                // Write each element of the ArrayList on a separate line
+                for (String line : informacion) {
+                    bw.write(line + "\n");
+                }
+            } else {
+                // Handle the case where informacion is null or empty (optional)
+                 bw.write("No hay informacion adicional disponible.\n");  // Example handling
             }
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            // Log the exception to a file or console for debugging
+            System.err.println("Error writing to file: " + e.getMessage());
+            throw e; // Re-throw the exception for proper error handling
         }
-
     }
+
 
 
     public static ArrayList<String> leerUsuarioContrasena(){

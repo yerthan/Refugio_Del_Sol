@@ -31,6 +31,7 @@ public class Vista extends JFrame {
     private static final long serialVersionUID = 1L;
     private JPanel contentPane;
     private ArrayList<String> infoEnviar = new ArrayList<>();
+    JSpinner spinner = new JSpinner();
 
     /**
      * Launch the application.
@@ -115,7 +116,7 @@ public class Vista extends JFrame {
         gbc_lblEligeElNmero.gridy = 5;
         contentPane.add(numCamas, gbc_lblEligeElNmero);
 
-        JSpinner spinner = new JSpinner();
+
         GridBagConstraints gbc_spinner = new GridBagConstraints();
         gbc_spinner.fill = GridBagConstraints.BOTH;
         gbc_spinner.insets = new Insets(0, 0, 5, 5);
@@ -125,7 +126,6 @@ public class Vista extends JFrame {
         SpinnerListModel listaCamas = new SpinnerListModel(camas);
         spinner = new JSpinner(listaCamas);
         contentPane.add(spinner, gbc_spinner);
-        infoEnviar.add(String.valueOf(spinner.getValue()));
 
         JLabel regimen = new JLabel("Elige tu regimen");
         regimen.setFont(new Font("Tahoma", Font.PLAIN, 12));
@@ -145,7 +145,6 @@ public class Vista extends JFrame {
         regimenes.addItem("Media pensión");
         regimenes.addItem("Desayuno");
         regimenes.setSelectedIndex(0);
-        infoEnviar.add(String.valueOf(regimenes.getSelectedIndex()));
         contentPane.add(regimenes, gbc_comboBox);
 
         JButton aceptar = new JButton("Aceptar");
@@ -160,8 +159,12 @@ public class Vista extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 infoEnviar.clear();
                 if(Comprobar()) {
+                    infoEnviar.add(String.valueOf(spinner.getModel().getValue()));
+                    infoEnviar.add(String.valueOf(regimenes.getSelectedItem()));
+
                     Extra ex = new Extra(contentPane, true, infoEnviar);
                     ex.setVisible(true);
+
 
                 }else {
                     JOptionPane.showMessageDialog(contentPane, "Revise que está todo completado.");

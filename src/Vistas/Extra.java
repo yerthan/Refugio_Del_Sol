@@ -10,6 +10,7 @@ import java.awt.Font;
 import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class Extra extends JDialog {
@@ -132,7 +133,11 @@ public class Extra extends JDialog {
                 JOptionPane.showMessageDialog(contentPane, "Debes elegir un extra o marcar ninguno");
             }
 
-            LecturaOEscrituraFicheros.escribirInfo(infoEnviar);
+            try {
+                LecturaOEscrituraFicheros.escribirInfo(infoEnviar);
+            } catch (IOException ex) {
+                throw new RuntimeException(ex);
+            }
 
         });
         contentPane.add(aceptar, gbc_btnNewButton);
