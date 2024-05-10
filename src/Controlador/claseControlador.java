@@ -1,17 +1,21 @@
 package Controlador;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.util.ArrayList;
+
 //
 public class claseControlador {
-    public String escribirInfo(String informacion){
+    public String escribirInfo(ArrayList<String> arrayList){
         String resultado = "Reserva realizada";
         try {
-            BufferedWriter bw=new BufferedWriter(new FileWriter("infoReserva.txt"));
-            if(informacion != null){
-                informacion = informacion.substring(0, informacion.length() - 1);
+            BufferedWriter bw=new BufferedWriter(new FileWriter("./src/ArchivoDeTextos/infoReserva.txt"));
+            if(arrayList != null){
+                arrayList = arrayList.substring(0, informacion.length() - 1);
 
             }
 
-        }catch (IOException e){
+        }catch (Exception e){
             System.out.println("error");
             System.out.println(e);
         }
