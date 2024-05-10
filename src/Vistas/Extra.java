@@ -1,8 +1,5 @@
 package Vistas;
 
-import java.awt.EventQueue;
-
-import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import java.awt.GridBagLayout;
@@ -12,6 +9,7 @@ import java.awt.Font;
 import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 import javax.swing.JRadioButton;
 import javax.swing.JButton;
@@ -22,16 +20,13 @@ public class Extra extends JDialog {
     private static final long serialVersionUID = 1L;
     private static JPanel contentPane;
     private static boolean boleano;
-    private static String a = "";
+    private static ArrayList<String> info = new ArrayList<>();
 
 
     /**
      * Create the frame.
      */
-    public Extra(JPanel contentPane, boolean boleano, String a) {
-        this.contentPane = contentPane;
-        this.boleano = boleano;
-        this.a = a;
+    public Extra(JPanel contentPane, boolean boleano, ArrayList<String> infoEnviar) {
 
         setBounds(100, 100, 500, 400);
         contentPane = new JPanel();
@@ -113,6 +108,7 @@ public class Extra extends JDialog {
 
         sinExtra.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
+                info = infoEnviar;
                 if(sinExtra.isSelected()) {
                     cuna.setEnabled(false);
                     gimansio.setEnabled(false);

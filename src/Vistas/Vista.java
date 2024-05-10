@@ -22,12 +22,13 @@ import javax.swing.JSpinner;
 import javax.swing.JComboBox;
 import java.awt.Font;
 import java.awt.Color;
+import java.util.ArrayList;
 
 public class Vista extends JFrame {
 
     private static final long serialVersionUID = 1L;
     private JPanel contentPane;
-    private String infoEnviar = "";
+    private ArrayList<String> infoEnviar = new ArrayList<>();
 
     /**
      * Launch the application.
@@ -153,6 +154,7 @@ public class Vista extends JFrame {
 
             @Override
             public void actionPerformed(ActionEvent e) {
+                infoEnviar.clear();
                 if(Comprobar()) {
                     Extra ex = new Extra(contentPane, true, infoEnviar);
                     ex.setVisible(true);
@@ -164,9 +166,9 @@ public class Vista extends JFrame {
             private boolean Comprobar () {
                 boolean esValido=true;
                 if (suite.isSelected()) {
-                    infoEnviar += "Suite,";
+                    infoEnviar.add("Suite");
                 } else if (turista.isSelected()) {
-                    infoEnviar += "Turista,";
+                    infoEnviar.add("Turista");
                 } else {
                     JOptionPane.showMessageDialog(contentPane, "Debes elegir una habitación");
                     esValido=false;
@@ -176,6 +178,5 @@ public class Vista extends JFrame {
         });
         contentPane.add(aceptar, gbc_btnNewButton);
     }
-
 }
 
