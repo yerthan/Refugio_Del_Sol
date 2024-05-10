@@ -103,56 +103,38 @@ public class Extra extends JDialog {
         gbc_btnNewButton.gridy = 9;
 
 
-
-
-
-//        sinExtra.addActionListener(new ActionListener() {
-//            public void actionPerformed(ActionEvent e) {
-//                info = infoEnviar;
-//                if(sinExtra.isSelected()) {
-//                    cuna.setEnabled(false);
-//                    gimansio.setEnabled(false);
-//                    parking.setEnabled(false);
-//                    cama.setEnabled(false);
-//                } else {
-//                    cuna.setEnabled(true);
-//                    gimansio.setEnabled(true);
-//                    parking.setEnabled(true);
-//                    cama.setEnabled(true);
-//                }
-//            }
-//        });
-
-
-
-
-        aceptar.addActionListener(new ActionListener() {
-
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                if (cuna.isSelected()) {
-                    infoEnviar.add("Cuna");
-                } else if (gimansio.isSelected()) {
-                    infoEnviar.add("Gimnasio");
-                } else if (parking.isSelected()){
-                    infoEnviar.add("Parking");
-                } else if (cama.isSelected()){
-                    infoEnviar.add("Cama supletoria");
-                } else if (sinExtra.isSelected()){
-                    infoEnviar.add("Null");
-                } else {
-                    JOptionPane.showMessageDialog(contentPane, "Debes elegir un extra o marcar ninguno");
-
-                }
-
-                LecturaOEscrituraFicheros.escribirInfo(infoEnviar);
-
-
+        sinExtra.addActionListener(e -> {
+            if (sinExtra.isSelected()) {
+                cuna.setEnabled(false);
+                gimansio.setEnabled(false);
+                parking.setEnabled(false);
+                cama.setEnabled(false);
+            } else {
+                cuna.setEnabled(true);
+                gimansio.setEnabled(true);
+                parking.setEnabled(true);
+                cama.setEnabled(true);
             }
+        });
+
+        aceptar.addActionListener(e -> {
+            if (cuna.isSelected()) {
+                infoEnviar.add("Cuna");
+            } else if (gimansio.isSelected()) {
+                infoEnviar.add("Gimnasio");
+            } else if (parking.isSelected()){
+                infoEnviar.add("Parking");
+            } else if (cama.isSelected()){
+                infoEnviar.add("Cama supletoria");
+            } else if (sinExtra.isSelected()){
+                infoEnviar.add("Null");
+            } else {
+                JOptionPane.showMessageDialog(contentPane, "Debes elegir un extra o marcar ninguno");
+            }
+
+            LecturaOEscrituraFicheros.escribirInfo(infoEnviar);
 
         });
         contentPane.add(aceptar, gbc_btnNewButton);
-
     }
-
 }
