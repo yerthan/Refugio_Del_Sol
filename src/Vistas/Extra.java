@@ -1,19 +1,16 @@
 package Vistas;
 
-import javax.swing.JPanel;
+import Operaciones.LecturaOEscrituraFicheros;
+
+import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.GridBagLayout;
-import javax.swing.JLabel;
 import java.awt.GridBagConstraints;
 import java.awt.Font;
 import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
-
-import javax.swing.JRadioButton;
-import javax.swing.JButton;
-import javax.swing.JDialog;
 
 public class Extra extends JDialog {
 
@@ -26,7 +23,7 @@ public class Extra extends JDialog {
     /**
      * Create the frame.
      */
-    public Extra(JPanel contentPane, boolean boleano, ArrayList<String> infoEnviar) {
+    public Extra(JPanel contentPanel, boolean boleano, ArrayList<String> infoEnviar) {
 
         setBounds(100, 100, 500, 400);
         contentPane = new JPanel();
@@ -104,24 +101,58 @@ public class Extra extends JDialog {
         gbc_btnNewButton.gridwidth = 17;
         gbc_btnNewButton.gridx = 0;
         gbc_btnNewButton.gridy = 9;
+
+
+
+
+
+//        sinExtra.addActionListener(new ActionListener() {
+//            public void actionPerformed(ActionEvent e) {
+//                info = infoEnviar;
+//                if(sinExtra.isSelected()) {
+//                    cuna.setEnabled(false);
+//                    gimansio.setEnabled(false);
+//                    parking.setEnabled(false);
+//                    cama.setEnabled(false);
+//                } else {
+//                    cuna.setEnabled(true);
+//                    gimansio.setEnabled(true);
+//                    parking.setEnabled(true);
+//                    cama.setEnabled(true);
+//                }
+//            }
+//        });
+
+
+
+
+        aceptar.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (cuna.isSelected()) {
+                    infoEnviar.add("Cuna");
+                } else if (gimansio.isSelected()) {
+                    infoEnviar.add("Gimnasio");
+                } else if (parking.isSelected()){
+                    infoEnviar.add("Parking");
+                } else if (cama.isSelected()){
+                    infoEnviar.add("Cama supletoria");
+                } else if (sinExtra.isSelected()){
+                    infoEnviar.add("Null");
+                } else {
+                    JOptionPane.showMessageDialog(contentPane, "Debes elegir un extra o marcar ninguno");
+
+                }
+
+                LecturaOEscrituraFicheros.escribirInfo(infoEnviar);
+
+
+            }
+
+        });
         contentPane.add(aceptar, gbc_btnNewButton);
 
-        sinExtra.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                info = infoEnviar;
-                if(sinExtra.isSelected()) {
-                    cuna.setEnabled(false);
-                    gimansio.setEnabled(false);
-                    parking.setEnabled(false);
-                    cama.setEnabled(false);
-                } else {
-                    cuna.setEnabled(true);
-                    gimansio.setEnabled(true);
-                    parking.setEnabled(true);
-                    cama.setEnabled(true);
-                }
-            }
-        });
     }
 
 }

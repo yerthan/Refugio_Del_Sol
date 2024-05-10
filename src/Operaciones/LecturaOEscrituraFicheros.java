@@ -5,18 +5,19 @@ import java.util.ArrayList;
 
 public class LecturaOEscrituraFicheros {
 
-//    public String escribirInfo(String info){
-//        String resultado = "Reserva Realizada";
-//        try {
-//            BufferedWriter bw = new BufferedWriter(new FileWriter("reserva.txt"));
-//            if(info != null){
-//                info=info.substring(0, info.length()-1);
-//                return info;
-//            }
-//        } catch (IOException e) {
-//            throw new RuntimeException(e);
-//        }
-//    }
+    public static void escribirInfo(ArrayList<String> info){
+        String resultado = "Reserva Realizada";
+        try {
+            BufferedWriter bw = new BufferedWriter(new FileWriter("./src/ArchivoDeTextos/reserva.txt"));
+            if(info != null){
+                bw.write(info.toString());
+
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
 
 
     public static ArrayList<String> leerUsuarioContrasena(){

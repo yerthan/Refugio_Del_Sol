@@ -1,5 +1,7 @@
 package Vistas;
 
+import Operaciones.LecturaOEscrituraFicheros;
+
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -123,6 +125,7 @@ public class Vista extends JFrame {
         SpinnerListModel listaCamas = new SpinnerListModel(camas);
         spinner = new JSpinner(listaCamas);
         contentPane.add(spinner, gbc_spinner);
+        infoEnviar.add(String.valueOf(spinner.getValue()));
 
         JLabel regimen = new JLabel("Elige tu regimen");
         regimen.setFont(new Font("Tahoma", Font.PLAIN, 12));
@@ -137,12 +140,13 @@ public class Vista extends JFrame {
         gbc_comboBox.fill = GridBagConstraints.HORIZONTAL;
         gbc_comboBox.gridx = 3;
         gbc_comboBox.gridy = 7;
-        JComboBox listaCamas1 = new JComboBox();
-        listaCamas1.addItem("Todo incluido");
-        listaCamas1.addItem("Media pensión");
-        listaCamas1.addItem("Desayuno");
-        listaCamas1.setSelectedIndex(0);
-        contentPane.add(listaCamas1, gbc_comboBox);
+        JComboBox regimenes = new JComboBox();
+        regimenes.addItem("Todo incluido");
+        regimenes.addItem("Media pensión");
+        regimenes.addItem("Desayuno");
+        regimenes.setSelectedIndex(0);
+        infoEnviar.add(String.valueOf(regimenes.getSelectedIndex()));
+        contentPane.add(regimenes, gbc_comboBox);
 
         JButton aceptar = new JButton("Aceptar");
         GridBagConstraints gbc_btnNewButton = new GridBagConstraints();
@@ -158,9 +162,12 @@ public class Vista extends JFrame {
                 if(Comprobar()) {
                     Extra ex = new Extra(contentPane, true, infoEnviar);
                     ex.setVisible(true);
+
                 }else {
-                    JOptionPane.showMessageDialog(contentPane, "Revise que esta todo relleno");
+                    JOptionPane.showMessageDialog(contentPane, "Revise que está todo completado.");
                 }
+
+
             }
 
             private boolean Comprobar () {
@@ -173,6 +180,8 @@ public class Vista extends JFrame {
                     JOptionPane.showMessageDialog(contentPane, "Debes elegir una habitación");
                     esValido=false;
                 }
+
+
                 return esValido;
             }
         });
