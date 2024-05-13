@@ -5,17 +5,13 @@ import java.util.Date;
 public class Reserva {
 
     private int ID;
-    private Date fechaInicio;
-    private Date fechaFin;
     private int habitacionID;
     private int extrasID;
     private int regimenID;
     private double precioTotal;
 
-    public Reserva(int ID, Date fechaInicio, Date fechaFin, int habitacionID, int extrasID, int regimenID, double precioTotal) {
+    public Reserva(int ID, int habitacionID, int extrasID, int regimenID, double precioTotal) {
         this.ID = ID;
-        this.fechaInicio = fechaInicio;
-        this.fechaFin = fechaFin;
         this.habitacionID = habitacionID;
         this.extrasID = extrasID;
         this.regimenID = regimenID;
@@ -33,21 +29,6 @@ public class Reserva {
         this.ID = ID;
     }
 
-    public Date getFechaInicio() {
-        return fechaInicio;
-    }
-
-    public void setFechaInicio(Date fechaInicio) {
-        this.fechaInicio = fechaInicio;
-    }
-
-    public Date getFechaFin() {
-        return fechaFin;
-    }
-
-    public void setFechaFin(Date fechaFin) {
-        this.fechaFin = fechaFin;
-    }
 
     public int getHabitacionID() {
         return habitacionID;
@@ -85,8 +66,6 @@ public class Reserva {
     public String toString() {
         return "Reserva{" +
                 "ID=" + ID +
-                ", fechaInicio=" + fechaInicio +
-                ", fechaFin=" + fechaFin +
                 ", habitacionID=" + habitacionID +
                 ", extrasID=" + extrasID +
                 ", regimenID=" + regimenID +

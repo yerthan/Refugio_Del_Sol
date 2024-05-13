@@ -10,7 +10,8 @@ public class HabitacionDAO implements I_HabitacionDAO{
 
  /*modelo*/
     public HabitacionDAO() throws SQLException {
-        String url = "jdbc:mysql://localhost/refugio_del_sol";
+        String url = "jdbc:mysql://localhost:3306/refugio_del_sol";
+
         ArrayList<String> datos = LecturaOEscrituraFicheros.leerUsuarioContrasena();
 
         try {

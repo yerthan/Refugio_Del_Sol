@@ -9,7 +9,7 @@ public class ReservaDAO implements I_ReservaDAO{
     private static Connection conectar() {
         Connection con = null;
 
-        String url = "jdbc:mysql://localhost/refugio_del_sol";
+        String url = "jdbc:mysql://localhost:3306/refugio_del_sol";
         try {
             ArrayList<String> datos = LecturaOEscrituraFicheros.leerUsuarioContrasena();
 
@@ -33,8 +33,6 @@ public class ReservaDAO implements I_ReservaDAO{
 
                 Reserva reserva = new Reserva();
                 reserva.setID(rs.getInt("ID"));
-                reserva.setFechaInicio(rs.getDate("FechaInicio"));
-                reserva.setFechaFin(rs.getDate("FechaFin"));
                 reserva.setHabitacionID(rs.getInt("HabitacionID"));
                 reserva.setExtrasID(rs.getInt("ExtrasID"));
                 reserva.setRegimenID(rs.getInt("RegimenID"));
@@ -86,6 +84,9 @@ public class ReservaDAO implements I_ReservaDAO{
                 }
             }
 
+            //hacer cálculos para calcular el total
+            reserva.setPrecioTotal(0);
+
         } else{
             System.out.println("error");
         }
@@ -93,19 +94,17 @@ public class ReservaDAO implements I_ReservaDAO{
 
         String resultado = "";
         Connection con = conectar();
-                                                    //ID, fechaInicio, fechaFin, habitacionID, extrasID, regimenID
-        String sql = "INSERT INTO refugio_del_sol.Reserva VALUES (?, ?, ?, ?, ?, ?, ?)";
+                                                    //ID, habitacionID, extrasID, regimenID
+        String sql = "INSERT INTO refugio_del_sol.Reserva VALUES (?, ?, ?, ?, ?)";
         PreparedStatement sentencia;
 
         try{
             sentencia = con.prepareStatement(sql);
             sentencia.setInt(1, reserva.getID());
-            sentencia.setDate(2, Date.valueOf(String.valueOf(reserva.getFechaInicio())));
-            sentencia.setDate(3, Date.valueOf(String.valueOf(reserva.getFechaFin())));
-            sentencia.setInt(4, reserva.getHabitacionID());
-            sentencia.setInt(5, reserva.getExtrasID());
-            sentencia.setInt(6, reserva.getRegimenID());
-            sentencia.setDouble(7, reserva.getPrecioTotal());
+            sentencia.setInt(2, reserva.getHabitacionID());
+            sentencia.setInt(3, reserva.getExtrasID());
+            sentencia.setInt(4, reserva.getRegimenID());
+            sentencia.setDouble(5, reserva.getPrecioTotal());
             return "Creacion de Reserva correcta";
 
         } catch (SQLException ex){
@@ -136,8 +135,6 @@ public class ReservaDAO implements I_ReservaDAO{
 
             if (rs.next()) {
                 reserva.setID(rs.getInt("ID"));
-                reserva.setFechaInicio(rs.getDate("FechaInicio"));
-                reserva.setFechaFin(rs.getDate("FechaFin"));
                 reserva.setHabitacionID(rs.getInt("HabitacionID"));
                 reserva.setExtrasID(rs.getInt("ExtrasID"));
                 reserva.setRegimenID(rs.getInt("RegimenID"));

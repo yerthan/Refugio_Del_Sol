@@ -26,8 +26,6 @@ CREATE TABLE Regimen (
 
 CREATE TABLE Reserva (
                          ID INT PRIMARY KEY AUTO_INCREMENT,
-                         FechaInicio DATE,
-                         FechaFin DATE,
                          HabitacionID INT,
                          ExtrasID INT,
                          RegimenID INT,
