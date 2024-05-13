@@ -1,8 +1,6 @@
 package Vistas;
 
 import Operaciones.LecturaOEscrituraFicheros;
-import Operaciones.Reserva;
-import Operaciones.ReservaDAO;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
@@ -13,7 +11,6 @@ import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
-import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class Extra extends JDialog {
@@ -138,12 +135,7 @@ public class Extra extends JDialog {
 
             try {
                 LecturaOEscrituraFicheros.escribirInfo(infoEnviar);
-                Reserva reserva = new Reserva();
-                ReservaDAO reservaDAO = new ReservaDAO();
-                reservaDAO.create(reserva);
             } catch (IOException ex) {
-                throw new RuntimeException(ex);
-            } catch (SQLException ex) {
                 throw new RuntimeException(ex);
             }
 

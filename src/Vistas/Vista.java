@@ -169,7 +169,6 @@ public class Vista extends JFrame {
                 }else {
                     JOptionPane.showMessageDialog(contentPane, "Revise que está todo completado.");
                 }
-
             }
 
             private boolean Comprobar () {
@@ -182,7 +181,6 @@ public class Vista extends JFrame {
                     JOptionPane.showMessageDialog(contentPane, "Debes elegir una habitación");
                     esValido=false;
                 }
-
 
                 return esValido;
             }
