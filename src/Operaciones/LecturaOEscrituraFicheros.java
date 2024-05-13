@@ -9,18 +9,14 @@ public class LecturaOEscrituraFicheros {
         try (BufferedWriter bw = new BufferedWriter(new FileWriter("./src/ArchivoDeTextos/reserva.txt"))) {
 
             if (informacion != null && !informacion.isEmpty()) {
-                // Write each element of the ArrayList on a separate line
                 for (String line : informacion) {
                     bw.write(line + "\n");
                 }
             } else {
-                // Handle the case where informacion is null or empty (optional)
-                 bw.write("No hay informacion adicional disponible.\n");  // Example handling
+                 bw.write("No hay informacion adicional disponible.\n");
             }
         } catch (IOException e) {
-            // Log the exception to a file or console for debugging
-            System.err.println("Error writing to file: " + e.getMessage());
-            throw e; // Re-throw the exception for proper error handling
+            System.err.println("Error: " + e.getMessage());
         }
     }
 

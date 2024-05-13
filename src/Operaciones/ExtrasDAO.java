@@ -5,9 +5,23 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ExtrasDAO {
+    private static Connection con;
+    private ArrayList<String> datos;
+
+    public ExtrasDAO(){
+        String url = "jdbc:mysql://localhost/refugio_del_sol";
+        ArrayList<String> datos = LecturaOEscrituraFicheros.leerUsuarioContrasena();
+
+        try {
+            con = DriverManager.getConnection(url, datos.get(0), datos.get(1));
+
+        } catch (SQLException ex) {
+            System.out.println("Error al conectar a la BBDD.");
+        }
+    }
 
     private static Connection conectar() {
-        Connection con = null;
+        //Connection con = null;
 
         String url = "jdbc:mysql://localhost/refugio_del_sol";
         try {
@@ -133,7 +147,7 @@ public class ExtrasDAO {
     public List<Extras> listarExtras(){
         List<Extras> extras = new ArrayList<>();
         String consulta = "SELECT * FROM refugio_del_sol.Extras";
-        Connection con = conectar();
+        //Connection con = conectar();
 
         try (PreparedStatement ps = con.prepareStatement(consulta)){
             ResultSet rs = ps.executeQuery();

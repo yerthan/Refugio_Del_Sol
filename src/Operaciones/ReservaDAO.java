@@ -53,13 +53,13 @@ public class ReservaDAO implements I_ReservaDAO{
 
 
     @Override
-    public String create(Reserva reserva) {
+    public String create(Reserva reserva) throws SQLException {
         //hay que crear la habitacionDAO, regimenDAO y extrasDAO para crear una Reserva con los datos reales
         HabitacionDAO habitacionDAO = new HabitacionDAO();
         RegimenDAO regimenDAO = new RegimenDAO();
         ExtrasDAO extrasDAO = new ExtrasDAO();
 
-        //necesitamos los datos recogidos en fichero para rellenar la bbdd!!!
+        //necesitamos los datos recogidos en fichero para rellenar la bbdd
         List<Habitacion> habitaciones= habitacionDAO.listarHabitaciones();
         List<Regimen> regimens = regimenDAO.listarRegimen();
         List<Extras> extras = extrasDAO.listarExtras();

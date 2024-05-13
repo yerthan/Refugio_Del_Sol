@@ -5,27 +5,44 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class HabitacionDAO implements I_HabitacionDAO{
+    private static Connection con;
+    private ArrayList<String> datos;
+
  /*modelo*/
-    private static Connection conectar() {
-        Connection con = null;
-
+    public HabitacionDAO() throws SQLException {
         String url = "jdbc:mysql://localhost/refugio_del_sol";
-        try {
-            ArrayList<String> datos = LecturaOEscrituraFicheros.leerUsuarioContrasena();
+        ArrayList<String> datos = LecturaOEscrituraFicheros.leerUsuarioContrasena();
 
+        try {
+            System.out.println(datos.get(0) + " " + datos.get(1));
             con = DriverManager.getConnection(url, datos.get(0), datos.get(1));
 
         } catch (SQLException ex) {
             System.out.println("Error al conectar a la BBDD.");
+            ex.printStackTrace();
         }
-
-        return con;
     }
+
+//    private static Connection conectar() {
+//        //Connection con = null;
+//
+//        String url = "jdbc:mysql://localhost/refugio_del_sol";
+//        try {
+//            ArrayList<String> datos = LecturaOEscrituraFicheros.leerUsuarioContrasena();
+//
+//            con = DriverManager.getConnection(url, datos.get(0), datos.get(1));
+//
+//        } catch (SQLException ex) {
+//            System.out.println("Error al conectar a la BBDD.");
+//        }
+//
+//        return con;
+//    }
 
     public List<Habitacion> listarHabitaciones(){
         List<Habitacion> habitaciones = new ArrayList<>();
         String consulta = "SELECT * FROM refugio_del_sol.Habitacion";
-        Connection con = conectar();
+        //Connection con = conectar();
 
         try (PreparedStatement ps = con.prepareStatement(consulta)){
             ResultSet rs = ps.executeQuery();
@@ -47,6 +64,16 @@ public class HabitacionDAO implements I_HabitacionDAO{
 
         } catch (SQLException e) {
             throw new RuntimeException(e);
+        }finally {
+            // Asegúrate de cerrar la conexión aquí en el bloque finally
+            try {
+                if (con != null) {
+                    con.close();
+                }
+            } catch (SQLException e) {
+                // Manejar cualquier error al cerrar la conexión
+                e.printStackTrace();
+            }
         }
     }
 
@@ -54,9 +81,9 @@ public class HabitacionDAO implements I_HabitacionDAO{
     @Override
     public String create(Habitacion habitacion) {
         String resultado = "";
-        Connection con = conectar();
+        //Connection con = conectar();
         //ID, numero, tipo, capacidad, precio
-        String sql = "INSERT INTO Habitacion VALUES (?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO refugio_del_sol.Habitacion VALUES (?, ?, ?, ?, ?)";
         PreparedStatement sentencia;
 
         try{
@@ -89,7 +116,7 @@ public class HabitacionDAO implements I_HabitacionDAO{
     @Override
     public Habitacion read(int id) {
         String consulta = "SELECT * FROM refugio_del_sol.Habitacion WHERE ID = ?";
-        Connection con = conectar();
+        //Connection con = conectar();
 
         try (PreparedStatement ps = con.prepareStatement(consulta)){
             ps.setInt(1, id); // Establecer el parámetro ID en la consulta SQL
@@ -128,7 +155,7 @@ public class HabitacionDAO implements I_HabitacionDAO{
     @Override
     public void update(Habitacion habitacion, double precio) {
         List<Habitacion> habitaciones = listarHabitaciones();
-        Connection con = conectar();
+        //Connection con = conectar();
 
         String consulta = "UPDATE refugio_del_sol.Habitacion SET Habitacion.Precio = ? WHERE Habitacion.ID = ?";
 
@@ -154,7 +181,7 @@ public class HabitacionDAO implements I_HabitacionDAO{
     public void delete(int id) {
 
         String consulta = "DELETE FROM refugio_del_sol.Habitacion WHERE ID = ?";
-        Connection con = conectar();
+        //Connection con = conectar();
 
         try (PreparedStatement ps = con.prepareStatement(consulta)) {
             ps.setInt(1, id);
