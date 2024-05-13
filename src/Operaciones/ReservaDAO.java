@@ -63,39 +63,53 @@ public class ReservaDAO implements I_ReservaDAO{
         List<Extras> extras = extrasDAO.listarExtras();
 
         ArrayList<String> datosReserva = Controlador.claseControlador.leerReserva();
+        double precioHabitacion = 0;
+        double precioRegimen = 0;
+        double precioExtra = 0;
 
         if (datosReserva!= null){
             for (Habitacion h : habitaciones){
-                if (h.getTipo().equals(datosReserva.get(0))
+                if (h.getTipo().equalsIgnoreCase(datosReserva.get(0))
                     && String.valueOf(h.getCapacidad()).equals(datosReserva.get(1))){
                     reserva.setHabitacionID(h.getID());
-                }
-            }
+                    precioHabitacion = h.getPrecio();
 
-            for (Regimen r : regimens){
-                if (r.getTipo().equals(datosReserva.get(2))){
-                    reserva.setRegimenID(r.getID());
-                }
-            }
+                    for (Regimen r : regimens){
+                        if (r.getTipo().equals(datosReserva.get(2))){
+                            reserva.setRegimenID(r.getID());
+                            precioRegimen = r.getPrecio();
 
-            for (Extras e : extras){
-                if (e.getNombre().equals(datosReserva.get(3))){
-                    reserva.setExtrasID(e.getID());
+
+
+                            for (Extras e : extras){
+                                if (e.getNombre().equals(datosReserva.get(3))){
+                                    reserva.setExtrasID(e.getID());
+                                    precioExtra = e.getPrecio();
+
+                                }
+                            }
+
+                        }
+                    }
+
+
+
+
                 }
             }
 
             //hacer cálculos para calcular el total
-            reserva.setPrecioTotal(0);
+            reserva.setPrecioTotal(precioRegimen + precioExtra + precioHabitacion);
+            System.out.println(reserva);
 
         } else{
             System.out.println("error");
         }
 
 
-        String resultado = "";
         Connection con = conectar();
                                                     //ID, habitacionID, extrasID, regimenID
-        String sql = "INSERT INTO refugio_del_sol.Reserva VALUES (?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO refugio_del_sol.Reserva (ID, HabitacionID, ExtrasID, RegimenID, PrecioTotal) VALUES (?, ?, ?, ?, ?)";
         PreparedStatement sentencia;
 
         try{
@@ -105,7 +119,9 @@ public class ReservaDAO implements I_ReservaDAO{
             sentencia.setInt(3, reserva.getExtrasID());
             sentencia.setInt(4, reserva.getRegimenID());
             sentencia.setDouble(5, reserva.getPrecioTotal());
-            return "Creacion de Reserva correcta";
+            int filasInsertadas = sentencia.executeUpdate();
+
+            return "Creacion de Reserva correcta" + filasInsertadas;
 
         } catch (SQLException ex){
             ex.getErrorCode();
