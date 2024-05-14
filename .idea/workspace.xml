@@ -4,9 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0cda1711-2e57-43ac-b2a7-e9f4e7396b32" name="Changes" comment="Fichero">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+    <list default="true" id="0cda1711-2e57-43ac-b2a7-e9f4e7396b32" name="Changes" comment="leer">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06_05_2024_12_20_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06_05_2024_12_20__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06_05_2024_12_37_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06_05_2024_12_37__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06_05_2024_12_38_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06_05_2024_12_38__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Refugio del Sol.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Refugio del Sol.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ArchivoDeTextos/reserva.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/ArchivoDeTextos/reserva.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controlador/claseControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controlador/claseControlador.java" afterDir="false" />
     </list>
@@ -49,6 +56,10 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.Mappings&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -82,7 +93,11 @@
       <workItem from="1715329407523" duration="2445000" />
       <workItem from="1715334764627" duration="454000" />
       <workItem from="1715335295807" duration="1013000" />
-      <workItem from="1715338607803" duration="1386000" />
+      <workItem from="1715338607803" duration="2156000" />
+      <workItem from="1715588636317" duration="1190000" />
+      <workItem from="1715595356514" duration="1177000" />
+      <workItem from="1715681207508" duration="388000" />
+      <workItem from="1715681632269" duration="1868000" />
     </task>
     <task id="LOCAL-00001" summary="precios habitaciones">
       <created>1714992016182</created>
@@ -232,7 +247,14 @@
       <option name="project" value="LOCAL" />
       <updated>1715334858621</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="leer">
+      <created>1715340077877</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1715340077877</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -264,6 +286,7 @@
     <MESSAGE value="porfa funciona" />
     <MESSAGE value="get" />
     <MESSAGE value="Fichero" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fichero" />
+    <MESSAGE value="leer" />
+    <option name="LAST_COMMIT_MESSAGE" value="leer" />
   </component>
 </project>

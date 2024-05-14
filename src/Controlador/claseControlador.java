@@ -50,7 +50,7 @@ public class claseControlador {
 
         ReservaDAO reservaDAO = new ReservaDAO();
         List<Reserva> reservas =  reservaDAO.listarReservas();
-        Reserva reserva = reservas.getLast();
+        Reserva reserva = reservas.get(reservas.size());
 
         HabitacionDAO habitacionDAO = new HabitacionDAO();
         Habitacion habitacion = habitacionDAO.read(reserva.getHabitacionID());
