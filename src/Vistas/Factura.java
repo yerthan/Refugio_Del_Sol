@@ -60,7 +60,7 @@ public class Factura extends JDialog {
         gbc_lblNewLabel_1.gridy = 3;
         getContentPane().add(lblNewLabel_1, gbc_lblNewLabel_1);
 
-        JLabel lblNewLabel_2 = new JLabel("Regimen ........................");
+        JLabel lblNewLabel_2 = new JLabel("Régimen ........................");
         lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 12));
         GridBagConstraints gbc_lblNewLabel_2 = new GridBagConstraints();
         gbc_lblNewLabel_2.anchor = GridBagConstraints.EAST;
