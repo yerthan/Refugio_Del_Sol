@@ -86,6 +86,9 @@ public class ReservaDAO implements I_ReservaDAO{
                                     reserva.setExtrasID(e.getID());
                                     precioExtra = e.getPrecio();
 
+                                    /*Hay que arreglar que no mande null cuando el usuario no marque ningun extra*/
+                                } else {
+                                    precioExtra = 0;
                                 }
                             }
 
