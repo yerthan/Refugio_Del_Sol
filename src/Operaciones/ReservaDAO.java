@@ -79,7 +79,7 @@ public class ReservaDAO implements I_ReservaDAO{
                             reserva.setRegimenID(r.getID());
                             precioRegimen = r.getPrecio();
 
-
+                            //prueba3
 
                             for (Extras e : extras){
                                 if (e.getNombre().equals(datosReserva.get(3))){
@@ -182,7 +182,7 @@ public class ReservaDAO implements I_ReservaDAO{
         List<Reserva> reservas = listarReservas();
         Connection con = conectar();
 
-        String consulta = "UPDATE refugio_del_sol.Reserva SET Reserva.Precio = ? WHERE ID = ?";
+        String consulta = "UPDATE refugio_del_sol.Reserva SET Reserva.PrecioTotal = ? WHERE ID = ?";
 
         if (reservas.contains(reserva)){
             try(PreparedStatement ps = con.prepareStatement(consulta)){
