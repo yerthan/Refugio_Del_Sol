@@ -11,6 +11,7 @@ import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class Extra extends JDialog {
@@ -135,7 +136,9 @@ public class Extra extends JDialog {
 
             try {
                 LecturaOEscrituraFicheros.escribirInfo(infoEnviar);
-            } catch (IOException ex) {
+                Factura f = new Factura();
+                f.setVisible(true);
+            } catch (IOException | SQLException ex) {
                 throw new RuntimeException(ex);
             }
 
