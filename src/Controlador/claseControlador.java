@@ -51,8 +51,7 @@ public class claseControlador {
         ReservaDAO reservaDAO = new ReservaDAO();
         List<Reserva> reservas =  reservaDAO.listarReservas();
         Reserva reserva = reservas.getLast();
-        System.out.println(reservas);
-        System.out.println(reserva);
+
         HabitacionDAO habitacionDAO = new HabitacionDAO();
         Habitacion habitacion = habitacionDAO.read(reserva.getHabitacionID());
         double precioHabitacion = habitacion.getPrecio();
