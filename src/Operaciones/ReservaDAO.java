@@ -45,6 +45,13 @@ public class ReservaDAO implements I_ReservaDAO{
 
         } catch (SQLException e) {
             throw new RuntimeException(e);
+        } finally {
+            try {
+                con.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+
+            }
         }
 
     }
