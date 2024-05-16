@@ -89,7 +89,7 @@ public class Extra extends JDialog {
         gbc_rdbtnNewRadioButton_2.gridy = 7;
         contentPane.add(cama, gbc_rdbtnNewRadioButton_2);
 
-        JRadioButton sinExtra = new JRadioButton("No quiero ningun extra");
+        JRadioButton sinExtra = new JRadioButton("No quiero ningún extra");
         GridBagConstraints gbc_rdbtnNewRadioButton_3 = new GridBagConstraints();
         gbc_rdbtnNewRadioButton_3.gridwidth = 17;
         gbc_rdbtnNewRadioButton_3.insets = new Insets(0, 0, 5, 0);
@@ -98,6 +98,11 @@ public class Extra extends JDialog {
         contentPane.add(sinExtra, gbc_rdbtnNewRadioButton_3);
 
         JButton aceptar = new JButton("Aceptar");
+        aceptar.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+            }
+        });
         GridBagConstraints gbc_btnNewButton = new GridBagConstraints();
         gbc_btnNewButton.gridheight = 3;
         gbc_btnNewButton.gridwidth = 17;

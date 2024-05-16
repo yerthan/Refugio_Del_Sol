@@ -32,6 +32,7 @@ public class Vista extends JFrame {
     private JPanel contentPane;
     private ArrayList<String> infoEnviar = new ArrayList<>();
     JSpinner spinner = new JSpinner();
+    private boolean comprobarReserva;
 
     /**
      * Launch the application.
@@ -116,13 +117,12 @@ public class Vista extends JFrame {
         gbc_lblEligeElNmero.gridy = 5;
         contentPane.add(numCamas, gbc_lblEligeElNmero);
 
-
         GridBagConstraints gbc_spinner = new GridBagConstraints();
         gbc_spinner.fill = GridBagConstraints.BOTH;
         gbc_spinner.insets = new Insets(0, 0, 5, 5);
         gbc_spinner.gridx = 3;
         gbc_spinner.gridy = 5;
-        Integer[] camas = {1,2,3};
+        String[] camas = {"1 (0€)", "2 (50€)", "3 (80€)"};
         SpinnerListModel listaCamas = new SpinnerListModel(camas);
         spinner = new JSpinner(listaCamas);
         contentPane.add(spinner, gbc_spinner);
@@ -148,6 +148,11 @@ public class Vista extends JFrame {
         contentPane.add(regimenes, gbc_comboBox);
 
         JButton aceptar = new JButton("Aceptar");
+        aceptar.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+            }
+        });
         GridBagConstraints gbc_btnNewButton = new GridBagConstraints();
         gbc_btnNewButton.gridwidth = 7;
         gbc_btnNewButton.gridheight = 2;
