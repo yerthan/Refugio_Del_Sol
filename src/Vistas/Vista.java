@@ -50,9 +50,7 @@ public class Vista extends JFrame {
         });
     }
 
-    /**
-     * Create the frame.
-     */
+
     public Vista() {
 
         ButtonGroup bg = new ButtonGroup();
@@ -150,18 +148,6 @@ public class Vista extends JFrame {
         JButton aceptar = new JButton("Aceptar");
         aceptar.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                dispose();
-            }
-        });
-        GridBagConstraints gbc_btnNewButton = new GridBagConstraints();
-        gbc_btnNewButton.gridwidth = 7;
-        gbc_btnNewButton.gridheight = 2;
-        gbc_btnNewButton.gridx = 0;
-        gbc_btnNewButton.gridy = 9;
-        aceptar.addActionListener(new ActionListener() {
-
-            @Override
-            public void actionPerformed(ActionEvent e) {
                 infoEnviar.clear();
                 if(Comprobar()) {
                     infoEnviar.add(String.valueOf(spinner.getModel().getValue()));
@@ -172,20 +158,29 @@ public class Vista extends JFrame {
                 }
             }
 
-            private boolean Comprobar () {
-                boolean esValido=true;
-                if (suite.isSelected()) {
-                    infoEnviar.add("Suite");
-                } else if (turista.isSelected()) {
-                    infoEnviar.add("Turista");
-                } else {
-                    JOptionPane.showMessageDialog(contentPane, "Debes elegir una habitación");
-                    esValido=false;
+            private boolean Comprobar() {
+                boolean esValido = true;
+                while (true) {
+                    if (suite.isSelected()) {
+                        infoEnviar.add("Suite");
+                        break;
+                    } else if (turista.isSelected()) {
+                        infoEnviar.add("Turista");
+                        break;
+                    } else {
+                        JOptionPane.showMessageDialog(contentPane, "Debes elegir una habitación", "Aviso", JOptionPane.WARNING_MESSAGE);
+                        esValido = false;
+                        return false;
+                    }
                 }
-
                 return esValido;
             }
         });
+        GridBagConstraints gbc_btnNewButton = new GridBagConstraints();
+        gbc_btnNewButton.gridwidth = 7;
+        gbc_btnNewButton.gridheight = 2;
+        gbc_btnNewButton.gridx = 0;
+        gbc_btnNewButton.gridy = 9;
         contentPane.add(aceptar, gbc_btnNewButton);
     }
 }
