@@ -110,7 +110,7 @@ public class Vista extends JFrame {
         contentPane.add(turista, gbc_rdbtnNewRadioButton_1);
 
         JLabel numCamas = new JLabel("Elige el número de camas");
-        numCamas.setFont(new Font("Tahoma", Font.PLAIN, 11));
+        numCamas.setFont(new Font("Tahoma", Font.PLAIN, 12));
         GridBagConstraints gbc_lblEligeElNmero = new GridBagConstraints();
         gbc_lblEligeElNmero.insets = new Insets(0, 0, 5, 5);
         gbc_lblEligeElNmero.gridx = 2;
@@ -127,7 +127,7 @@ public class Vista extends JFrame {
         spinner = new JSpinner(listaCamas);
         contentPane.add(spinner, gbc_spinner);
 
-        JLabel regimen = new JLabel("Elige tu regimen");
+        JLabel regimen = new JLabel("Elige tu régimen");
         regimen.setFont(new Font("Tahoma", Font.PLAIN, 12));
         GridBagConstraints gbc_lblNewLabel_2 = new GridBagConstraints();
         gbc_lblNewLabel_2.insets = new Insets(0, 0, 5, 5);
@@ -141,9 +141,9 @@ public class Vista extends JFrame {
         gbc_comboBox.gridx = 3;
         gbc_comboBox.gridy = 7;
         JComboBox regimenes = new JComboBox();
-        regimenes.addItem("Todo incluido");
-        regimenes.addItem("Media pensión");
-        regimenes.addItem("Desayuno");
+        regimenes.addItem("Todo incluido (50€)");
+        regimenes.addItem("Media pensión (25€)");
+        regimenes.addItem("Desayuno (10€)");
         regimenes.setSelectedIndex(0);
         contentPane.add(regimenes, gbc_comboBox);
 
@@ -169,10 +169,6 @@ public class Vista extends JFrame {
 
                     Extra ex = new Extra(contentPane, true, infoEnviar);
                     ex.setVisible(true);
-
-
-                }else {
-                    JOptionPane.showMessageDialog(contentPane, "Revise que está todo completado.");
                 }
             }
 
