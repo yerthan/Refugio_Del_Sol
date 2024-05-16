@@ -36,26 +36,25 @@ public class Factura extends JDialog {
 
     public Factura() throws SQLException {
         getContentPane().setBackground(new Color(255, 255, 255));
-        setBounds(100, 100, 450, 300);
+        setBounds(100, 100, 500, 400);
         GridBagLayout gridBagLayout = new GridBagLayout();
         gridBagLayout.columnWidths = new int[] {30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 0, 0, 30};
         gridBagLayout.rowHeights = new int[] {30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30};
         gridBagLayout.columnWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0};
         gridBagLayout.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0};
         getContentPane().setLayout(gridBagLayout);
-        {
-            JLabel lblNewLabel = new JLabel("Refugio Del Sol ");
-            lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 15));
-            GridBagConstraints gbc_lblNewLabel = new GridBagConstraints();
-            gbc_lblNewLabel.insets = new Insets(0, 0, 5, 0);
-            gbc_lblNewLabel.gridheight = 3;
-            gbc_lblNewLabel.gridwidth = 19;
-            gbc_lblNewLabel.gridx = 0;
-            gbc_lblNewLabel.gridy = 0;
-            getContentPane().add(lblNewLabel, gbc_lblNewLabel);
-        }
 
-        JLabel lblNewLabel_1 = new JLabel("Habitación ........................");
+        JLabel lblNewLabel = new JLabel("Refugio Del Sol ");
+        lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 15));
+        GridBagConstraints gbc_lblNewLabel = new GridBagConstraints();
+        gbc_lblNewLabel.insets = new Insets(0, 0, 5, 0);
+        gbc_lblNewLabel.gridheight = 3;
+        gbc_lblNewLabel.gridwidth = 19;
+        gbc_lblNewLabel.gridx = 0;
+        gbc_lblNewLabel.gridy = 0;
+        getContentPane().add(lblNewLabel, gbc_lblNewLabel);
+
+        JLabel lblNewLabel_1 = new JLabel("Habitación ........................ " + precios.get(0));
         lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 12));
         GridBagConstraints gbc_lblNewLabel_1 = new GridBagConstraints();
         gbc_lblNewLabel_1.anchor = GridBagConstraints.EAST;
@@ -65,7 +64,7 @@ public class Factura extends JDialog {
         gbc_lblNewLabel_1.gridy = 3;
         getContentPane().add(lblNewLabel_1, gbc_lblNewLabel_1);
 
-        JLabel lblNewLabel_2 = new JLabel("Regimen ........................");
+        JLabel lblNewLabel_2 = new JLabel("Regimen ........................ " + precios.get(1));
         lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 12));
         GridBagConstraints gbc_lblNewLabel_2 = new GridBagConstraints();
         gbc_lblNewLabel_2.anchor = GridBagConstraints.EAST;
@@ -75,7 +74,7 @@ public class Factura extends JDialog {
         gbc_lblNewLabel_2.gridy = 5;
         getContentPane().add(lblNewLabel_2, gbc_lblNewLabel_2);
 
-        JLabel lblNewLabel_3 = new JLabel("Extras ........................");
+        JLabel lblNewLabel_3 = new JLabel("Extras ........................ " + precios.get(2));
         lblNewLabel_3.setFont(new Font("Tahoma", Font.PLAIN, 12));
         GridBagConstraints gbc_lblNewLabel_3 = new GridBagConstraints();
         gbc_lblNewLabel_3.anchor = GridBagConstraints.EAST;
@@ -85,7 +84,7 @@ public class Factura extends JDialog {
         gbc_lblNewLabel_3.gridy = 7;
         getContentPane().add(lblNewLabel_3, gbc_lblNewLabel_3);
 
-        JLabel lblNewLabel_4 = new JLabel("TOTAL ........................");
+        JLabel lblNewLabel_4 = new JLabel("TOTAL ........................ " + precios.get(3));
         lblNewLabel_4.setFont(new Font("Tahoma", Font.BOLD, 13));
         GridBagConstraints gbc_lblNewLabel_4 = new GridBagConstraints();
         gbc_lblNewLabel_4.anchor = GridBagConstraints.EAST;
