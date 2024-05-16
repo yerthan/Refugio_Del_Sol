@@ -99,17 +99,11 @@ public class Extra extends JDialog {
         contentPane.add(sinExtra, gbc_rdbtnNewRadioButton_3);
 
         JButton aceptar = new JButton("Aceptar");
-        aceptar.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                dispose();
-            }
-        });
         GridBagConstraints gbc_btnNewButton = new GridBagConstraints();
         gbc_btnNewButton.gridheight = 3;
         gbc_btnNewButton.gridwidth = 17;
         gbc_btnNewButton.gridx = 0;
         gbc_btnNewButton.gridy = 9;
-
 
         sinExtra.addActionListener(e -> {
             if (sinExtra.isSelected()) {
@@ -125,29 +119,32 @@ public class Extra extends JDialog {
             }
         });
 
-        aceptar.addActionListener(e -> {
-            if (cuna.isSelected()) {
-                infoEnviar.add("Cuna");
-            } else if (gimansio.isSelected()) {
-                infoEnviar.add("Gimnasio");
-            } else if (parking.isSelected()){
-                infoEnviar.add("Parking");
-            } else if (cama.isSelected()){
-                infoEnviar.add("Cama supletoria");
-            } else if (sinExtra.isSelected()){
-                infoEnviar.add("Null");
-            } else {
-                JOptionPane.showMessageDialog(contentPane, "Debes elegir un extra o marcar ninguno");
-            }
+        aceptar.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                if (cuna.isSelected()) {
+                    infoEnviar.add("Cuna");
+                } else if (gimansio.isSelected()) {
+                    infoEnviar.add("Gimnasio");
+                } else if (parking.isSelected()){
+                    infoEnviar.add("Parking");
+                } else if (cama.isSelected()){
+                    infoEnviar.add("Cama supletoria");
+                } else if (sinExtra.isSelected()){
+                    infoEnviar.add("Null");
+                } else {
+                    JOptionPane.showMessageDialog(contentPane, "Debes elegir un extra", "Aviso", JOptionPane.WARNING_MESSAGE);
+                    return;
+                }
 
-            try {
-                LecturaOEscrituraFicheros.escribirInfo(infoEnviar);
-                Factura f = new Factura();
-                f.setVisible(true);
-            } catch (IOException | SQLException ex) {
-                throw new RuntimeException(ex);
+                try {
+                    LecturaOEscrituraFicheros.escribirInfo(infoEnviar);
+                    Factura f = new Factura();
+                    f.setVisible(true);
+                } catch (IOException | SQLException ex) {
+                    throw new RuntimeException(ex);
+                }
+                Extra.this.dispose();
             }
-
         });
         contentPane.add(aceptar, gbc_btnNewButton);
     }

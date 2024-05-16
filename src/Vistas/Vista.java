@@ -146,6 +146,12 @@ public class Vista extends JFrame {
         contentPane.add(regimenes, gbc_comboBox);
 
         JButton aceptar = new JButton("Aceptar");
+        GridBagConstraints gbc_btnNewButton = new GridBagConstraints();
+        gbc_btnNewButton.gridwidth = 7;
+        gbc_btnNewButton.gridheight = 2;
+        gbc_btnNewButton.gridx = 0;
+        gbc_btnNewButton.gridy = 9;
+
         aceptar.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 infoEnviar.clear();
@@ -155,6 +161,7 @@ public class Vista extends JFrame {
 
                     Extra ex = new Extra(contentPane, true, infoEnviar);
                     ex.setVisible(true);
+                    Vista.this.dispose();
                 }
             }
 
@@ -176,11 +183,6 @@ public class Vista extends JFrame {
                 return esValido;
             }
         });
-        GridBagConstraints gbc_btnNewButton = new GridBagConstraints();
-        gbc_btnNewButton.gridwidth = 7;
-        gbc_btnNewButton.gridheight = 2;
-        gbc_btnNewButton.gridx = 0;
-        gbc_btnNewButton.gridy = 9;
         contentPane.add(aceptar, gbc_btnNewButton);
     }
 }
