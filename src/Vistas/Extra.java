@@ -4,10 +4,7 @@ import Operaciones.LecturaOEscrituraFicheros;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
-import java.awt.GridBagLayout;
-import java.awt.GridBagConstraints;
-import java.awt.Font;
-import java.awt.Insets;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
@@ -22,14 +19,13 @@ public class Extra extends JDialog {
     private static ArrayList<String> info = new ArrayList<>();
 
 
-    /**
-     * Create the frame.
-     */
     public Extra(JPanel contentPanel, boolean boleano, ArrayList<String> infoEnviar) {
 
         setBounds(100, 100, 500, 400);
         contentPane = new JPanel();
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+        contentPane.setBackground(new Color(151, 183, 222));
+
 
         setContentPane(contentPane);
         GridBagLayout gbl_contentPane = new GridBagLayout();
@@ -58,6 +54,7 @@ public class Extra extends JDialog {
         contentPane.add(extras, gbc_lblNewLabel_1);
 
         JRadioButton cuna = new JRadioButton("Cuna (20€)");
+        cuna.setBackground(new Color(151, 183, 222));
         GridBagConstraints gbc_rdbtnNewRadioButton = new GridBagConstraints();
         gbc_rdbtnNewRadioButton.gridwidth = 17;
         gbc_rdbtnNewRadioButton.insets = new Insets(0, 0, 5, 0);
@@ -66,6 +63,7 @@ public class Extra extends JDialog {
         contentPane.add(cuna, gbc_rdbtnNewRadioButton);
 
         JRadioButton gimansio = new JRadioButton("Gimnasio (30€)");
+        gimansio.setBackground(new Color(151, 183, 222));
         GridBagConstraints gbc_rdbtnGimnasio = new GridBagConstraints();
         gbc_rdbtnGimnasio.gridwidth = 17;
         gbc_rdbtnGimnasio.insets = new Insets(0, 0, 5, 0);
@@ -74,6 +72,7 @@ public class Extra extends JDialog {
         contentPane.add(gimansio, gbc_rdbtnGimnasio);
 
         JRadioButton parking = new JRadioButton("Parking (10€)");
+        parking.setBackground(new Color(151, 183, 222));
         GridBagConstraints gbc_rdbtnNewRadioButton_1 = new GridBagConstraints();
         gbc_rdbtnNewRadioButton_1.gridwidth = 17;
         gbc_rdbtnNewRadioButton_1.insets = new Insets(0, 0, 5, 0);
@@ -82,6 +81,7 @@ public class Extra extends JDialog {
         contentPane.add(parking, gbc_rdbtnNewRadioButton_1);
 
         JRadioButton cama = new JRadioButton("Cama supletoria (20€)");
+        cama.setBackground(new Color(151, 183, 222));
         GridBagConstraints gbc_rdbtnNewRadioButton_2 = new GridBagConstraints();
         gbc_rdbtnNewRadioButton_2.gridwidth = 17;
         gbc_rdbtnNewRadioButton_2.insets = new Insets(0, 0, 5, 0);
@@ -90,6 +90,7 @@ public class Extra extends JDialog {
         contentPane.add(cama, gbc_rdbtnNewRadioButton_2);
 
         JRadioButton sinExtra = new JRadioButton("No quiero ningún extra");
+        sinExtra.setBackground(new Color(151, 183, 222));
         GridBagConstraints gbc_rdbtnNewRadioButton_3 = new GridBagConstraints();
         gbc_rdbtnNewRadioButton_3.gridwidth = 17;
         gbc_rdbtnNewRadioButton_3.insets = new Insets(0, 0, 5, 0);

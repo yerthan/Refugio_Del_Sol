@@ -6,10 +6,8 @@ import Operaciones.HabitacionDAO;
 import Operaciones.Reserva;
 import Operaciones.ReservaDAO;
 
-import javax.swing.JButton;
-import javax.swing.JDialog;
+import javax.swing.*;
 import java.awt.GridBagLayout;
-import javax.swing.JLabel;
 import java.awt.GridBagConstraints;
 import java.awt.Font;
 import java.awt.Insets;
@@ -19,10 +17,12 @@ import java.awt.event.ActionListener;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+
 public class Factura extends JDialog {
 
     private static final long serialVersionUID = 1L;
     private ArrayList<String> precios = claseControlador.leerPrecios();
+
 
     public static void main(String[] args) {
         try {
@@ -35,7 +35,7 @@ public class Factura extends JDialog {
     }
 
     public Factura() throws SQLException {
-        getContentPane().setBackground(new Color(255, 255, 255));
+        getContentPane().setBackground(new Color(151, 183, 222));
         setBounds(100, 100, 500, 400);
         GridBagLayout gridBagLayout = new GridBagLayout();
         gridBagLayout.columnWidths = new int[] {30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 0, 0, 30};
@@ -43,6 +43,7 @@ public class Factura extends JDialog {
         gridBagLayout.columnWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0};
         gridBagLayout.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0};
         getContentPane().setLayout(gridBagLayout);
+
 
         JLabel lblNewLabel = new JLabel("Refugio Del Sol ");
         lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 15));

@@ -60,7 +60,7 @@ public class Vista extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(100, 100, 500, 400);
         contentPane = new JPanel();
-        contentPane.setBackground(new Color(255, 255, 255));
+        contentPane.setBackground(new Color(151, 183, 222));
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
         setContentPane(contentPane);
@@ -91,7 +91,7 @@ public class Vista extends JFrame {
         contentPane.add(habitacion, gbc_lblNewLabel_1);
 
         JRadioButton suite = new JRadioButton("Suite (200€)");
-        suite.setBackground(new Color(255, 255, 255));
+        suite.setBackground(new Color(151, 183, 222));
         GridBagConstraints gbc_rdbtnNewRadioButton = new GridBagConstraints();
         gbc_rdbtnNewRadioButton.anchor = GridBagConstraints.EAST;
         gbc_rdbtnNewRadioButton.insets = new Insets(0, 0, 5, 5);
@@ -101,7 +101,7 @@ public class Vista extends JFrame {
         contentPane.add(suite, gbc_rdbtnNewRadioButton);
 
         JRadioButton turista = new JRadioButton("Turista (100€)");
-        turista.setBackground(new Color(255, 255, 255));
+        turista.setBackground(new Color(151, 183, 222));
         GridBagConstraints gbc_rdbtnNewRadioButton_1 = new GridBagConstraints();
         gbc_rdbtnNewRadioButton_1.insets = new Insets(0, 0, 5, 5);
         gbc_rdbtnNewRadioButton_1.gridx = 3;
