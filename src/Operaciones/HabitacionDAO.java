@@ -15,7 +15,7 @@ public class HabitacionDAO implements I_HabitacionDAO{
         ArrayList<String> datos = LecturaOEscrituraFicheros.leerUsuarioContrasena();
 
         try {
-            System.out.println(datos.get(0) + " " + datos.get(1));
+
             con = DriverManager.getConnection(url, datos.get(0), datos.get(1));
 
         } catch (SQLException ex) {

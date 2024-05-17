@@ -66,8 +66,6 @@ public class claseControlador {
 
         ReservaDAO reservaDAO = new ReservaDAO();
 
-        ArrayList<String> datosReserva = leerReserva();
-
         Reserva reserva = new Reserva();
         reservaDAO.create(reserva);
 
@@ -95,6 +93,10 @@ public class claseControlador {
 
         return arrayList;
     }
+
+
+
+
 
 
 

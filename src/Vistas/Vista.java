@@ -32,7 +32,7 @@ public class Vista extends JFrame {
     private JPanel contentPane;
     private ArrayList<String> infoEnviar = new ArrayList<>();
     JSpinner spinner = new JSpinner();
-    private boolean comprobarReserva;
+    private boolean existeReserva;
 
     /**
      * Launch the application.
@@ -177,9 +177,16 @@ public class Vista extends JFrame {
                     } else {
                         JOptionPane.showMessageDialog(contentPane, "Debes elegir una habitación", "Aviso", JOptionPane.WARNING_MESSAGE);
                         esValido = false;
-                        return false;
+                        return esValido;
                     }
                 }
+
+
+
+
+
+
+
                 return esValido;
             }
         });
