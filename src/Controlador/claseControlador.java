@@ -67,12 +67,10 @@ public class claseControlador {
         ReservaDAO reservaDAO = new ReservaDAO();
 
         ArrayList<String> datosReserva = leerReserva();
-        System.out.println(datosReserva);
 
         Reserva reserva = new Reserva();
         reservaDAO.create(reserva);
 
-        //List<Reserva> reservas =  reservaDAO.listarReservas();
         HabitacionDAO habitacionDAO = new HabitacionDAO();
         Habitacion habitacion = habitacionDAO.read(reserva.getHabitacionID());
         double precioHabitacion = habitacion.getPrecio();
@@ -90,11 +88,6 @@ public class claseControlador {
         arrayList.add(String.valueOf(precioExtras));
 
         arrayList.add(String.valueOf(reserva.getPrecioTotal()));
-
-        //reservaDAO.create(reserva);
-        // ESTA BIEN > System.out.println("desde leerPrecios()+ "+reserva);
-
-        System.out.println("el arrayList que devuelve leerprecios() + "+arrayList);
 
 
 

@@ -74,7 +74,6 @@ public class ReservaDAO implements I_ReservaDAO{
         double precioRegimen = 0;
         double precioExtra = 0;
 
-        System.out.println("desde create"+datosReserva);
 
         if (datosReserva!= null){
             for (Habitacion h : habitaciones){
@@ -112,7 +111,6 @@ public class ReservaDAO implements I_ReservaDAO{
 
             //hacer cálculos para calcular el total
             reserva.setPrecioTotal(precioRegimen + precioExtra + precioHabitacion);
-            System.out.println(reserva);
 
         } else{
             System.out.println("error");
