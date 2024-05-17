@@ -74,6 +74,8 @@ public class ReservaDAO implements I_ReservaDAO{
         double precioRegimen = 0;
         double precioExtra = 0;
 
+        System.out.println("desde create"+datosReserva);
+
         if (datosReserva!= null){
             for (Habitacion h : habitaciones){
                 if (h.getTipo().equalsIgnoreCase(datosReserva.get(0))

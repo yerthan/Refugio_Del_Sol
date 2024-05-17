@@ -11,6 +11,8 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+import static Controlador.claseControlador.formatearLista;
+
 public class Extra extends JDialog {
 
     private static final long serialVersionUID = 1L;
@@ -137,7 +139,8 @@ public class Extra extends JDialog {
                 }
 
                 try {
-                    LecturaOEscrituraFicheros.escribirInfo(infoEnviar);
+                    LecturaOEscrituraFicheros.escribirInfo(formatearLista(infoEnviar));
+
                     Factura f = new Factura();
                     f.setVisible(true);
                 } catch (IOException | SQLException ex) {

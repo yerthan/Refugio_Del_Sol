@@ -72,7 +72,8 @@ INSERT INTO Extras (Nombre, Precio) VALUES
                                         ('Cuna', 20.00),
                                         ('Gimnasio', 30.00),
                                         ('Parking', 10.00),
-                                        ('Cama supletoria', 20.00);
+                                        ('Cama supletoria', 20.00),
+                                        ('Null', 0);
 
 INSERT INTO Regimen (Tipo, Descripcion, Precio) VALUES ('Todo incluido', 'desayuno, almuerzo, cena y bebidas', 50.00);
 INSERT INTO Regimen (Tipo, Descripcion, Precio) VALUES ('Media pensión', 'desayuno y almuerzo', 25.00);

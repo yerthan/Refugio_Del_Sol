@@ -34,14 +34,30 @@ public class claseControlador {
                     arrayList.add(archivo);
                 }
             }
-            return arrayList;
+
+            return formatearLista(arrayList);
         }catch (Exception e){
             System.out.println(e);
 
         }
-
         return null;
 
+    }
+
+
+    public static ArrayList<String> formatearLista(ArrayList<String> lista) {
+
+        ArrayList<String> listaFormateada = new ArrayList<>();
+
+        for (String elemento : lista) {
+            int index = elemento.indexOf(" (");
+            if (index != -1) {
+                elemento = elemento.substring(0, index);
+            }
+            listaFormateada.add(elemento.trim());
+        }
+
+        return listaFormateada;
     }
 
 
@@ -49,9 +65,15 @@ public class claseControlador {
         ArrayList<String> arrayList  = new ArrayList<>();
 
         ReservaDAO reservaDAO = new ReservaDAO();
-        List<Reserva> reservas =  reservaDAO.listarReservas();
-        Reserva reserva = reservas.get(reservas.size()-1);
 
+        ArrayList<String> datosReserva = leerReserva();
+        System.out.println(datosReserva);
+//        Reserva reserva = new Reserva(Integer.parseInt(datosReserva.get(0)), Integer.parseInt(datosReserva.get(1)),
+//                Integer.parseInt(datosReserva.get(2)), Integer.parseInt(datosReserva.get(3)), Double.parseDouble(datosReserva.get(4)));
+        Reserva reserva = new Reserva();
+        reservaDAO.create(reserva);
+
+        //List<Reserva> reservas =  reservaDAO.listarReservas();
         HabitacionDAO habitacionDAO = new HabitacionDAO();
         Habitacion habitacion = habitacionDAO.read(reserva.getHabitacionID());
         double precioHabitacion = habitacion.getPrecio();
@@ -70,6 +92,10 @@ public class claseControlador {
 
         arrayList.add(String.valueOf(reserva.getPrecioTotal()));
 
+        //reservaDAO.create(reserva);
+        // ESTA BIEN > System.out.println("desde leerPrecios()+ "+reserva);
+
+        System.out.println("el arrayList que devuelve leerprecios() + "+arrayList);
 
 
 
@@ -77,6 +103,7 @@ public class claseControlador {
 
         return arrayList;
     }
+
 
 
 
