@@ -68,8 +68,7 @@ public class claseControlador {
 
         ArrayList<String> datosReserva = leerReserva();
         System.out.println(datosReserva);
-//        Reserva reserva = new Reserva(Integer.parseInt(datosReserva.get(0)), Integer.parseInt(datosReserva.get(1)),
-//                Integer.parseInt(datosReserva.get(2)), Integer.parseInt(datosReserva.get(3)), Double.parseDouble(datosReserva.get(4)));
+
         Reserva reserva = new Reserva();
         reservaDAO.create(reserva);
 
