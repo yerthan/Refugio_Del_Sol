@@ -1,5 +1,6 @@
 package Vistas;
 
+import Controlador.claseControlador;
 import Operaciones.LecturaOEscrituraFicheros;
 
 import java.awt.EventQueue;
@@ -24,6 +25,7 @@ import javax.swing.JSpinner;
 import javax.swing.JComboBox;
 import java.awt.Font;
 import java.awt.Color;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class Vista extends JFrame {
@@ -32,7 +34,7 @@ public class Vista extends JFrame {
     private JPanel contentPane;
     private ArrayList<String> infoEnviar = new ArrayList<>();
     JSpinner spinner = new JSpinner();
-    private boolean existeReserva;
+    private boolean existeReserva = claseControlador.comprobarHabitacion();
 
     /**
      * Launch the application.
@@ -51,7 +53,7 @@ public class Vista extends JFrame {
     }
 
 
-    public Vista() {
+    public Vista() throws SQLException {
 
         ButtonGroup bg = new ButtonGroup();
 

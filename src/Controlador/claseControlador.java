@@ -95,6 +95,23 @@ public class claseControlador {
     }
 
 
+    public static boolean comprobarHabitacion() throws SQLException {
+        ReservaDAO reservaDAO = new ReservaDAO();
+        List<Reserva> reservas = reservaDAO.listarReservas();
+
+        HabitacionDAO habitacionDAO = new HabitacionDAO();
+        List<Habitacion> habitaciones = habitacionDAO.listarHabitaciones();
+
+        for (Reserva r : reservas){
+            for (Habitacion h : habitaciones){
+                if (r.getHabitacionID() == h.getID()){
+                    return false;
+                }
+            }
+        }
+
+        return true;
+    }
 
 
 
