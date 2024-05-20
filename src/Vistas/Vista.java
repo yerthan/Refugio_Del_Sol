@@ -156,14 +156,16 @@ public class Vista extends JFrame {
 
         aceptar.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                infoEnviar.clear();
-                if(Comprobar()) {
-                    infoEnviar.add(String.valueOf(spinner.getModel().getValue()));
-                    infoEnviar.add(String.valueOf(regimenes.getSelectedItem()));
+                if (ComprobarReserva()) {
+                    infoEnviar.clear();
+                    if (Comprobar()) {
+                        infoEnviar.add(String.valueOf(spinner.getModel().getValue()));
+                        infoEnviar.add(String.valueOf(regimenes.getSelectedItem()));
 
-                    Extra ex = new Extra(contentPane, true, infoEnviar);
-                    ex.setVisible(true);
-                    Vista.this.dispose();
+                        Extra ex = new Extra(contentPane, true, infoEnviar);
+                        ex.setVisible(true);
+                        Vista.this.dispose();
+                    }
                 }
             }
 
@@ -186,13 +188,15 @@ public class Vista extends JFrame {
             }
 
             private boolean ComprobarReserva() {
-                if (existeReserva == false) {
-                    JOptionPane.showConfirmDialog(contentPane, "No hay habitaciones disponibles", "Aviso", JOptionPane.WARNING_MESSAGE);
+                if (!existeReserva) {
+                    JOptionPane.showMessageDialog(contentPane, "No hay habitaciones disponibles", "Aviso", JOptionPane.WARNING_MESSAGE);
                     Vista.this.dispose();
+                    return false;
                 }
                 return true;
             }
         });
+
         contentPane.add(aceptar, gbc_btnNewButton);
     }
 }
