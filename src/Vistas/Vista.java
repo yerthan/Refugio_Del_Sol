@@ -180,14 +180,15 @@ public class Vista extends JFrame {
                         return esValido;
                     }
                 }
-
-
-
-
-
-
-
                 return esValido;
+            }
+
+            private boolean ComprobarReserva() {
+                if (existeReserva == false) {
+                    JOptionPane.showConfirmDialog(contentPane, "No hay habitaciones disponibles", "Aviso", JOptionPane.WARNING_MESSAGE);
+                    Vista.this.dispose();
+                }
+                return true;
             }
         });
         contentPane.add(aceptar, gbc_btnNewButton);
