@@ -22,6 +22,7 @@ public class ReservaDAO implements I_ReservaDAO{
     }
 
     public List<Reserva> listarReservas(){
+        //prueba
         List<Reserva> reservas = new ArrayList<>();
         String consulta = "SELECT * FROM refugio_del_sol.Reserva";
         Connection con = conectar();
