@@ -34,7 +34,6 @@ public class Vista extends JFrame {
     private JPanel contentPane;
     private ArrayList<String> infoEnviar = new ArrayList<>();
     JSpinner spinner = new JSpinner();
-    private boolean existeReserva = claseControlador.comprobarHabitacion();
 
     /**
      * Launch the application.
@@ -156,16 +155,20 @@ public class Vista extends JFrame {
 
         aceptar.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                if (ComprobarReserva()) {
-                    infoEnviar.clear();
-                    if (Comprobar()) {
-                        infoEnviar.add(String.valueOf(spinner.getModel().getValue()));
-                        infoEnviar.add(String.valueOf(regimenes.getSelectedItem()));
+                try {
+                    if (ComprobarReserva()) {
+                        infoEnviar.clear();
+                        if (Comprobar()) {
+                            infoEnviar.add(String.valueOf(spinner.getModel().getValue()));
+                            infoEnviar.add(String.valueOf(regimenes.getSelectedItem()));
 
-                        Extra ex = new Extra(contentPane, true, infoEnviar);
-                        ex.setVisible(true);
-                        Vista.this.dispose();
+                            Extra ex = new Extra(contentPane, true, infoEnviar);
+                            ex.setVisible(true);
+                            Vista.this.dispose();
+                        }
                     }
+                } catch (SQLException ex) {
+                    throw new RuntimeException(ex);
                 }
             }
 
@@ -187,8 +190,10 @@ public class Vista extends JFrame {
                 return esValido;
             }
 
-            private boolean ComprobarReserva() {
-                if (!existeReserva) {
+            private boolean ComprobarReserva() throws SQLException {
+                boolean existeReserva = claseControlador.comprobarHabitacion();
+
+                if (existeReserva) {
                     JOptionPane.showMessageDialog(contentPane, "No hay habitaciones disponibles", "Aviso", JOptionPane.WARNING_MESSAGE);
                     Vista.this.dispose();
                     return false;
