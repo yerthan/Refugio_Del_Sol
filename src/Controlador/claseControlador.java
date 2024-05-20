@@ -94,25 +94,65 @@ public class claseControlador {
         return arrayList;
     }
 
-
-    public static boolean comprobarHabitacion() throws SQLException {
-        ReservaDAO reservaDAO = new ReservaDAO();
-        List<Reserva> reservas = reservaDAO.listarReservas();
-
-        HabitacionDAO habitacionDAO = new HabitacionDAO();
-        List<Habitacion> habitaciones = habitacionDAO.listarHabitaciones();
-
-        for (Reserva r : reservas){
-            for (Habitacion h : habitaciones){
-                if (r.getHabitacionID() == h.getID()){
-                    return false;
-                }
-            }
-        }
-
-        return true;
-    }
-
+//
+//    public static boolean comprobarHabitacion() throws SQLException {
+//        ReservaDAO reservaDAO = new ReservaDAO();
+//        List<Reserva> reservas = reservaDAO.listarReservas();
+//
+//        HabitacionDAO habitacionDAO = new HabitacionDAO();
+//        List<Habitacion> habitaciones = habitacionDAO.listarHabitaciones();
+//
+//        // comprobar tipo y capacidad = saca ID de habitacion
+//        // busca en reseva
+//
+//        ArrayList<String> datos = leerReserva();
+//        boolean existeHabitacion = true;
+//        System.out.println(datos.get(0));
+//        System.out.println(datos.get(1));
+//        //List<Habitacion> habitacionesDelMismoTipo = habitacionDAO.listarHabitacionesMismotipo(datos.get(0), Integer.parseInt(datos.get(1)));
+//
+////        for (Habitacion h : habitaciones){
+////            if (h.getTipo().equalsIgnoreCase(datos.get(0)) && h.getCapacidad()==(Integer.parseInt(datos.get(1)))){
+////                for (Reserva r : reservas){
+////                    if (r.getHabitacionID() == h.getID()){
+////                        habitacionesDelMismoTipo.add(habitacionDAO.read(h.getID()));
+////
+////                        System.out.println("hab id"+ h.getID());
+////                        existeHabitacion = false;
+////                    }
+////                }
+////            }
+////        }
+//
+//        List<Habitacion> habitacionesDelMismoTipo = new ArrayList<Habitacion>();
+//        for (Habitacion h : habitaciones){
+//            if (h.getTipo().equalsIgnoreCase(datos.get(0))){
+//                System.out.println("entra");
+//
+//                if (h.getCapacidad()==Integer.parseInt(datos.get(1))){
+//                    habitacionesDelMismoTipo.add(h);
+//
+//                }
+//            }
+//        }
+//
+//        System.out.println(habitacionesDelMismoTipo);
+//
+//        for (Habitacion h : habitacionesDelMismoTipo){
+//            for (Reserva r : reservas){
+//                if (h.getID() == r.getHabitacionID()){
+//                    System.out.println("hab id"+ h.getID());
+//                    existeHabitacion = false;
+//                } else {
+//                    existeHabitacion = true;
+//                }
+//            }
+//
+//        }
+//
+//        return existeHabitacion;
+//    }
+//
 
 
 

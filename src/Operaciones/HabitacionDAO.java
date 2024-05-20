@@ -78,6 +78,51 @@ public class HabitacionDAO implements I_HabitacionDAO{
         }
     }
 
+//    public List<Habitacion> listarHabitacionesMismotipo (String tipo, int capacidad){
+//        List<Habitacion> habitaciones = new ArrayList<>();
+//        String consulta = "SELECT ID, Numero, Tipo, Capacidad, Precio FROM refugio_del_sol.Habitacion WHERE Tipo = ? AND Capacidad = ?";
+//        PreparedStatement sentencia;
+//
+//        System.out.println(tipo);
+//        System.out.println(capacidad);
+//
+//
+//        try{
+//            sentencia = con.prepareStatement(consulta);
+//            sentencia.setString(1, tipo);
+//            sentencia.setInt(2, capacidad);
+//            ResultSet rs = sentencia.executeQuery();
+//
+//            while (rs.next()) {
+//                Habitacion habitacion = new Habitacion();
+//                habitacion.setID(rs.getInt("ID"));
+//                habitacion.setNumero(rs.getInt("Numero"));
+//                habitacion.setTipo(rs.getString("Tipo"));
+//                habitacion.setCapacidad(rs.getInt("Capacidad"));
+//                habitacion.setPrecio(rs.getDouble("Precio"));
+//
+//                habitaciones.add(habitacion);
+//            }
+//
+//            if (habitaciones.isEmpty()) { // No rooms found
+//                System.out.println("No existe esa habitacion");
+//            }
+//
+//            return habitaciones;
+//
+//        } catch (SQLException ex){
+//            ex.getErrorCode();
+//            return null;
+//
+//        } finally {
+//            try {
+//                con.close();
+//            } catch (SQLException e) {
+//                e.printStackTrace();
+//                return null;
+//            }
+//        }
+//    }
 
     @Override
     public String create(Habitacion habitacion) {
