@@ -81,7 +81,7 @@ public class Vista extends JFrame {
         gbc_lblNewLabel.gridy = 0;
         contentPane.add(nombre, gbc_lblNewLabel);
 
-        JLabel habitacion = new JLabel("Elige tu habitación");
+        JLabel habitacion = new JLabel("Elige tu habitación: ");
         habitacion.setFont(new Font("Tahoma", Font.PLAIN, 13));
         GridBagConstraints gbc_lblNewLabel_1 = new GridBagConstraints();
         gbc_lblNewLabel_1.gridwidth = 7;
