@@ -1,28 +1,20 @@
 package Vistas;
 
 import Controlador.claseControlador;
-import Operaciones.Habitacion;
-import Operaciones.HabitacionDAO;
-import Operaciones.Reserva;
-import Operaciones.ReservaDAO;
 
 import javax.swing.*;
-import java.awt.GridBagLayout;
-import java.awt.GridBagConstraints;
-import java.awt.Font;
-import java.awt.Insets;
-import java.awt.Color;
+import javax.swing.border.EmptyBorder;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-
 public class Factura extends JDialog {
 
     private static final long serialVersionUID = 1L;
     private ArrayList<String> precios = claseControlador.leerPrecios();
-
+    private static JPanel contentPane;
 
     public static void main(String[] args) {
         try {
@@ -35,78 +27,111 @@ public class Factura extends JDialog {
     }
 
     public Factura() throws SQLException {
-        getContentPane().setBackground(new Color(151, 183, 222));
         setBounds(100, 100, 500, 400);
-        GridBagLayout gridBagLayout = new GridBagLayout();
-        gridBagLayout.columnWidths = new int[] {30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 0, 0, 30};
-        gridBagLayout.rowHeights = new int[] {30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30};
-        gridBagLayout.columnWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0};
-        gridBagLayout.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0};
-        getContentPane().setLayout(gridBagLayout);
 
+        contentPane = new BackgroundPanel("./src/Vistas/Fondo.jpg");
+        contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+        contentPane.setLayout(new GridBagLayout());
+        setContentPane(contentPane);
+
+        GridBagLayout gridBagLayout = new GridBagLayout();
+        gridBagLayout.columnWidths = new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+        gridBagLayout.rowHeights = new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+        gridBagLayout.columnWeights = new double[]{1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0};
+        gridBagLayout.rowWeights = new double[]{1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0};
+        contentPane.setLayout(gridBagLayout);
 
         JLabel lblNewLabel = new JLabel("Refugio Del Sol ");
         lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 15));
         GridBagConstraints gbc_lblNewLabel = new GridBagConstraints();
-        gbc_lblNewLabel.insets = new Insets(0, 0, 5, 0);
+        gbc_lblNewLabel.insets = new Insets(5, 5, 5, 5);
         gbc_lblNewLabel.gridheight = 3;
-        gbc_lblNewLabel.gridwidth = 19;
-        gbc_lblNewLabel.gridx = 0;
+        gbc_lblNewLabel.gridwidth = 17;
+        gbc_lblNewLabel.gridx = 1;
         gbc_lblNewLabel.gridy = 0;
-        getContentPane().add(lblNewLabel, gbc_lblNewLabel);
+        gbc_lblNewLabel.anchor = GridBagConstraints.CENTER;
+        contentPane.add(lblNewLabel, gbc_lblNewLabel);
 
-        JLabel lblNewLabel_1 = new JLabel("Habitación ........................ " + precios.get(0));
+        JLabel lblNewLabel_1 = new JLabel("Habitación ............................ " + precios.get(0));
         lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 12));
         GridBagConstraints gbc_lblNewLabel_1 = new GridBagConstraints();
-        gbc_lblNewLabel_1.anchor = GridBagConstraints.EAST;
+        gbc_lblNewLabel_1.anchor = GridBagConstraints.CENTER;
         gbc_lblNewLabel_1.gridwidth = 11;
-        gbc_lblNewLabel_1.insets = new Insets(0, 0, 5, 5);
-        gbc_lblNewLabel_1.gridx = 0;
+        gbc_lblNewLabel_1.insets = new Insets(5, 5, 5, 5);
+        gbc_lblNewLabel_1.gridx = 4;
         gbc_lblNewLabel_1.gridy = 3;
-        getContentPane().add(lblNewLabel_1, gbc_lblNewLabel_1);
+        contentPane.add(lblNewLabel_1, gbc_lblNewLabel_1);
 
-        JLabel lblNewLabel_2 = new JLabel("Regimen ........................ " + precios.get(1));
+        // Empty row for spacing
+        GridBagConstraints gbc_emptyRow_1 = new GridBagConstraints();
+        gbc_emptyRow_1.gridx = 0;
+        gbc_emptyRow_1.gridy = 4;
+        gbc_emptyRow_1.gridwidth = 19;
+        gbc_emptyRow_1.weighty = 0.1;
+        contentPane.add(Box.createVerticalStrut(10), gbc_emptyRow_1);
+
+        JLabel lblNewLabel_2 = new JLabel("Régimen ............................ " + precios.get(1));
         lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 12));
         GridBagConstraints gbc_lblNewLabel_2 = new GridBagConstraints();
-        gbc_lblNewLabel_2.anchor = GridBagConstraints.EAST;
+        gbc_lblNewLabel_2.anchor = GridBagConstraints.CENTER;
         gbc_lblNewLabel_2.gridwidth = 11;
-        gbc_lblNewLabel_2.insets = new Insets(0, 0, 5, 5);
-        gbc_lblNewLabel_2.gridx = 0;
+        gbc_lblNewLabel_2.insets = new Insets(5, 5, 5, 5);
+        gbc_lblNewLabel_2.gridx = 4;
         gbc_lblNewLabel_2.gridy = 5;
-        getContentPane().add(lblNewLabel_2, gbc_lblNewLabel_2);
+        contentPane.add(lblNewLabel_2, gbc_lblNewLabel_2);
 
-        JLabel lblNewLabel_3 = new JLabel("Extras ........................ " + precios.get(2));
+        // Empty row for spacing
+        GridBagConstraints gbc_emptyRow_2 = new GridBagConstraints();
+        gbc_emptyRow_2.gridx = 0;
+        gbc_emptyRow_2.gridy = 6;
+        gbc_emptyRow_2.gridwidth = 19;
+        gbc_emptyRow_2.weighty = 0.1;
+        contentPane.add(Box.createVerticalStrut(10), gbc_emptyRow_2);
+
+        JLabel lblNewLabel_3 = new JLabel("Extras ............................ " + precios.get(2));
         lblNewLabel_3.setFont(new Font("Tahoma", Font.PLAIN, 12));
         GridBagConstraints gbc_lblNewLabel_3 = new GridBagConstraints();
-        gbc_lblNewLabel_3.anchor = GridBagConstraints.EAST;
+        gbc_lblNewLabel_3.anchor = GridBagConstraints.CENTER;
         gbc_lblNewLabel_3.gridwidth = 11;
-        gbc_lblNewLabel_3.insets = new Insets(0, 0, 5, 5);
-        gbc_lblNewLabel_3.gridx = 0;
+        gbc_lblNewLabel_3.insets = new Insets(5, 5, 5, 5);
+        gbc_lblNewLabel_3.gridx = 4;
         gbc_lblNewLabel_3.gridy = 7;
-        getContentPane().add(lblNewLabel_3, gbc_lblNewLabel_3);
+        contentPane.add(lblNewLabel_3, gbc_lblNewLabel_3);
 
-        JLabel lblNewLabel_4 = new JLabel("TOTAL ........................ " + precios.get(3));
+        // Empty row for spacing
+        GridBagConstraints gbc_emptyRow_3 = new GridBagConstraints();
+        gbc_emptyRow_3.gridx = 0;
+        gbc_emptyRow_3.gridy = 8;
+        gbc_emptyRow_3.gridwidth = 19;
+        gbc_emptyRow_3.weighty = 0.1;
+        contentPane.add(Box.createVerticalStrut(10), gbc_emptyRow_3);
+
+        JLabel lblNewLabel_4 = new JLabel("TOTAL ............................ " + precios.get(3));
         lblNewLabel_4.setFont(new Font("Tahoma", Font.BOLD, 13));
         GridBagConstraints gbc_lblNewLabel_4 = new GridBagConstraints();
-        gbc_lblNewLabel_4.anchor = GridBagConstraints.EAST;
+        gbc_lblNewLabel_4.anchor = GridBagConstraints.CENTER;
         gbc_lblNewLabel_4.gridwidth = 11;
-        gbc_lblNewLabel_4.insets = new Insets(0, 0, 5, 5);
-        gbc_lblNewLabel_4.gridx = 0;
+        gbc_lblNewLabel_4.insets = new Insets(5, 5, 5, 5);
+        gbc_lblNewLabel_4.gridx = 4;
         gbc_lblNewLabel_4.gridy = 9;
-        getContentPane().add(lblNewLabel_4, gbc_lblNewLabel_4);
+        contentPane.add(lblNewLabel_4, gbc_lblNewLabel_4);
 
-        JButton btnNewButton = new JButton("Cerrar");
-        btnNewButton.addActionListener(new ActionListener() {
+        JButton cerrar = new JButton("Cerrar");
+        cerrar.setBackground(new Color(255, 255, 255));
+        GridBagConstraints gbc_btnNewButton = new GridBagConstraints();
+        gbc_btnNewButton.gridheight = 3;
+        gbc_btnNewButton.gridwidth = 11;
+        gbc_btnNewButton.insets = new Insets(5, 5, 5, 5);
+        gbc_btnNewButton.gridx = 4;
+        gbc_btnNewButton.gridy = 12;
+        gbc_btnNewButton.anchor = GridBagConstraints.CENTER;
+
+        cerrar.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 dispose();
             }
         });
-        GridBagConstraints gbc_btnNewButton = new GridBagConstraints();
-        gbc_btnNewButton.gridheight = 2;
-        gbc_btnNewButton.gridwidth = 19;
-        gbc_btnNewButton.gridx = 0;
-        gbc_btnNewButton.gridy = 11;
-        getContentPane().add(btnNewButton, gbc_btnNewButton);
+
+        contentPane.add(cerrar, gbc_btnNewButton);
     }
 }
-

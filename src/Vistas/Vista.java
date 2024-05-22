@@ -53,25 +53,26 @@ public class Vista extends JFrame {
 
 
     public Vista() throws SQLException {
-
         ButtonGroup bg = new ButtonGroup();
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(100, 100, 500, 400);
-        contentPane = new JPanel();
-        contentPane.setBackground(new Color(151, 183, 222));
+
+        contentPane = new BackgroundPanel("src/Vistas/Fondo.jpg");
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+        contentPane.setLayout(new GridBagLayout());
 
         setContentPane(contentPane);
+
         GridBagLayout gbl_contentPane = new GridBagLayout();
-        gbl_contentPane.columnWidths = new int[] {30, 30, 95, 106, 49, 0, 45};
-        gbl_contentPane.rowHeights = new int[] {30, 30, 30, 30, 30, 30, 30, 30, 30};
+        gbl_contentPane.columnWidths = new int[]{30, 30, 95, 106, 49, 0, 45};
+        gbl_contentPane.rowHeights = new int[]{30, 30, 30, 30, 30, 30, 30, 30, 30};
         gbl_contentPane.columnWeights = new double[]{0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0};
         gbl_contentPane.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0};
         contentPane.setLayout(gbl_contentPane);
 
-        JLabel nombre = new JLabel("Refugio Del Sol");
-        nombre.setFont(new Font("Tahoma", Font.BOLD, 15));
+        JLabel nombre = new JLabel("Refugio Del Sol ");
+        nombre.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 16));
         GridBagConstraints gbc_lblNewLabel = new GridBagConstraints();
         gbc_lblNewLabel.gridheight = 2;
         gbc_lblNewLabel.insets = new Insets(0, 0, 5, 0);
@@ -81,7 +82,7 @@ public class Vista extends JFrame {
         contentPane.add(nombre, gbc_lblNewLabel);
 
         JLabel habitacion = new JLabel("Elige tu habitación");
-        habitacion.setFont(new Font("Tahoma", Font.PLAIN, 11));
+        habitacion.setFont(new Font("Tahoma", Font.PLAIN, 13));
         GridBagConstraints gbc_lblNewLabel_1 = new GridBagConstraints();
         gbc_lblNewLabel_1.gridwidth = 7;
         gbc_lblNewLabel_1.insets = new Insets(0, 0, 5, 0);
@@ -90,7 +91,7 @@ public class Vista extends JFrame {
         contentPane.add(habitacion, gbc_lblNewLabel_1);
 
         JRadioButton suite = new JRadioButton("Suite (200€)");
-        suite.setBackground(new Color(151, 183, 222));
+        suite.setOpaque(false);
         GridBagConstraints gbc_rdbtnNewRadioButton = new GridBagConstraints();
         gbc_rdbtnNewRadioButton.anchor = GridBagConstraints.EAST;
         gbc_rdbtnNewRadioButton.insets = new Insets(0, 0, 5, 5);
@@ -100,7 +101,7 @@ public class Vista extends JFrame {
         contentPane.add(suite, gbc_rdbtnNewRadioButton);
 
         JRadioButton turista = new JRadioButton("Turista (100€)");
-        turista.setBackground(new Color(151, 183, 222));
+        turista.setOpaque(false);
         GridBagConstraints gbc_rdbtnNewRadioButton_1 = new GridBagConstraints();
         gbc_rdbtnNewRadioButton_1.insets = new Insets(0, 0, 5, 5);
         gbc_rdbtnNewRadioButton_1.gridx = 3;
@@ -147,11 +148,13 @@ public class Vista extends JFrame {
         contentPane.add(regimenes, gbc_comboBox);
 
         JButton aceptar = new JButton("Aceptar");
+        aceptar.setBackground(new Color(255, 255, 255));
         GridBagConstraints gbc_btnNewButton = new GridBagConstraints();
         gbc_btnNewButton.gridwidth = 7;
         gbc_btnNewButton.gridheight = 2;
         gbc_btnNewButton.gridx = 0;
         gbc_btnNewButton.gridy = 9;
+        contentPane.add(aceptar, gbc_btnNewButton);
 
         aceptar.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {

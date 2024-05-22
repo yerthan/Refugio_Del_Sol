@@ -24,9 +24,9 @@ public class Extra extends JDialog {
     public Extra(JPanel contentPanel, boolean boleano, ArrayList<String> infoEnviar) {
 
         setBounds(100, 100, 500, 400);
-        contentPane = new JPanel();
+        contentPane = new BackgroundPanel("src/Vistas/Fondo.jpg");
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-        contentPane.setBackground(new Color(151, 183, 222));
+        contentPane.setLayout(new GridBagLayout());
 
 
         setContentPane(contentPane);
@@ -55,8 +55,8 @@ public class Extra extends JDialog {
         gbc_lblNewLabel_1.gridy = 3;
         contentPane.add(extras, gbc_lblNewLabel_1);
 
-        JRadioButton cuna = new JRadioButton("Cuna (20€)");
-        cuna.setBackground(new Color(151, 183, 222));
+        JRadioButton cuna = new JRadioButton("Cuna (20€)"+ " " + "\uD83D\uDC76");
+        cuna.setOpaque(false);
         GridBagConstraints gbc_rdbtnNewRadioButton = new GridBagConstraints();
         gbc_rdbtnNewRadioButton.gridwidth = 17;
         gbc_rdbtnNewRadioButton.insets = new Insets(0, 0, 5, 0);
@@ -64,17 +64,17 @@ public class Extra extends JDialog {
         gbc_rdbtnNewRadioButton.gridy = 4;
         contentPane.add(cuna, gbc_rdbtnNewRadioButton);
 
-        JRadioButton gimansio = new JRadioButton("Gimnasio (30€)");
-        gimansio.setBackground(new Color(151, 183, 222));
+        JRadioButton gimnasio = new JRadioButton("Gimnasio (30€)" + " " + "\uD83D\uDCAA");
+        gimnasio.setOpaque(false);
         GridBagConstraints gbc_rdbtnGimnasio = new GridBagConstraints();
         gbc_rdbtnGimnasio.gridwidth = 17;
         gbc_rdbtnGimnasio.insets = new Insets(0, 0, 5, 0);
         gbc_rdbtnGimnasio.gridx = 0;
         gbc_rdbtnGimnasio.gridy = 5;
-        contentPane.add(gimansio, gbc_rdbtnGimnasio);
+        contentPane.add(gimnasio, gbc_rdbtnGimnasio);
 
-        JRadioButton parking = new JRadioButton("Parking (10€)");
-        parking.setBackground(new Color(151, 183, 222));
+        JRadioButton parking = new JRadioButton("Parking (10€)" + " " + "\uD83D\uDE97");
+        parking.setOpaque(false);
         GridBagConstraints gbc_rdbtnNewRadioButton_1 = new GridBagConstraints();
         gbc_rdbtnNewRadioButton_1.gridwidth = 17;
         gbc_rdbtnNewRadioButton_1.insets = new Insets(0, 0, 5, 0);
@@ -82,8 +82,8 @@ public class Extra extends JDialog {
         gbc_rdbtnNewRadioButton_1.gridy = 6;
         contentPane.add(parking, gbc_rdbtnNewRadioButton_1);
 
-        JRadioButton cama = new JRadioButton("Cama supletoria (20€)");
-        cama.setBackground(new Color(151, 183, 222));
+        JRadioButton cama = new JRadioButton("Cama supletoria (20€)" + " " + "\uD83D\uDECF");
+        cama.setOpaque(false);
         GridBagConstraints gbc_rdbtnNewRadioButton_2 = new GridBagConstraints();
         gbc_rdbtnNewRadioButton_2.gridwidth = 17;
         gbc_rdbtnNewRadioButton_2.insets = new Insets(0, 0, 5, 0);
@@ -91,8 +91,8 @@ public class Extra extends JDialog {
         gbc_rdbtnNewRadioButton_2.gridy = 7;
         contentPane.add(cama, gbc_rdbtnNewRadioButton_2);
 
-        JRadioButton sinExtra = new JRadioButton("No quiero ningún extra");
-        sinExtra.setBackground(new Color(151, 183, 222));
+        JRadioButton sinExtra = new JRadioButton("No quiero ningún extra" + " " + "❌");
+        sinExtra.setOpaque(false);
         GridBagConstraints gbc_rdbtnNewRadioButton_3 = new GridBagConstraints();
         gbc_rdbtnNewRadioButton_3.gridwidth = 17;
         gbc_rdbtnNewRadioButton_3.insets = new Insets(0, 0, 5, 0);
@@ -101,6 +101,7 @@ public class Extra extends JDialog {
         contentPane.add(sinExtra, gbc_rdbtnNewRadioButton_3);
 
         JButton aceptar = new JButton("Aceptar");
+        aceptar.setBackground(new Color(255, 255, 255));
         GridBagConstraints gbc_btnNewButton = new GridBagConstraints();
         gbc_btnNewButton.gridheight = 3;
         gbc_btnNewButton.gridwidth = 17;
@@ -110,12 +111,12 @@ public class Extra extends JDialog {
         sinExtra.addActionListener(e -> {
             if (sinExtra.isSelected()) {
                 cuna.setEnabled(false);
-                gimansio.setEnabled(false);
+                gimnasio.setEnabled(false);
                 parking.setEnabled(false);
                 cama.setEnabled(false);
             } else {
                 cuna.setEnabled(true);
-                gimansio.setEnabled(true);
+                gimnasio.setEnabled(true);
                 parking.setEnabled(true);
                 cama.setEnabled(true);
             }
@@ -125,7 +126,7 @@ public class Extra extends JDialog {
             public void actionPerformed(ActionEvent e) {
                 if (cuna.isSelected()) {
                     infoEnviar.add("Cuna");
-                } else if (gimansio.isSelected()) {
+                } else if (gimnasio.isSelected()) {
                     infoEnviar.add("Gimnasio");
                 } else if (parking.isSelected()){
                     infoEnviar.add("Parking");
