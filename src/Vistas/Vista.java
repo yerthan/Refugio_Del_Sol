@@ -158,22 +158,15 @@ public class Vista extends JFrame {
 
         aceptar.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-//                try {
-//                    if (ComprobarReserva()) {
+                infoEnviar.clear();
+                if (Comprobar()) {
+                    infoEnviar.add(String.valueOf(spinner.getModel().getValue()));
+                    infoEnviar.add(String.valueOf(regimenes.getSelectedItem()));
 
-                        infoEnviar.clear();
-                        if (Comprobar()) {
-                            infoEnviar.add(String.valueOf(spinner.getModel().getValue()));
-                            infoEnviar.add(String.valueOf(regimenes.getSelectedItem()));
-
-                            Extra ex = new Extra(contentPane, true, infoEnviar);
-                            ex.setVisible(true);
-                            Vista.this.dispose();
-                        }
-//                    }
-//                } catch (SQLException ex) {
-//                    throw new RuntimeException(ex);
-//                }
+                    Extra ex = new Extra(contentPane, true, infoEnviar);
+                    ex.setVisible(true);
+                    Vista.this.dispose();
+                }
             }
 
             private boolean Comprobar() {
@@ -193,19 +186,7 @@ public class Vista extends JFrame {
                 }
                 return esValido;
             }
-
-//            private boolean ComprobarReserva() throws SQLException {
-//                boolean existeReserva = claseControlador.comprobarHabitacion();
-//                System.out.println(existeReserva);
-//                if (!existeReserva) {
-//                    JOptionPane.showMessageDialog(contentPane, "No hay habitaciones disponibles", "Aviso", JOptionPane.WARNING_MESSAGE);
-//                    Vista.this.dispose();
-//                    return false;
-//                }
-//                return true;
-//            }
         });
-
         contentPane.add(aceptar, gbc_btnNewButton);
     }
 }

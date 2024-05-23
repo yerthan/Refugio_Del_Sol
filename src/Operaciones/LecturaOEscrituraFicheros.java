@@ -52,9 +52,5 @@ public class LecturaOEscrituraFicheros {
         }
 
         return array;
-
     }
-
-
-
 }

@@ -98,7 +98,6 @@ public class Factura extends JDialog {
         gbc_lblNewLabel_3.gridy = 7;
         contentPane.add(lblNewLabel_3, gbc_lblNewLabel_3);
 
-        // Empty row for spacing
         GridBagConstraints gbc_emptyRow_3 = new GridBagConstraints();
         gbc_emptyRow_3.gridx = 0;
         gbc_emptyRow_3.gridy = 8;
@@ -126,11 +125,7 @@ public class Factura extends JDialog {
         gbc_btnNewButton.gridy = 12;
         gbc_btnNewButton.anchor = GridBagConstraints.CENTER;
 
-        cerrar.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                dispose();
-            }
-        });
+        cerrar.addActionListener(e -> dispose());
 
         contentPane.add(cerrar, gbc_btnNewButton);
     }
