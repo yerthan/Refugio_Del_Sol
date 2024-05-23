@@ -47,7 +47,7 @@ public class Extra extends JDialog {
         gbc_lblNewLabel.gridy = 0;
         contentPane.add(nombre, gbc_lblNewLabel);
 
-        JLabel extras = new JLabel("Elige tus extras: ");
+        JLabel extras = new JLabel("Elige tus extras (solo uno): ");
         GridBagConstraints gbc_lblNewLabel_1 = new GridBagConstraints();
         gbc_lblNewLabel_1.gridwidth = 17;
         gbc_lblNewLabel_1.insets = new Insets(0, 0, 5, 0);
