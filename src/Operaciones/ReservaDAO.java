@@ -22,7 +22,6 @@ public class ReservaDAO implements I_ReservaDAO{
     }
 
     public List<Reserva> listarReservas(){
-        //prueba
         List<Reserva> reservas = new ArrayList<>();
         String consulta = "SELECT * FROM refugio_del_sol.Reserva";
         Connection con = conectar();
@@ -67,7 +66,7 @@ public class ReservaDAO implements I_ReservaDAO{
         ExtrasDAO extrasDAO = new ExtrasDAO();
 
         //necesitamos los datos recogidos en fichero para rellenar la bbdd
-        List<Habitacion> habitaciones= habitacionDAO.listarHabitaciones();
+        List<Habitacion> habitaciones = habitacionDAO.listarHabitaciones();
         List<Regimen> regimens = regimenDAO.listarRegimen();
         List<Extras> extras = extrasDAO.listarExtras();
 
@@ -77,26 +76,23 @@ public class ReservaDAO implements I_ReservaDAO{
         double precioExtra = 0;
 
 
-        if (datosReserva!= null){
-            for (Habitacion h : habitaciones){
+        if (datosReserva != null && datosReserva.size()<=4) {
+            for (Habitacion h : habitaciones) {
                 if (h.getTipo().equalsIgnoreCase(datosReserva.get(0))
-                    && String.valueOf(h.getCapacidad()).equals(datosReserva.get(1))){
+                        && String.valueOf(h.getCapacidad()).equals(datosReserva.get(1))) {
                     reserva.setHabitacionID(h.getID());
                     precioHabitacion = h.getPrecio();
 
-                    for (Regimen r : regimens){
-                        if (r.getTipo().equals(datosReserva.get(2))){
+                    for (Regimen r : regimens) {
+                        if (r.getTipo().equals(datosReserva.get(2))) {
                             reserva.setRegimenID(r.getID());
                             precioRegimen = r.getPrecio();
 
-                            //prueba3
-
-                            for (Extras e : extras){
-                                if (e.getNombre().equals(datosReserva.get(3))){
+                            for (Extras e : extras) {
+                                if (e.getNombre().equals(datosReserva.get(3))) {
                                     reserva.setExtrasID(e.getID());
                                     precioExtra = e.getPrecio();
-
-                                    /*Hay que arreglar que no mande null cuando el usuario no marque ningun extra*/
+                                    break;
                                 } else {
                                     precioExtra = 0;
                                 }
@@ -106,18 +102,15 @@ public class ReservaDAO implements I_ReservaDAO{
                     }
 
 
-
-
                 }
             }
 
-            //hacer cálculos para calcular el total
-            reserva.setPrecioTotal(precioRegimen + precioExtra + precioHabitacion);
-
-        } else{
+        }else{
             System.out.println("error");
         }
 
+        reserva.setPrecioTotal(precioRegimen + precioExtra + precioHabitacion);
+        System.out.println("reserva: "+reserva.getPrecioTotal());
 
         Connection con = conectar();
                                                     //ID, habitacionID, extrasID, regimenID
