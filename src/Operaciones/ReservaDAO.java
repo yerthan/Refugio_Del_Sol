@@ -65,11 +65,11 @@ public class ReservaDAO implements I_ReservaDAO{
         RegimenDAO regimenDAO = new RegimenDAO();
         ExtrasDAO extrasDAO = new ExtrasDAO();
 
-        //necesitamos los datos recogidos en fichero para rellenar la bbdd
         List<Habitacion> habitaciones = habitacionDAO.listarHabitaciones();
         List<Regimen> regimens = regimenDAO.listarRegimen();
         List<Extras> extras = extrasDAO.listarExtras();
 
+        //necesitamos los datos recogidos en fichero para rellenar la bbdd
         ArrayList<String> datosReserva = Controlador.claseControlador.leerReserva();
         double precioHabitacion = 0;
         double precioRegimen = 0;
@@ -100,8 +100,6 @@ public class ReservaDAO implements I_ReservaDAO{
 
                         }
                     }
-
-
                 }
             }
 
@@ -110,10 +108,8 @@ public class ReservaDAO implements I_ReservaDAO{
         }
 
         reserva.setPrecioTotal(precioRegimen + precioExtra + precioHabitacion);
-        System.out.println("reserva: "+reserva.getPrecioTotal());
 
         Connection con = conectar();
-                                                    //ID, habitacionID, extrasID, regimenID
         String sql = "INSERT INTO refugio_del_sol.Reserva (ID, HabitacionID, ExtrasID, RegimenID, PrecioTotal) VALUES (?, ?, ?, ?, ?)";
         PreparedStatement sentencia;
 
